@@ -1,5 +1,62 @@
 <div class="wrapper">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light1">
+  <div class="app-header my-container-xl">
+    <div class="app-header__left">
+      <a class="app-header__logo"></a>
+      <div class="app-header__divider"></div>
+
+      <div class="app-header__menu header-menu">
+        <a href="#"
+          [routerLink]="'/'"
+          [routerLinkActive]="'header-menu__item--active'"
+          [routerLinkActiveOptions]="{exact:true}"
+          class="header-menu__item"
+        >Explorer</a>
+        <a href="#"
+          [routerLink]="'/richlist'"
+          [routerLinkActive]="'header-menu__item--active'"
+          [routerLinkActiveOptions]="{exact:true}"
+          class="header-menu__item"
+        >Richlist</a>
+        <a href="#"
+          [routerLink]="'/masternodes'"
+          [routerLinkActive]="'header-menu__item--active'"
+          [routerLinkActiveOptions]="{exact:true}"
+          class="header-menu__item"
+        >Masternodes</a>
+        <a href="#"
+          [routerLink]="'/movement'"
+          [routerLinkActive]="'header-menu__item--active'"
+          [routerLinkActiveOptions]="{exact:true}"
+          class="header-menu__item"
+        >Movement</a>
+        <a href="#"
+          [routerLink]="'/api'"
+          [routerLinkActive]="'header-menu__item--active'"
+          [routerLinkActiveOptions]="{exact:true}"
+          class="header-menu__item"
+        >Api</a>
+        <a href="#"
+          [routerLink]="'/market'"
+          [routerLinkActive]="'header-menu__item--active'"
+          [routerLinkActiveOptions]="{exact:true}"
+          class="header-menu__item"
+        >Market</a>
+      </div>
+    </div>
+
+    <div class="app-header__right">
+      <form class="header-search app-header__search" (ngSubmit)="onSearch()">
+        <input class="header-search__input"
+               type="text"
+               name="main-search"
+               placeholder="Search block height, block hash, tx hash or address"
+               [(ngModel)]="search"
+        />
+      </form>
+    </div>
+  </div>
+
+  <!--<nav class="navbar navbar-expand-lg navbar-light bg-light1">
     <a class="navbar-brand" href="#">{{data.wallet | uppercase}} Coin</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -35,37 +92,10 @@
         </div>
       </form>
     </div>
-  </nav>
+  </nav>-->
 </div>
 
-<div class="stats">
-  <div class="row">
-    <div class="col-sm">
-      <div class="header-box">
-        <h4>Difficulty</h4>
-        <h6>{{data.stats.difficulty}}</h6>
-      </div>
-    </div>
-    <div class="col-sm mt-3 mt-sm-0">
-      <div class="header-box">
-        <h4>Coin Supply</h4>
-        <h6>{{data.stats.moneysupply}}</h6>
-      </div>
-    </div>
-    <div class="col-md mt-3 mt-md-0">
-      <div class="header-box">
-        <h4>Network</h4>
-        <h6>{{data.stats.hashrate}} (GH/s)</h6>
-      </div>
-    </div>
-    <div class="col-lg mt-3 mt-lg-0">
-      <div class="header-box">
-        <h4>Masternodes</h4>
-        <h6>total: {{data.stats.masternodesCount.total}}, enabled: {{data.stats.masternodesCount.enabled}}</h6>
-      </div>
-    </div>
-  </div>
-</div>
+<info-bar></info-bar>
 
 <div class="d-flex justify-content-center loader" *ngIf="searching">
   <div class="d-table h-100">

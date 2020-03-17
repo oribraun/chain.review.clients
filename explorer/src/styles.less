@@ -1,12 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import (css) url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+@import "config";
+
 html {
   height:100%;
+
   body {
     //background: linear-gradient(to bottom right, #ffffff, rgba(42, 159, 214, .1));
-    background-color: #f3f3f3;
+    background-color: @body-background-color;
     overflow-y: scroll;
+    padding-top: @header-height;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 14px;
   }
 }
+
 .pointer {
   cursor: pointer;
 }
@@ -53,6 +61,7 @@ html {
     vertical-align: top;
     //border-top: 1px solid #dee2e6;
     overflow: hidden;
+    text-overflow: ellipsis;
   }
   .dev-fund {
     a {
@@ -67,6 +76,31 @@ html {
     bottom: 0;
     background: rgba(255,255,255,.5);
     z-index: 1;
+  }
+}
+
+.my-table {
+  border: 1px solid @border-color;
+  background-color: @primary-bg-color;
+
+  .header {
+    background-color: @table-header;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: @primary-font-color;
+    border-bottom: 0 none !important;
+  }
+
+  .my-tr {
+    border-color: @border-color;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .01);
+    }
+  }
+
+  &--no-header {
+      border-top: 0 none !important;
   }
 }
 
@@ -103,4 +137,34 @@ html {
 }
 .force-visibility-hidden {
   visibility: hidden !important;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding-left: 2px;
+  margin-top: 0;
+
+  background-color: transparent;
+  border-bottom: 0 none !important;
+
+  h4 {
+    color: @primary-font-color;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+
+.my-container-xl {
+  box-sizing: content-box;
+}
+
+@media (min-width: 1200px) {
+    .my-container-xl {
+        max-width: 1280px !important;
+        min-width: 1220px;
+    }
 }

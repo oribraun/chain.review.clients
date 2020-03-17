@@ -1,0 +1,35 @@
+<div class="info-bar">
+  <div class="chain-info">
+    <div class="chain-info__logo--{{data.wallet}} chain-info__logo"></div>
+    <div class="chain-info__name">{{data.wallet | uppercase}} Coin</div>
+  </div>
+
+  <div class="stats">
+    <div class="row">
+      <div class="col-sm">
+        <div class="header-box">
+          <h4>Difficulty</h4>
+          <h6>{{data.stats.difficulty | number:'1.0-0'}}</h6>
+        </div>
+      </div>
+      <div class="col-sm mt-3 mt-sm-0">
+        <div class="header-box">
+          <h4>Coin Supply</h4>
+          <h6>{{data.stats.moneysupply | number:'1.0-0'}}</h6>
+        </div>
+      </div>
+      <div class="col-md mt-3 mt-md-0">
+        <div class="header-box">
+          <h4>Network</h4>
+          <h6>{{data.stats.hashrate | number:'1.0-0'}} (GH/s)</h6>
+        </div>
+      </div>
+      <div class="col-lg mt-3 mt-lg-0">
+        <div class="header-box">
+          <h4>Masternodes</h4>
+          <h6>{{data.stats.masternodesCount.total}}/{{data.stats.masternodesCount.enabled}}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -22,6 +22,7 @@ import { PrettyDaysHoursMinutesPipe } from './pipes/prettyDaysHoursMinutes/prett
 import { OrderByPipe } from './pipes/orderBy/order-by.pipe';
 import { MarketComponent } from './components/market/market.component';
 import { ToFixedPipe } from './pipes/toFixed/to-fixed.pipe';
+import { InfoBarComponent } from "./components/header/info-bar/info-bar.component";
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { ToFixedPipe } from './pipes/toFixed/to-fixed.pipe';
     RangePipe,
     PrettyTimePipe,
     HeaderComponent,
+    InfoBarComponent,
     TxComponent,
     BlockComponent,
     AddressComponent,

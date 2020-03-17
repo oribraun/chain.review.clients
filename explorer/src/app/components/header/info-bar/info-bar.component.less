@@ -1,0 +1,112 @@
+@import "../../../../config";
+
+.info-bar {
+  background: @primary-bg-color;
+  border: 1px solid @border-color;
+  border-radius: @border-radius;
+  padding: 8px 16px;
+  margin: 24px 0;
+
+  display: flex;
+
+  .chain-info {
+      flex: 0 0 auto;
+  }
+
+  .stats {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+
+    padding: 8px 0 0 32px;
+
+    h4 {
+        font-size: 12px;
+        order: 2;
+    }
+    h6 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 0;
+        order: 1;
+    }
+
+    .row {
+        flex: 1 1 auto;
+    }
+
+    .row > div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .row > div:not(:first-child)::before {
+        position: absolute;
+        left: 0;
+        top: 12px;
+        bottom: 12px;
+        border-left: 1px solid rgba(0, 0, 0, .1);
+        content: "";
+    }
+
+    .header-box {
+      display: flex;
+      flex-direction: column;
+      padding: 8px !important;
+      text-align: left;
+
+      background-color: transparent !important;
+      border: 0 none !important;
+      box-shadow: none !important;
+      position:  relative;
+    }
+
+    .header-box h4 {
+      text-transform: uppercase;
+    }
+  }
+
+  .chain-price-graph {
+      flex: 0 0 auto;
+      width: 400px;
+      min-height: 100px !important;
+      max-height: 100px;
+  }
+}
+
+.chain-info {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.chain-info__logo {
+  display: inline-flex;
+  height: 32px;
+  width: 32px;
+  margin-right: 8px;
+
+  &--fix {
+    background: url(../assets/fix.svg);
+  }
+
+  &--dogec {
+    background: url(../assets/dogec.svg);
+  }
+
+  &--stream {
+    background: url(../assets/stream.svg);
+  }
+
+  &--trittium {
+    background: url(../assets/trtt.svg);
+  }
+
+  &--twins {
+    background: url(../assets/twins.svg);
+  }
+}
+
+.chain-info__name {
+    font-size: 1.25rem;
+}
