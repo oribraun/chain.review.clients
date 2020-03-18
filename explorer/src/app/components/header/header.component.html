@@ -1,50 +1,32 @@
 <div class="wrapper">
-  <div class="app-header my-container-xl">
-    <div class="app-header__left">
-      <a class="app-header__logo"></a>
-      <div class="app-header__divider"></div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="app-header__logo"></a>
+    <div class="app-header__divider"></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="app-header__menu header-menu">
-        <a href="#"
-          [routerLink]="'/'"
-          [routerLinkActive]="'header-menu__item--active'"
-          [routerLinkActiveOptions]="{exact:true}"
-          class="header-menu__item"
-        >Explorer</a>
-        <a href="#"
-          [routerLink]="'/richlist'"
-          [routerLinkActive]="'header-menu__item--active'"
-          [routerLinkActiveOptions]="{exact:true}"
-          class="header-menu__item"
-        >Richlist</a>
-        <a href="#"
-          [routerLink]="'/masternodes'"
-          [routerLinkActive]="'header-menu__item--active'"
-          [routerLinkActiveOptions]="{exact:true}"
-          class="header-menu__item"
-        >Masternodes</a>
-        <a href="#"
-          [routerLink]="'/movement'"
-          [routerLinkActive]="'header-menu__item--active'"
-          [routerLinkActiveOptions]="{exact:true}"
-          class="header-menu__item"
-        >Movement</a>
-        <a href="#"
-          [routerLink]="'/api'"
-          [routerLinkActive]="'header-menu__item--active'"
-          [routerLinkActiveOptions]="{exact:true}"
-          class="header-menu__item"
-        >Api</a>
-        <a href="#"
-          [routerLink]="'/market'"
-          [routerLinkActive]="'header-menu__item--active'"
-          [routerLinkActiveOptions]="{exact:true}"
-          class="header-menu__item"
-        >Market</a>
-      </div>
-    </div>
-
-    <div class="app-header__right">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="header-menu__item" href="#" [routerLink]="'/'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Explorer</a>
+        </li>
+        <li data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="header-menu__item" href="#" [routerLink]="'/richlist'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Richlist</a>
+        </li>
+        <li data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="header-menu__item" href="#" [routerLink]="'/masternodes'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Masternodes</a>
+        </li>
+        <li data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="header-menu__item" href="#" [routerLink]="'/movement'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Movement</a>
+        </li>
+        <li data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="header-menu__item" href="#" [routerLink]="'/api'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Api</a>
+        </li>
+        <li [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:false}" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="header-menu__item" href="#" [routerLink]="'/market'">Market</a>
+        </li>
+      </ul>
       <form class="header-search app-header__search" (ngSubmit)="onSearch()">
         <input class="header-search__input"
                type="text"
@@ -52,47 +34,10 @@
                placeholder="Search block height, block hash, tx hash or address"
                [(ngModel)]="search"
         />
+        <button class="header-search__button input-group-text" type="submit"><span class="fa fa-search form-control-feedback"></span></button>
       </form>
     </div>
-  </div>
-
-  <!--<nav class="navbar navbar-expand-lg navbar-light bg-light1">
-    <a class="navbar-brand" href="#">{{data.wallet | uppercase}} Coin</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" href="#" [routerLink]="'/'">Explorer</a>
-        </li>
-        <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" href="#" [routerLink]="'/richlist'">Richlist</a>
-        </li>
-        <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" href="#" [routerLink]="'/masternodes'">Masternodes</a>
-        </li>
-        <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" href="#" [routerLink]="'/movement'">Movement</a>
-        </li>
-        <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" href="#" [routerLink]="'/api'">Api</a>
-        </li>
-        <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:false}" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" href="#" [routerLink]="'/market'">Market</a>
-        </li>
-      </ul>
-      <form class="form search my-2 my-lg-0" (ngSubmit)="onSearch()">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search block height, block hash, tx hash or address" name="main-search" [(ngModel)]="search">
-          <div class="input-group-append">
-            <button class="input-group-text" type="submit" id="basic-addon1"><span class="fa fa-search form-control-feedback"></span></button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </nav>-->
+  </nav>
 </div>
 
 <info-bar></info-bar>

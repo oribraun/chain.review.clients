@@ -90,10 +90,10 @@
     padding-right:0;
     padding-left:0;
     padding-bottom: 0;
-    background-color: #f3f3f3;
-    @media(max-width: 992px) {
-
-    }
+    background-color: #fff;
+    height: 50px;
+    max-width: 1280px;
+    margin: 0 auto;
   }
 }
 .stats {
@@ -119,6 +119,31 @@
     z-index: 100;
 }
 
+#navbarSupportedContent {
+  background-color: @primary-bg-color;
+
+  @media (max-width: 992px) {
+    & {
+      border-bottom: 1px solid @border-color;
+      margin-top: 8px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-toggler {
+    margin-right: 15px;
+  }
+
+  .navbar-nav {
+    padding-left: 15px;
+
+    li {
+      margin: 4px 0;
+    }
+  }
+}
+
 .app-header {
   display: flex;
   align-items: center;
@@ -138,6 +163,12 @@
     height: 32px;
     width: 32px;
     margin-right: 8px;
+
+    @media (max-width: 992px) {
+      & {
+        margin-left: 15px;
+      }
+    }
   }
 
   &__divider {
@@ -147,6 +178,12 @@
     margin-right: 16px;
     margin-top: 4px;
     background-color: @border-color;
+
+    @media (max-width: 992px) {
+      & {
+        display: none;
+      }
+    }
   }
 
   &__search {
@@ -160,6 +197,7 @@
   align-content: center;
 
   &__item {
+    display: inline-flex;
     border: 1px solid @menu-button-border-regular;
     background-color: @menu-button-bg-regular;
     color: @primary-font-color;
@@ -184,7 +222,12 @@
 }
 
 .header-search {
+  display: flex;
+  flex-direction: row;
+
   &__input {
+    flex: 1 1 auto;
+
     border-radius: 4px;
     height: 32px;
     padding: 0 12px;
@@ -194,13 +237,24 @@
     border: 1px solid @border-color;
     color: @primary-font-color;
     outline: 0;
+
+    &:focus {
+      border-color: #238bec;
+    }
+
+    &::placeholder {
+      color: #cccccc;
+    }
   }
 
-  &__input:focus {
-    border-color: #238bec;
+  &__button {
+    flex: 0 0 auto;
+    margin-left: 8px;
   }
 
-  &__input::placeholder {
-    color: #cccccc;
+  @media (max-width: 992px) {
+    & {
+      padding: 12px 15px;
+    }
   }
 }

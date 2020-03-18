@@ -8,105 +8,154 @@
   margin: 24px 0;
 
   display: flex;
+  align-items: center;
 
-  .chain-info {
-      flex: 0 0 auto;
+  &__chart {
+    flex: 0 0 auto;
+    width: 400px;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 100px;
   }
 
-  .stats {
+  &__chain-info {
+    flex: 0 0 auto;
+  }
+
+  &__stats {
     flex: 1 1 auto;
     display: flex;
     align-items: center;
 
-    padding: 8px 0 0 32px;
+    padding-left: 16px;
+  }
+}
 
-    h4 {
-        font-size: 12px;
-        order: 2;
-    }
-    h6 {
-        font-size: 16px;
-        font-weight: 600;
-        margin-bottom: 0;
-        order: 1;
-    }
-
-    .row {
-        flex: 1 1 auto;
-    }
-
-    .row > div {
-        display: flex;
-        justify-content: center;
-    }
-
-    .row > div:not(:first-child)::before {
-        position: absolute;
-        left: 0;
-        top: 12px;
-        bottom: 12px;
-        border-left: 1px solid rgba(0, 0, 0, .1);
-        content: "";
-    }
-
-    .header-box {
-      display: flex;
-      flex-direction: column;
-      padding: 8px !important;
-      text-align: left;
-
-      background-color: transparent !important;
-      border: 0 none !important;
-      box-shadow: none !important;
-      position:  relative;
-    }
-
-    .header-box h4 {
-      text-transform: uppercase;
-    }
+.stats {
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    width: 100%;
   }
 
-  .chain-price-graph {
-      flex: 0 0 auto;
-      width: 400px;
-      min-height: 100px !important;
-      max-height: 100px;
+  &__label {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__number {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:  relative;
+
+    padding: 8px 24px;
+    text-align: left;
+
+    &:not(:first-child)::before {
+      position: absolute;
+      left: 0;
+      top: 12px;
+      bottom: 12px;
+      border-left: 1px solid rgba(0, 0, 0, .1);
+      content: "";
+    }
   }
 }
 
 .chain-info {
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-}
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
 
-.chain-info__logo {
-  display: inline-flex;
-  height: 32px;
-  width: 32px;
-  margin-right: 8px;
+  &__logo {
+    display: inline-flex;
+    height: 32px;
+    width: 32px;
+    margin-right: 8px;
 
-  &--fix {
-    background: url(../assets/fix.svg);
+    &--fix {
+      background: url(../assets/fix.svg);
+    }
+
+    &--dogecash {
+      background: url(../assets/dogec.svg);
+    }
+
+    &--stream {
+      background: url(../assets/stream.svg);
+    }
+
+    &--trittium {
+      background: url(../assets/trtt.svg);
+    }
+
+    &--twins {
+      background: url(../assets/twins.svg);
+    }
   }
 
-  &--dogecash {
-    background: url(../assets/dogec.svg);
-  }
-
-  &--stream {
-    background: url(../assets/stream.svg);
-  }
-
-  &--trittium {
-    background: url(../assets/trtt.svg);
-  }
-
-  &--twins {
-    background: url(../assets/twins.svg);
-  }
-}
-
-.chain-info__name {
+  &__name {
     font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 1240px) {
+  .stats {
+    &__row {
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: repeat(2, 50%);
+    }
+
+    &__box:nth-child(even) {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &__box:nth-child(odd) {
+      align-items: flex-end;
+      text-align: right;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .info-bar {
+    flex-direction: column;
+  }
+
+  .stats {
+    &__row {
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: repeat(2, 50%);
+    }
+
+    &__box:nth-child(even) {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &__box:nth-child(odd) {
+      align-items: flex-end;
+      text-align: right;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
 }
