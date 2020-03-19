@@ -8,7 +8,7 @@ declare var DATA: any;
   styleUrls: ['./info-bar.component.less']
 })
 export class InfoBarComponent implements OnInit {
-  public data = {};
+  public data: any = {};
 
   ngOnInit() {
     let data: any = {};
