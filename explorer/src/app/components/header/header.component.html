@@ -23,8 +23,8 @@
         <li data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="header-menu__item" href="#" [routerLink]="'/api'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Api</a>
         </li>
-        <li [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:false}" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="header-menu__item" href="#" [routerLink]="'/market'">Market</a>
+        <li data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="header-menu__item" href="#"  [routerLink]="'/market'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:false}">Market</a>
         </li>
       </ul>
       <form class="header-search app-header__search" (ngSubmit)="onSearch()">
