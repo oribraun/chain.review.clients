@@ -87,13 +87,12 @@
     top: 0;
     left: 0;
     right: 0;
-    padding-right:0;
-    padding-left:0;
-    padding-bottom: 0;
     background-color: #fff;
     height: 50px;
     max-width: 1280px;
     margin: 0 auto;
+    padding: 5px 15px;
+    margin-top: 3px;
   }
 }
 .stats {
@@ -256,5 +255,28 @@
     & {
       padding: 12px 15px;
     }
+  }
+}
+
+@media (min-width: 1056px) {
+  .my-navbar-expand {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+  }
+  .my-navbar-expand .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+  }
+  .my-navbar-expand .navbar-toggler {
+    display: none;
+  }
+  .my-navbar-expand .my-navbar-collapse {
+    display: -webkit-box !important;
+    display: flex !important;
+    flex-basis: auto;
   }
 }
