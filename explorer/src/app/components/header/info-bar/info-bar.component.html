@@ -1,7 +1,7 @@
 <div class="info-bar">
   <div class="info-bar__chain-info chain-info">
     <div class="chain-info__logo--{{data.wallet}} chain-info__logo"></div>
-    <div class="chain-info__name">{{data.wallet | uppercase}} Coin</div>
+    <div class="chain-info__name">{{data.wallet.replace('dogecash', 'dogec') | uppercase}} Coin</div>
   </div>
 
   <div class="info-bar__stats stats">
