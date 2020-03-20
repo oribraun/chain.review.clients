@@ -24,6 +24,7 @@ import { MarketComponent } from './components/market/market.component';
 import { ToFixedPipe } from './pipes/toFixed/to-fixed.pipe';
 import { InfoBarComponent } from "./components/header/info-bar/info-bar.component";
 import { HeaderChartComponent } from "./components/header/chart/chart.component";
+import { MaxAfterDotPipe } from './pipes/maxAfterDot/max-after-dot.pipe';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { HeaderChartComponent } from "./components/header/chart/chart.component"
     OrderByPipe,
     MarketComponent,
     ToFixedPipe,
+    MaxAfterDotPipe,
   ],
   imports: [
     BrowserModule,

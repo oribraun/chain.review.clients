@@ -25,6 +25,7 @@ import { MarketComponent } from './components/market/market.component';
 import { ToFixedPipe } from './pipes/toFixed/to-fixed.pipe';
 import { InfoBarComponent } from "./components/header/info-bar/info-bar.component";
 import { HeaderChartComponent } from "./components/header/chart/chart.component";
+import { MaxAfterDotPipe } from './pipes/maxAfterDot/max-after-dot.pipe';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { HeaderChartComponent } from "./components/header/chart/chart.component"
     PrettyDaysHoursMinutesPipe,
     OrderByPipe,
     MarketComponent,
-    ToFixedPipe
+    ToFixedPipe,
+    MaxAfterDotPipe
   ],
   imports: [
     BrowserModule,

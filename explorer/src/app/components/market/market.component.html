@@ -53,15 +53,17 @@
       <div class="my-table">
         <div class="header">
           <div class="row">
-            <div class="col-7 col-sm-8 col-md-9 col-lg-10 col-xl-10 my-th">Price</div>
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-th">Qty</div>
+            <div class="col-7 col-sm-7 col-md-4 col-lg-5 col-xl-5 my-th">Price({{currentFromCoin}})</div>
+            <div class="col-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 my-th">Qty({{currentToCoin}})</div>
+            <div class="d-none d-md-block col-7 col-sm-8 col-md-4 col-lg-3 col-xl-3 my-th">Total({{currentFromCoin}})</div>
           </div>
         </div>
         <div class="body">
           <div class="my-tr" *ngFor="let bid of market.bids">
             <div class="row">
-              <div class="col-7 col-sm-8 col-md-9 col-lg-10 col-xl-10 my-td" [innerHtml]="(bid[0] / 1).toFixed(8)"></div>
-              <div class="col-5 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-td" [innerHtml]="bid[1]"></div>
+              <div class="col-7 col-sm-7 col-md-4 col-lg-5 col-xl-5 my-td" [innerHtml]="(bid[0] / 1).toFixed(8)"></div>
+              <div class="col-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 my-td" [innerHtml]="bid[1]"></div>
+              <div class="d-none d-md-block col-7 col-sm-8 col-md-4 col-lg-3 col-xl-3 my-td" [innerHtml]="(bid[0] * bid[1]) | maxAfterDot:8"></div>
             </div>
           </div>
         </div>
@@ -72,15 +74,17 @@
       <div class="my-table">
         <div class="header">
           <div class="row">
-            <div class="col-7 col-sm-8 col-md-9 col-lg-10 col-xl-10 my-th">Price</div>
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-th">Qty</div>
+            <div class="col-7 col-sm-7 col-md-4 col-lg-5 col-xl-5 my-th">Price({{currentFromCoin}})</div>
+            <div class="col-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 my-th">Qty({{currentToCoin}})</div>
+            <div class="d-none d-md-block col-7 col-sm-8 col-md-4 col-lg-3 col-xl-3 my-th">Total({{currentFromCoin}})</div>
           </div>
         </div>
         <div class="body">
           <div class="my-tr" *ngFor="let ask of market.asks">
             <div class="row">
-              <div class="col-7 col-sm-8 col-md-9 col-lg-10 col-xl-10 my-td" [innerHtml]="(ask[0] / 1).toFixed(8)"></div>
-              <div class="col-5 col-sm-4 col-md-3 col-lg-2 col-xl-2 my-td" [innerHtml]="ask[1]"></div>
+              <div class="col-7 col-sm-7 col-md-4 col-lg-5 col-xl-5 my-td" [innerHtml]="(ask[0] / 1).toFixed(8)"></div>
+              <div class="col-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 my-td" [innerHtml]="ask[1]"></div>
+              <div class="d-none d-md-block col-7 col-sm-8 col-md-4 col-lg-3 col-xl-3 my-td" [innerHtml]="(ask[0] * ask[1]) | maxAfterDot:8"></div>
             </div>
           </div>
         </div>

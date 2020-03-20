@@ -12,6 +12,8 @@ export class MarketComponent implements OnInit {
 
   public data;
   public currentSymbol: string = '';
+  public currentFromCoin: string = '';
+  public currentToCoin: string = '';
   public market: any;
   public avaliableMarkets: any;
   public gettingAvailableMarkets: boolean = false;
@@ -26,6 +28,9 @@ export class MarketComponent implements OnInit {
     this.router = router;
     this.route.params.subscribe(params => {
       this.currentSymbol = params['symbol'];
+      const coins = this.currentSymbol.split('_');
+      this.currentFromCoin = coins[0];
+      this.currentToCoin = coins[1];
       if(this.avaliableMarkets) {
         this.getMarket();
       }
