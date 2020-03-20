@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute, Router} from "@angular/router";
+import {MaxAfterDotPipe} from "../../pipes/maxAfterDot/max-after-dot.pipe";
 
 declare var DATA: any;
 @Component({
@@ -22,15 +23,18 @@ export class MarketComponent implements OnInit {
   private http: HttpClient;
   private route: ActivatedRoute;
   private router: Router;
+  private maxAfterDotPipe: MaxAfterDotPipe = new MaxAfterDotPipe();
   constructor(http: HttpClient, route: ActivatedRoute, router: Router) {
     this.http = http;
     this.route = route;
     this.router = router;
     this.route.params.subscribe(params => {
       this.currentSymbol = params['symbol'];
-      const coins = this.currentSymbol.split('_');
-      this.currentFromCoin = coins[0];
-      this.currentToCoin = coins[1];
+      if(this.currentSymbol) {
+        const coins = this.currentSymbol.split('_');
+        this.currentFromCoin = coins[1];
+        this.currentToCoin = coins[0];
+      }
       if(this.avaliableMarkets) {
         this.getMarket();
       }
@@ -100,6 +104,39 @@ export class MarketComponent implements OnInit {
 
   fixPrice(price) {
     return parseFloat(price).toFixed(8);
+  }
+
+  setTotal(price) {
+    var res;
+      if(this.currentFromCoin === 'BTC') {
+        res = this.maxAfterDotPipe.transform(price, 8);
+      }
+      else {
+        res = parseFloat(this.maxAfterDotPipe.transform(price, 2)).toFixed(2);
+      }
+    return res;
+  }
+  setPrice(total) {
+    var res;
+    if(this.currentFromCoin === 'BTC') {
+      res = this.maxAfterDotPipe.transform(total, 8);
+    }
+    else if(this.currentFromCoin === 'XEM' || this.currentFromCoin === 'DOGEC' || this.currentFromCoin === 'STREAM') {
+      res = parseFloat(this.maxAfterDotPipe.transform(total, 8)).toFixed(8);
+    }
+    else if(this.currentFromCoin === 'TWINS') {
+      res = parseFloat(this.maxAfterDotPipe.transform(total, 4)).toFixed(4);
+    }
+    else if(this.currentFromCoin === 'FIX') {
+      res = parseFloat(this.maxAfterDotPipe.transform(total, 8));
+      if(res < 1) {
+        res = res.toFixed(8);
+      }
+    }
+    else {
+      res = parseFloat(this.maxAfterDotPipe.transform(total, 2)).toFixed(2);
+    }
+    return res;
   }
 
 }
