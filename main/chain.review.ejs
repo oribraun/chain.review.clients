@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="main/style.css">
 </head>
 <body>
-<div class="container">
+<div class="container-xl">
     <nav class="navbar navbar-light">
         <a class="navbar-brand" href="#">
             <img src="https://new.capital/exchange/img/new/small_logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -21,8 +21,8 @@
         <div class="header d-none d-sm-block">
             <div class="row">
                 <div class="col-sm-2 my-th">Wallet</div>
-                <div class="col-sm-4 my-th">Explorer</div>
-                <div class="col-sm-4 my-th">Last Block</div>
+                <div class="col-sm-5 my-th">Explorer</div>
+                <div class="col-sm-3 my-th">Last Block</div>
                 <div class="col-sm-2 my-th">Masternodes</div>
             </div>
         </div>
@@ -34,13 +34,13 @@
                             <span class="label font-weight-bold d-sm-none">Wallet:&nbsp;</span>
                             <span class=""><%= data[i].wallet %></span>
                         </div>
-                        <div class="col-sm-4 my-td">
+                        <div class="col-sm-5 my-td">
                             <span class="label font-weight-bold d-sm-none">Explorer:&nbsp;</span>
                             <span class="">
                                 <a target="_blank" href="<%= data[i].explorer %>"><%= data[i].explorer %></a>
                             </span>
                         </div>
-                        <div class="col-sm-4 my-td">
+                        <div class="col-sm-3 my-td">
                             <span class="label font-weight-bold d-sm-none">Last Block:&nbsp;</span>
                             <span class="">
                                 <%= data[i].stats.last_block %>
