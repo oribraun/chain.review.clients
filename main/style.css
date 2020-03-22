@@ -49,6 +49,7 @@ html body {
   padding: .75rem;
   vertical-align: top;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 .my-table .dev-fund a {
   color: #74bd00;

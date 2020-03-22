@@ -109,7 +109,7 @@ export class MarketComponent implements OnInit {
   setTotal(price) {
     var res;
       if(this.currentFromCoin === 'BTC') {
-        res = this.maxAfterDotPipe.transform(price, 8);
+        res = parseFloat(this.maxAfterDotPipe.transform(price, 8)).toFixed(8);
       }
       else {
         res = parseFloat(this.maxAfterDotPipe.transform(price, 2)).toFixed(2);
@@ -119,7 +119,7 @@ export class MarketComponent implements OnInit {
   setPrice(total) {
     var res;
     if(this.currentFromCoin === 'BTC') {
-      res = this.maxAfterDotPipe.transform(total, 8);
+      res = parseFloat(this.maxAfterDotPipe.transform(total, 8)).toFixed(8);
     }
     else if(this.currentFromCoin === 'XEM' || this.currentFromCoin === 'DOGEC' || this.currentFromCoin === 'STREAM') {
       res = parseFloat(this.maxAfterDotPipe.transform(total, 8)).toFixed(8);
