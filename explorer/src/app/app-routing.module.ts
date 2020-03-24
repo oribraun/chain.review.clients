@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'address/:address', component: AddressComponent },
   { path: 'richlist', component: RichlistComponent },
   { path: 'masternodes', component: MasternodesComponent },
-  { path: 'movement', component: MovementComponent },
+  { path: 'transactions', component: MovementComponent },
   { path: 'api', component: ApiComponent },
   { path: 'market', component: MarketComponent },
   { path: 'market/:symbol', component: MarketComponent },
