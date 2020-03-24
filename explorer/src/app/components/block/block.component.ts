@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute, Router} from "@angular/router";
+import {Title} from "@angular/platform-browser";
 
 declare var DATA: any;
 @Component({
@@ -19,10 +20,12 @@ export class BlockComponent implements OnInit {
   private http: HttpClient;
   private route: ActivatedRoute;
   private router: Router;
-  constructor(http: HttpClient, route: ActivatedRoute, router: Router) {
+  private titleService: Title;
+  constructor(http: HttpClient, route: ActivatedRoute, router: Router, titleService: Title) {
     this.http = http;
     this.route = route;
     this.router = router;
+    this.titleService = titleService;
     let data: any = {}; /// from server node ejs data
     if (typeof (<any>window).DATA !== "undefined") {
       data = (<any>window).DATA;
@@ -36,16 +39,18 @@ export class BlockComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
   getBlock() {
     this.gettingBlockTxs = true;
-    let url = window.location.origin + '/api/db/' + this.data.wallet + '/getBlockTxsByHash/' + this.hash;
+    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getBlockTxsByHash/' + this.hash;
     console.log('url', url)
     this.http.get(url).subscribe(
       (response: any) => {
         if(!response.err) {
           this.block = response.data.block;
+          this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Block ' + this.block.height + ' | Chain Review' );
           this.blockTxs = response.data.txs;
           console.log('this.blockTxs', this.blockTxs)
         } else {

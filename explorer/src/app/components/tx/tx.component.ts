@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute, Router} from "@angular/router";
+import {Title} from "@angular/platform-browser";
 
 declare var DATA: any;
 @Component({
@@ -18,10 +19,12 @@ export class TxComponent implements OnInit {
   private http: HttpClient;
   private route: ActivatedRoute;
   private router: Router;
-  constructor(http: HttpClient, route: ActivatedRoute, router: Router) {
+  private titleService: Title;
+  constructor(http: HttpClient, route: ActivatedRoute, router: Router, titleService: Title) {
     this.http = http;
     this.route = route;
     this.router = router;
+    this.titleService = titleService;
     let data: any = {}; /// from server node ejs data
     if (typeof (<any>window).DATA !== "undefined") {
       data = (<any>window).DATA;
@@ -39,12 +42,13 @@ export class TxComponent implements OnInit {
 
   getTxDetails() {
     this.gettingTx = true;
-    let url = window.location.origin + '/api/db/' + this.data.wallet + '/getTxDetails/' + this.hash;
+    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getTxDetails/' + this.hash;
     console.log('url', url)
     this.http.get(url).subscribe(
       (response: any) => {
         if(!response.err) {
           this.tx = response.data;
+          this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Tx ' + this.tx.txid + ' | Chain Review' );
         } else {
           this.router.navigateByUrl('/');
         }

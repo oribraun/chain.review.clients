@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute, Router} from "@angular/router";
 import {MaxAfterDotPipe} from "../../pipes/maxAfterDot/max-after-dot.pipe";
+import {Title} from "@angular/platform-browser";
 
 declare var DATA: any;
 @Component({
@@ -24,10 +25,12 @@ export class MarketComponent implements OnInit {
   private route: ActivatedRoute;
   private router: Router;
   private maxAfterDotPipe: MaxAfterDotPipe = new MaxAfterDotPipe();
-  constructor(http: HttpClient, route: ActivatedRoute, router: Router) {
+  private titleService: Title;
+  constructor(http: HttpClient, route: ActivatedRoute, router: Router, titleService: Title) {
     this.http = http;
     this.route = route;
     this.router = router;
+    this.titleService = titleService;
     this.route.params.subscribe(params => {
       this.currentSymbol = params['symbol'];
       if(this.currentSymbol) {
@@ -35,25 +38,25 @@ export class MarketComponent implements OnInit {
         this.currentFromCoin = coins[1];
         this.currentToCoin = coins[0];
       }
+      let data: any = {}; /// from server node ejs data
+      if (typeof (<any>window).DATA !== "undefined") {
+        data = (<any>window).DATA;
+      }
+      this.data = data;
+      this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Market Overview | Chain Review' );
       if(this.avaliableMarkets) {
         this.getMarket();
       }
     });
-
-    let data: any = {}; /// from server node ejs data
-    if (typeof (<any>window).DATA !== "undefined") {
-      data = (<any>window).DATA;
-    }
-    this.data = data;
-    this.getAvaliableMarkets();
   }
 
   ngOnInit() {
+    this.getAvaliableMarkets();
   }
 
   getAvaliableMarkets() {
     this.gettingAvailableMarkets = true;
-    let url = window.location.origin + '/api/db/' + this.data.wallet + '/getAvailableMarkets';
+    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getAvailableMarkets';
     this.http.get(url).subscribe(
       (response: any) => {
         if(!response.err) {
@@ -80,7 +83,7 @@ export class MarketComponent implements OnInit {
   getMarket() {
     this.gettingMarket = true;
     this.market = null;
-    let url = window.location.origin + '/api/db/' + this.data.wallet + '/getMarket/' + this.currentSymbol;
+    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getMarket/' + this.currentSymbol;
     this.http.get(url).subscribe(
       (response: any) => {
         if(!response.err) {

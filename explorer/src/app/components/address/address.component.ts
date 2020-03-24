@@ -1,6 +1,7 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute, Router} from "@angular/router";
+import {Title} from "@angular/platform-browser";
 
 declare var DATA: any;
 @Component({
@@ -33,10 +34,12 @@ export class AddressComponent implements OnInit {
   private http: HttpClient;
   private route: ActivatedRoute;
   private router: Router;
-  constructor(http: HttpClient, route: ActivatedRoute, router: Router) {
+  private titleService: Title;
+  constructor(http: HttpClient, route: ActivatedRoute, router: Router, titleService: Title) {
     this.http = http;
     this.route = route;
     this.router = router;
+    this.titleService = titleService;
     let data: any = {}; /// from server node ejs data
     if (typeof (<any>window).DATA !== "undefined") {
       data = (<any>window).DATA;
@@ -135,7 +138,7 @@ export class AddressComponent implements OnInit {
   getAddressTxList() {
     console.log('this.latestAddressId', this.latestAddressId);
     this.gettingTxs = true;
-    let url = window.location.origin + '/api/db/' + this.data.wallet + '/getAddressTxs';
+    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getAddressTxs';
     console.log('url', url)
     var data = {
       address : this.addr,
@@ -169,12 +172,13 @@ export class AddressComponent implements OnInit {
 
   getAddressDetails() {
     this.gettingAddressDetails = true;
-    let url = window.location.origin + '/api/db/' + this.data.wallet + '/getAddressDetails/' + this.addr;
+    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getAddressDetails/' + this.addr;
     console.log('url', url)
     this.http.get(url).subscribe(
         (response: any) => {
           if(!response.err) {
             this.addressDetails = response.data;
+            this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Address ' + this.addressDetails.address + ' | Chain Review' );
             this.getAddressTxList();
           } else {
             if(response.errMessage === 'no address found') {

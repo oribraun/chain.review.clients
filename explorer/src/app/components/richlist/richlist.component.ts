@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute} from "@angular/router";
+import {Title} from "@angular/platform-browser";
 
 declare var DATA: any;
 declare var $: any;
@@ -23,35 +24,33 @@ export class RichlistComponent implements OnInit {
     e: '',
     total: ''
   };
-  public type: string;
   public gettingRichlist: boolean = false;
   public currentType: string = 'balance';
 
   private http: HttpClient;
   private route: ActivatedRoute;
-  constructor(http: HttpClient, route: ActivatedRoute) {
+  private titleService: Title;
+  constructor(http: HttpClient, route: ActivatedRoute, titleService: Title) {
     this.http = http;
     this.route = route;
+    this.titleService = titleService;
+  }
 
+  ngOnInit() {
     let data: any = {}; /// from server node ejs data
     if (typeof (<any>window).DATA !== "undefined") {
       data = (<any>window).DATA;
     }
     // console.log(data);
     this.data = data;
-    this.route.params.subscribe(params => {
-      this.type = params['type'];
-    });
+    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Addresses | Chain Review' );
     this.getRichlist();
-  }
-
-  ngOnInit() {
   }
 
   getRichlist() {
     this.richlistBalance = [];
     this.gettingRichlist = true;
-    let url = window.location.origin + '/api/db/' + this.data.wallet + '/getRichlist';
+    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getRichlist';
     console.log('url', url)
     this.http.get(url).subscribe(
       (response: any) => {

@@ -1,5 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {Title} from "@angular/platform-browser";
 
 declare var DATA: any;
 @Component({
@@ -33,17 +34,20 @@ export class MovementComponent implements OnInit {
     "high_flag": 10000000 // flagb
   };
   private http: HttpClient;
-  constructor(http: HttpClient) {
+  private titleService: Title;
+  constructor(http: HttpClient, titleService: Title) {
     this.http = http;
-  }
-
-  ngOnInit() {
+    this.titleService = titleService;
     let data: any = {}; /// from server node ejs data
     if (typeof (<any>window).DATA !== "undefined") {
       data = (<any>window).DATA;
     }
     // console.log(data);
     this.data = data;
+    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Transactions | Chain Review' );
+  }
+
+  ngOnInit() {
     this.setCurrentTable();
     this.getTxVinVoutCount();
 
@@ -130,7 +134,7 @@ export class MovementComponent implements OnInit {
 
   getTxVinVoutCount() {
     this.gettingTxVinVoutCount = true;
-    let url = window.location.origin + '/api/db/' + this.data.wallet + '/getTxVinVoutCountWhereTotal';
+    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getTxVinVoutCountWhereTotal';
     console.log('url', url)
     this.http.get(url).subscribe(
       (response: any) => {
@@ -149,7 +153,7 @@ export class MovementComponent implements OnInit {
   }
   getTxs() {
     this.gettingTxs = true;
-    let url = window.location.origin + '/api/db/' + this.data.wallet + '/getAllTxVinVout';
+    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getAllTxVinVout';
     console.log('url', url)
     var data = {
       limit: this.pagination.limit,

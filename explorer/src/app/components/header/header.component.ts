@@ -44,7 +44,7 @@ export class HeaderComponent implements OnInit {
     }
     // console.log('currentHash', currentHash)
     this.searching = true;
-    let url = window.location.origin + '/api/db/' + this.data.wallet + '/search/' + this.search;
+    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/search/' + this.search;
     console.log('url', url);
     $('.navbar-collapse').collapse('hide');
     this.http.get(url).subscribe(
