@@ -117,7 +117,7 @@ export class AnalyticsService {
   // }
 
   static trackPageView() {
-    console.log('ga', ga)
+    // console.log('ga', ga)
     ga('send', {
       hitType: 'pageview',
       page: location.pathname + "/" + location.hash,

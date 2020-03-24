@@ -12,7 +12,7 @@ import {MarketComponent} from "./components/market/market.component";
 
 
 const routes: Routes = [
-  { path: '', component: BlocksComponent },
+  { path: '', component: BlocksComponent, pathMatch: 'full' },
   { path: 'block/:hash', component: BlockComponent },
   { path: 'tx/:hash', component: TxComponent },
   { path: 'address/:address', component: AddressComponent },
