@@ -1,3 +1,15 @@
+.info-bar {
+  background: #fff;
+  border: 1px solid #EAEBF1;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin: 24px 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
 .search {
   .input-group-text {
     cursor: pointer;
@@ -18,13 +30,21 @@
 }
 
 .box {
-  font-size: 1em;
+  font-size: 1.145em;
   text-align: center;
   .header {
-    color: rgb(153, 153, 153);
+    font-weight: 600;
   }
   .amount {
     color: rgb(153, 153, 153);
+  }
+  &:not(.box-no-border)::before {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    content: "";
   }
 }
 
