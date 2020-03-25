@@ -36,6 +36,7 @@ export class BlockComponent implements OnInit {
       this.hash = params['hash'];
       this.getBlock();
     });
+    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Block ' + this.hash + ' | Chain Review' );
   }
 
   ngOnInit() {

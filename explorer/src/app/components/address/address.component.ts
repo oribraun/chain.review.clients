@@ -51,6 +51,7 @@ export class AddressComponent implements OnInit {
       this.setCurrentTable();
       this.getAddressDetails();
     });
+    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Address ' + this.addr + ' | Chain Review' );
   }
 
   ngOnInit() {

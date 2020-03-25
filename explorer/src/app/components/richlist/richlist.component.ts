@@ -34,9 +34,6 @@ export class RichlistComponent implements OnInit {
     this.http = http;
     this.route = route;
     this.titleService = titleService;
-  }
-
-  ngOnInit() {
     let data: any = {}; /// from server node ejs data
     if (typeof (<any>window).DATA !== "undefined") {
       data = (<any>window).DATA;
@@ -44,6 +41,9 @@ export class RichlistComponent implements OnInit {
     // console.log(data);
     this.data = data;
     this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Addresses | Chain Review' );
+  }
+
+  ngOnInit() {
     this.getRichlist();
   }
 

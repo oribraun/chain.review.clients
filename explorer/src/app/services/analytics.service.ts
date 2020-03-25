@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from './../../environments/environment';
 import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {NavigationEnd, NavigationStart, Router} from "@angular/router";
+import {Title} from "@angular/platform-browser";
 
 declare var ga: any;
 @Injectable({
@@ -13,8 +14,9 @@ export class AnalyticsService {
   public analyticsId: string;
   private router: Router;
   private httpClient: HttpClient;
+  private titleService: Title;
   private headers: any;
-  constructor(httpClient: HttpClient, router: Router) {
+  constructor(httpClient: HttpClient, router: Router, titleService: Title) {
     this.headers = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
@@ -28,12 +30,13 @@ export class AnalyticsService {
 
     this.httpClient = httpClient;
     this.router = router;
+    this.titleService = titleService;
     this.analyticsId = environment.analyticsId;
     AnalyticsService.loadGoogleAnalytics2(this.analyticsId);
     router.events.forEach((event) => {
       if(event instanceof NavigationEnd) {
         setTimeout(() => {
-          AnalyticsService.trackPageView();
+          this.trackPageView();
         });
       }
       // NavigationEnd
@@ -116,13 +119,13 @@ export class AnalyticsService {
   //     .subscribe((data: any) => {});
   // }
 
-  static trackPageView() {
+  trackPageView() {
     // console.log('ga', ga)
     ga('send', {
       hitType: 'pageview',
       page: location.pathname + "/" + location.hash,
       location: location.pathname + "/" + location.hash,
-      title: document.title
+      title: this.titleService.getTitle()
     });
   }
 }

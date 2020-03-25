@@ -35,6 +35,7 @@ export class TxComponent implements OnInit {
       this.hash = params['hash'];
       this.getTxDetails();
     });
+    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Tx ' + this.hash + ' | Chain Review' );
   }
 
   ngOnInit() {
