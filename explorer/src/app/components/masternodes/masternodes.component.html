@@ -1,12 +1,18 @@
-<div class="row info-bar" *ngIf="masternodesCollateralCount && masternodes.length">
-  <!--    {{market.market_cap | json}}-->
-  <div class="mt-3 col-12"
-       [ngClass]="('col-sm-' + (masternodesCollateralCount.length >= 4 ? 12/2 : 12/masternodesCollateralCount.length)).replace('.', '-') + (' col-md-' + + 12/masternodesCollateralCount.length).replace('.', '-')"
-       *ngFor="let data of masternodesCollateralCount; let i = index">
-    <div class="box" [ngClass]="{'box-no-border': i == 0}">
-      <div class="text">
-        <div class="header">Collateral: {{data.collateral}}</div>
-        <div class="amount">Nodes: {{data.count}}</div>
+<div *ngIf="masternodesCollateralCount && masternodes.length">
+  <div class="info-bar">
+    <div class="info-bar__chain-info chain-info">
+      <div class="chain-info__logo--{{data.wallet}} chain-info__logo"></div>
+      <div class="chain-info__name">{{data.wallet.replace('dogecash', 'dogec') | uppercase}} Coin</div>
+    </div>
+
+    <div class="info-bar__stats stats">
+      <div class="stats__row">
+        <div class="stats__box" *ngFor="let data of masternodesCollateralCount; let i = index">
+          <div class="stats__content">
+            <div class="stats__number">Collateral: {{data.collateral}}</div>
+            <div class="stats__label">Nodes: {{data.count}}</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,98 +1,156 @@
 <div *ngIf="!gettingAvailableMarkets">
-  <div class="row">
-    <div class="col-12">
-      <ul class="nav nav-tabs">
-        <li class="nav-item" *ngFor="let market of avaliableMarkets">
-          <a class="nav-link pointer" [ngClass]="{'active': currentSymbol === market.symbol}" (click)="setCurrentTable(market.symbol)">{{market.symbol}}</a>
-        </li>
-      </ul>
+<!--  <div class="row">-->
+<!--    <div class="col-12">-->
+<!--      <ul class="nav nav-tabs">-->
+<!--        <li class="nav-item" *ngFor="let market of avaliableMarkets">-->
+<!--          <a class="nav-link pointer" [ngClass]="{'active': currentSymbol === market.symbol}" (click)="setCurrentTable(market.symbol)">{{market.symbol}}</a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="row" *ngIf="market">-->
+<!--&lt;!&ndash;    {{market.market_cap | json}}&ndash;&gt;-->
+<!--    <div class="col-sm-4 mb-3  col-xl-1-8">-->
+<!--      <div class="box">-->
+<!--        <div class="header">LAST PRICE</div>-->
+<!--        <div class="amount">{{market.market_cap.lastPrice}}</div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-sm-4 mb-3  col-xl-1-8">-->
+<!--      <div class="box">-->
+<!--        <div class="header">FIRST PRICE</div>-->
+<!--        <div class="amount">{{market.market_cap.openPrice}}</div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-sm-4 mb-3  col-xl-1-8">-->
+<!--      <div class="box">-->
+<!--        <div class="header">24H CHANGE</div>-->
+<!--        <div class="amount">{{market.market_cap.priceChange}}</div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-sm-4 mb-3  col-xl-1-8">-->
+<!--      <div class="box">-->
+<!--        <div class="header">24H HIGH</div>-->
+<!--        <div class="amount">{{market.market_cap.highPrice}}</div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-sm-4 mb-3  col-xl-1-8">-->
+<!--      <div class="box">-->
+<!--        <div class="header">24H LOW</div>-->
+<!--        <div class="amount">{{market.market_cap.lowPrice}}</div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-sm-4 mb-3  col-xl-3">-->
+<!--      <div class="box">-->
+<!--        <div class="header">24H VOLUME</div>-->
+<!--        <div class="amount">{{market.market_cap.volume}} {{market.market_cap.symbol.split('_')[0]}} / {{market.market_cap.quoteVolume}} {{market.market_cap.symbol.split('_')[1]}}</div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="row" *ngIf="market">-->
+<!--    <div class="col-sm-6">-->
+<!--      <div class="head"><h4>Bids</h4></div>-->
+<!--      <div class="my-table">-->
+<!--        <div class="header">-->
+<!--          <div class="row">-->
+<!--            <div class="col-7 col-sm-7 col-md-4 col-lg-5 col-xl-5 my-th">Price({{currentFromCoin}})</div>-->
+<!--            <div class="col-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 my-th">Amount({{currentToCoin}})</div>-->
+<!--            <div class="d-none d-md-block col-7 col-sm-8 col-md-4 col-lg-3 col-xl-3 my-th">Total({{currentFromCoin}})</div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="body">-->
+<!--          <div class="my-tr" *ngFor="let bid of market.bids">-->
+<!--            <div class="row">-->
+<!--              <div class="col-7 col-sm-7 col-md-4 col-lg-5 col-xl-5 my-td" [innerHtml]="setPrice(bid[0] / 1)"></div>-->
+<!--              <div class="col-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 my-td" [innerHtml]="bid[1]"></div>-->
+<!--              <div class="d-none d-md-block col-7 col-sm-8 col-md-4 col-lg-3 col-xl-3 my-td" [innerHtml]="setTotal(bid[0] * bid[1])"></div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-sm-6">-->
+<!--      <div class="head"><h4>Asks</h4></div>-->
+<!--      <div class="my-table">-->
+<!--        <div class="header">-->
+<!--          <div class="row">-->
+<!--            <div class="col-7 col-sm-7 col-md-4 col-lg-5 col-xl-5 my-th">Price({{currentFromCoin}})</div>-->
+<!--            <div class="col-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 my-th">Amount({{currentToCoin}})</div>-->
+<!--            <div class="d-none d-md-block col-7 col-sm-8 col-md-4 col-lg-3 col-xl-3 my-th">Total({{currentFromCoin}})</div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="body">-->
+<!--          <div class="my-tr" *ngFor="let ask of market.asks">-->
+<!--            <div class="row">-->
+<!--              <div class="col-7 col-sm-7 col-md-4 col-lg-5 col-xl-5 my-td" [innerHtml]="setPrice(ask[0] / 1)"></div>-->
+<!--              <div class="col-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 my-td" [innerHtml]="ask[1]"></div>-->
+<!--              <div class="d-none d-md-block col-7 col-sm-8 col-md-4 col-lg-3 col-xl-3 my-td" [innerHtml]="setTotal(ask[0] * ask[1])"></div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+</div>
+
+<div class="my-table" *ngIf="!gettingAvailableMarkets && !gettingMarketSummary">
+  <div class="header d-none d-lg-block">
+    <div class="row">
+      <div class="col-lg-2-8 col-xl-2-8 my-th" >Market</div>
+      <div class="col-lg-2-5 col-xl-2-5 my-th">Avg Price</div>
+      <div class="col-lg-2-2 col-xl-2-2 my-th">24h Volume</div>
+      <div class="col-lg-2-3 col-xl-2-3 my-th">Sell Liquidity</div>
+      <div class="col-lg-2-2 col-xl-2-2 my-th">Buy Liquidity</div>
     </div>
   </div>
-  <div class="row" *ngIf="market">
-<!--    {{market.market_cap | json}}-->
-    <div class="col-sm-4 mt-sm-3  col-xl-1-8">
-      <div class="box">
-        <div class="header">LAST PRICE</div>
-        <div class="amount">{{market.market_cap.lastPrice}}</div>
-      </div>
-    </div>
-    <div class="col-sm-4 mt-sm-3  col-xl-1-8">
-      <div class="box">
-        <div class="header">FIRST PRICE</div>
-        <div class="amount">{{market.market_cap.openPrice}}</div>
-      </div>
-    </div>
-    <div class="col-sm-4 mt-sm-3  col-xl-1-8">
-      <div class="box">
-        <div class="header">24H CHANGE</div>
-        <div class="amount">{{market.market_cap.priceChange}}</div>
-      </div>
-    </div>
-    <div class="col-sm-4 mt-sm-3  col-xl-1-8">
-      <div class="box">
-        <div class="header">24H HIGH</div>
-        <div class="amount">{{market.market_cap.highPrice}}</div>
-      </div>
-    </div>
-    <div class="col-sm-4 mt-sm-3  col-xl-1-8">
-      <div class="box">
-        <div class="header">24H LOW</div>
-        <div class="amount">{{market.market_cap.lowPrice}}</div>
-      </div>
-    </div>
-    <div class="col-sm-4 mt-sm-3  col-xl-3">
-      <div class="box">
-        <div class="header">24H VOLUME</div>
-        <div class="amount">{{market.market_cap.volume}} {{market.market_cap.symbol.split('_')[0]}} / {{market.market_cap.quoteVolume}} {{market.market_cap.symbol.split('_')[1]}}</div>
-      </div>
-    </div>
-  </div>
-  <div class="row" *ngIf="market">
-    <div class="col-sm-6">
-      <div class="head"><h4>Bids</h4></div>
-      <div class="my-table">
-        <div class="header">
-          <div class="row">
-            <div class="col-7 col-sm-7 col-md-4 col-lg-5 col-xl-5 my-th">Price({{currentFromCoin}})</div>
-            <div class="col-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 my-th">Amount({{currentToCoin}})</div>
-            <div class="d-none d-md-block col-7 col-sm-8 col-md-4 col-lg-3 col-xl-3 my-th">Total({{currentFromCoin}})</div>
-          </div>
+  <div class="body">
+    <div class="my-tr" *ngFor="let market of marketData | keyvalue">
+      <div class="row">
+        <!--        {{(pagination.current - 1) * pagination.limit + i}}-->
+        <div class="col-lg-2-8 col-xl-2-8 my-td text-center text-lg-left font-weight-bold">
+          {{market.key}}
         </div>
-        <div class="body">
-          <div class="my-tr" *ngFor="let bid of market.bids">
-            <div class="row">
-              <div class="col-7 col-sm-7 col-md-4 col-lg-5 col-xl-5 my-td" [innerHtml]="setPrice(bid[0] / 1)"></div>
-              <div class="col-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 my-td" [innerHtml]="bid[1]"></div>
-              <div class="d-none d-md-block col-7 col-sm-8 col-md-4 col-lg-3 col-xl-3 my-td" [innerHtml]="setTotal(bid[0] * bid[1])"></div>
+        <div class="col-lg-2-5 col-xl-2-5 my-td">
+          <span class="d-lg-none my-th">Avg Price:&nbsp;&nbsp;</span>{{market.value.avgPriceBtc}} BTC
+        </div>
+        <div class="col-lg-2-2 col-xl-2-2 my-td">
+          <span class="d-lg-none my-th">24h Volume:&nbsp;&nbsp;</span>{{market.value['24hVolume']}} BTC
+        </div>
+        <div class="col-lg-2-3 col-xl-2-3 my-td my-td-dropdown">
+          <span class="d-lg-none my-th">Sell Liquidity:&nbsp;&nbsp;</span>
+<!--          <select class="select-box" name="" id="">-->
+<!--            <option value="" selected>{{market.value.sellLiquidity}} BTC</option>-->
+<!--            <option value="" *ngFor="let option of market.value.sellLquidityOptions">{{option.fromAmount}} {{option.fromCoin}} / {{option.toAmount}} {{option.toCoin}}</option>-->
+<!--          </select>-->
+          <div class="dropdown my-dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{market.value.sellLiquidity}} BTC
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" *ngFor="let option of market.value.sellLquidityOptions">{{option.fromAmount}} <span class="small">{{option.fromCoin}}-{{option.toCoin}}</span> / {{option.toAmount}} <span class="small">{{option.toMainCoin}}</span></a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="head"><h4>Asks</h4></div>
-      <div class="my-table">
-        <div class="header">
-          <div class="row">
-            <div class="col-7 col-sm-7 col-md-4 col-lg-5 col-xl-5 my-th">Price({{currentFromCoin}})</div>
-            <div class="col-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 my-th">Amount({{currentToCoin}})</div>
-            <div class="d-none d-md-block col-7 col-sm-8 col-md-4 col-lg-3 col-xl-3 my-th">Total({{currentFromCoin}})</div>
-          </div>
-        </div>
-        <div class="body">
-          <div class="my-tr" *ngFor="let ask of market.asks">
-            <div class="row">
-              <div class="col-7 col-sm-7 col-md-4 col-lg-5 col-xl-5 my-td" [innerHtml]="setPrice(ask[0] / 1)"></div>
-              <div class="col-5 col-sm-5 col-md-4 col-lg-4 col-xl-4 my-td" [innerHtml]="ask[1]"></div>
-              <div class="d-none d-md-block col-7 col-sm-8 col-md-4 col-lg-3 col-xl-3 my-td" [innerHtml]="setTotal(ask[0] * ask[1])"></div>
+        <div class="col-lg-2-2 col-xl-2-2 my-td my-td-dropdown">
+          <span class="d-lg-none my-th">Buy Liquidity:&nbsp;&nbsp;</span>
+<!--          <select class="select-box" name="" id="">-->
+<!--            <option value="" selected>{{market.value.buyLiquidity}} BTC</option>-->
+<!--            <option value="" *ngFor="let option of market.value.buyLquidityOptions">{{option.fromAmount}} {{option.fromCoin}} / {{option.toAmount}} {{option.toCoin}}</option>-->
+<!--          </select>-->
+          <div class="dropdown my-dropdown">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{market.value.buyLiquidity}} BTC
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" *ngFor="let option of market.value.buyLquidityOptions">{{option.fromAmount}} <span class="small">{{option.fromCoin}}-{{option.toCoin}}</span> / {{option.toAmount}} <span class="small">{{option.toMainCoin}}</span></a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+<!--      </div>-->
+<!--    </div>-->
   </div>
 </div>
-<div class="d-flex justify-content-center loader" *ngIf="gettingAvailableMarkets || gettingMarket">
+<div class="d-flex justify-content-center loader" *ngIf="gettingAvailableMarkets || gettingMarketSummary">
   <div class="d-table h-100">
     <div class="d-table-cell align-middle">
       <div class="spinner-grow" role="status">

@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'transactions', component: MovementComponent },
   { path: 'api', component: ApiComponent },
   { path: 'market', component: MarketComponent },
-  { path: 'market/:symbol', component: MarketComponent },
+  // { path: 'market/:symbol', component: MarketComponent },
   { path: '**', redirectTo: '' },
   // { path: 'login', component: LoginComponent },
 ];

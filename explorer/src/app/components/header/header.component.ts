@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   public search: string;
   public searching: boolean = false;
   private http: HttpClient;
-  private router: Router;
+  public router: Router;
   constructor(http: HttpClient, router: Router) {
     this.http = http;
     this.router = router;

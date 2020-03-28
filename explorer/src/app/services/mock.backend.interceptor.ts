@@ -6905,6 +6905,1603 @@ var masternodesCollateralCount = {
   ]
 }
 
+var transactionsChart = {
+  "err": 0,
+  "errMessage": "",
+  "data": [
+    {
+      "date": "2020-03-25",
+      "count": 1059,
+      "totalAmountADay": 2602371620813578
+    },
+    {
+      "date": "2020-03-24",
+      "count": 1865,
+      "totalAmountADay": 6887166181420774
+    },
+    {
+      "date": "2020-03-23",
+      "count": 1955,
+      "totalAmountADay": 5580174997642823
+    },
+    {
+      "date": "2020-03-22",
+      "count": 1945,
+      "totalAmountADay": 8182351058664079
+    },
+    {
+      "date": "2020-03-21",
+      "count": 2054,
+      "totalAmountADay": 4279325144161198
+    },
+    {
+      "date": "2020-03-20",
+      "count": 1980,
+      "totalAmountADay": 13159186524069172
+    },
+    {
+      "date": "2020-03-19",
+      "count": 2133,
+      "totalAmountADay": 4851261072203831
+    },
+    {
+      "date": "2020-03-18",
+      "count": 1906,
+      "totalAmountADay": 3571822489963905
+    },
+    {
+      "date": "2020-03-17",
+      "count": 2113,
+      "totalAmountADay": 9377318314697154
+    },
+    {
+      "date": "2020-03-16",
+      "count": 2000,
+      "totalAmountADay": 8367130742656088
+    },
+    {
+      "date": "2020-03-15",
+      "count": 1938,
+      "totalAmountADay": 5058395170929251
+    },
+    {
+      "date": "2020-03-14",
+      "count": 2026,
+      "totalAmountADay": 5570707656544562
+    },
+    {
+      "date": "2020-03-13",
+      "count": 1918,
+      "totalAmountADay": 21033203293703244
+    },
+    {
+      "date": "2020-03-12",
+      "count": 2071,
+      "totalAmountADay": 5053009376052980
+    },
+    {
+      "date": "2020-03-11",
+      "count": 1876,
+      "totalAmountADay": 11576789459179920
+    },
+    {
+      "date": "2020-03-10",
+      "count": 2107,
+      "totalAmountADay": 8195789331792775
+    },
+    {
+      "date": "2020-03-09",
+      "count": 1898,
+      "totalAmountADay": 15283836270898532
+    },
+    {
+      "date": "2020-03-08",
+      "count": 1950,
+      "totalAmountADay": 4112915760476707
+    },
+    {
+      "date": "2020-03-07",
+      "count": 1902,
+      "totalAmountADay": 4102223042699172
+    },
+    {
+      "date": "2020-03-06",
+      "count": 2005,
+      "totalAmountADay": 3726296624169694
+    },
+    {
+      "date": "2020-03-05",
+      "count": 1885,
+      "totalAmountADay": 3417569859872840
+    },
+    {
+      "date": "2020-03-04",
+      "count": 1964,
+      "totalAmountADay": 3384783818313802
+    },
+    {
+      "date": "2020-03-03",
+      "count": 1589,
+      "totalAmountADay": 2687719051537169
+    },
+    {
+      "date": "2020-03-02",
+      "count": 1550,
+      "totalAmountADay": 4548296132251057
+    },
+    {
+      "date": "2020-03-01",
+      "count": 1629,
+      "totalAmountADay": 5251422270583342
+    },
+    {
+      "date": "2020-02-29",
+      "count": 1695,
+      "totalAmountADay": 7177936783767624
+    },
+    {
+      "date": "2020-02-28",
+      "count": 1563,
+      "totalAmountADay": 3368948771635306
+    },
+    {
+      "date": "2020-02-27",
+      "count": 1556,
+      "totalAmountADay": 4116419349500247
+    },
+    {
+      "date": "2020-02-26",
+      "count": 1593,
+      "totalAmountADay": 3472596355927487
+    },
+    {
+      "date": "2020-02-25",
+      "count": 1614,
+      "totalAmountADay": 5090860291399086
+    },
+    {
+      "date": "2020-02-24",
+      "count": 1591,
+      "totalAmountADay": 2492729255967395
+    },
+    {
+      "date": "2020-02-23",
+      "count": 1578,
+      "totalAmountADay": 2431427869276970
+    },
+    {
+      "date": "2020-02-22",
+      "count": 1595,
+      "totalAmountADay": 16054123044046704
+    },
+    {
+      "date": "2020-02-21",
+      "count": 1617,
+      "totalAmountADay": 4086134758375527
+    },
+    {
+      "date": "2020-02-20",
+      "count": 1609,
+      "totalAmountADay": 5073381593160587
+    },
+    {
+      "date": "2020-02-19",
+      "count": 1574,
+      "totalAmountADay": 3094014275175155
+    },
+    {
+      "date": "2020-02-18",
+      "count": 1556,
+      "totalAmountADay": 3759793069369379
+    },
+    {
+      "date": "2020-02-17",
+      "count": 1587,
+      "totalAmountADay": 6057209921440162
+    },
+    {
+      "date": "2020-02-16",
+      "count": 1562,
+      "totalAmountADay": 3390192073981735
+    },
+    {
+      "date": "2020-02-15",
+      "count": 1604,
+      "totalAmountADay": 12275910114532604
+    },
+    {
+      "date": "2020-02-14",
+      "count": 1709,
+      "totalAmountADay": 16138314839491850
+    },
+    {
+      "date": "2020-02-13",
+      "count": 1706,
+      "totalAmountADay": 9441348527516744
+    },
+    {
+      "date": "2020-02-12",
+      "count": 1670,
+      "totalAmountADay": 15784253601070662
+    },
+    {
+      "date": "2020-02-11",
+      "count": 1791,
+      "totalAmountADay": 25894722819479904
+    },
+    {
+      "date": "2020-02-10",
+      "count": 1658,
+      "totalAmountADay": 7577552743947136
+    },
+    {
+      "date": "2020-02-09",
+      "count": 1637,
+      "totalAmountADay": 4138251234839945
+    },
+    {
+      "date": "2020-02-08",
+      "count": 1615,
+      "totalAmountADay": 5655500042469384
+    },
+    {
+      "date": "2020-02-07",
+      "count": 1910,
+      "totalAmountADay": 8625775662213015
+    },
+    {
+      "date": "2020-02-06",
+      "count": 1990,
+      "totalAmountADay": 4553175315210318
+    },
+    {
+      "date": "2020-02-05",
+      "count": 2038,
+      "totalAmountADay": 8200444310685531
+    },
+    {
+      "date": "2020-02-04",
+      "count": 1973,
+      "totalAmountADay": 4102547235972027
+    },
+    {
+      "date": "2020-02-03",
+      "count": 1784,
+      "totalAmountADay": 6977487274187937
+    },
+    {
+      "date": "2020-02-02",
+      "count": 1875,
+      "totalAmountADay": 8317175450064358
+    },
+    {
+      "date": "2020-02-01",
+      "count": 2031,
+      "totalAmountADay": 9859057288355716
+    },
+    {
+      "date": "2020-01-31",
+      "count": 1917,
+      "totalAmountADay": 6727410902148898
+    },
+    {
+      "date": "2020-01-30",
+      "count": 1867,
+      "totalAmountADay": 8698533118903940
+    },
+    {
+      "date": "2020-01-29",
+      "count": 1794,
+      "totalAmountADay": 5146314827248392
+    },
+    {
+      "date": "2020-01-28",
+      "count": 1670,
+      "totalAmountADay": 24363635842948776
+    },
+    {
+      "date": "2020-01-27",
+      "count": 1918,
+      "totalAmountADay": 52882495277287780
+    },
+    {
+      "date": "2020-01-26",
+      "count": 1960,
+      "totalAmountADay": 55399420760332570
+    },
+    {
+      "date": "2020-01-25",
+      "count": 1953,
+      "totalAmountADay": 51465787795511930
+    },
+    {
+      "date": "2020-01-24",
+      "count": 2209,
+      "totalAmountADay": 61084550059701080
+    },
+    {
+      "date": "2020-01-23",
+      "count": 2032,
+      "totalAmountADay": 38491146905301870
+    },
+    {
+      "date": "2020-01-22",
+      "count": 2062,
+      "totalAmountADay": 40491598108571010
+    },
+    {
+      "date": "2020-01-21",
+      "count": 1982,
+      "totalAmountADay": 32489288996103976
+    },
+    {
+      "date": "2020-01-20",
+      "count": 2115,
+      "totalAmountADay": 28266842970074504
+    },
+    {
+      "date": "2020-01-19",
+      "count": 2209,
+      "totalAmountADay": 28153357800569424
+    },
+    {
+      "date": "2020-01-18",
+      "count": 2227,
+      "totalAmountADay": 26549301918407376
+    },
+    {
+      "date": "2020-01-17",
+      "count": 2092,
+      "totalAmountADay": 29780318147117624
+    },
+    {
+      "date": "2020-01-16",
+      "count": 2496,
+      "totalAmountADay": 32269081684649016
+    },
+    {
+      "date": "2020-01-15",
+      "count": 2200,
+      "totalAmountADay": 28088365289992640
+    },
+    {
+      "date": "2020-01-14",
+      "count": 2195,
+      "totalAmountADay": 28696490682077068
+    },
+    {
+      "date": "2020-01-13",
+      "count": 2320,
+      "totalAmountADay": 24351164543237984
+    },
+    {
+      "date": "2020-01-12",
+      "count": 2129,
+      "totalAmountADay": 23039842591978024
+    },
+    {
+      "date": "2020-01-11",
+      "count": 2105,
+      "totalAmountADay": 21605212245960150
+    },
+    {
+      "date": "2020-01-10",
+      "count": 2152,
+      "totalAmountADay": 16581563309628452
+    },
+    {
+      "date": "2020-01-09",
+      "count": 2227,
+      "totalAmountADay": 21271998683924908
+    },
+    {
+      "date": "2020-01-08",
+      "count": 2073,
+      "totalAmountADay": 17767166794247028
+    },
+    {
+      "date": "2020-01-07",
+      "count": 2163,
+      "totalAmountADay": 24589288629162016
+    },
+    {
+      "date": "2020-01-06",
+      "count": 2103,
+      "totalAmountADay": 51665247424447650
+    },
+    {
+      "date": "2020-01-05",
+      "count": 2009,
+      "totalAmountADay": 18727678863822756
+    },
+    {
+      "date": "2020-01-04",
+      "count": 2189,
+      "totalAmountADay": 20997478791650376
+    },
+    {
+      "date": "2020-01-03",
+      "count": 2018,
+      "totalAmountADay": 22276332640190784
+    },
+    {
+      "date": "2020-01-02",
+      "count": 2167,
+      "totalAmountADay": 17339138632874470
+    },
+    {
+      "date": "2020-01-01",
+      "count": 2061,
+      "totalAmountADay": 18508160911427264
+    },
+    {
+      "date": "2019-12-31",
+      "count": 2053,
+      "totalAmountADay": 17951368068194784
+    },
+    {
+      "date": "2019-12-30",
+      "count": 2029,
+      "totalAmountADay": 18286096137646210
+    },
+    {
+      "date": "2019-12-29",
+      "count": 2062,
+      "totalAmountADay": 23212644688140120
+    },
+    {
+      "date": "2019-12-28",
+      "count": 2064,
+      "totalAmountADay": 18689121008289220
+    },
+    {
+      "date": "2019-12-27",
+      "count": 1930,
+      "totalAmountADay": 17386832704561216
+    },
+    {
+      "date": "2019-12-26",
+      "count": 2117,
+      "totalAmountADay": 20399078836062696
+    },
+    {
+      "date": "2019-12-25",
+      "count": 2012,
+      "totalAmountADay": 20286092756955120
+    },
+    {
+      "date": "2019-12-24",
+      "count": 2095,
+      "totalAmountADay": 21572810789485160
+    },
+    {
+      "date": "2019-12-23",
+      "count": 2158,
+      "totalAmountADay": 22667812716656310
+    },
+    {
+      "date": "2019-12-22",
+      "count": 2225,
+      "totalAmountADay": 133806356501615890
+    },
+    {
+      "date": "2019-12-21",
+      "count": 2184,
+      "totalAmountADay": 14652185242355932
+    },
+    {
+      "date": "2019-12-20",
+      "count": 2040,
+      "totalAmountADay": 16044297573175206
+    },
+    {
+      "date": "2019-12-19",
+      "count": 2003,
+      "totalAmountADay": 13521610680694858
+    },
+    {
+      "date": "2019-12-18",
+      "count": 1962,
+      "totalAmountADay": 11354512286605666
+    },
+    {
+      "date": "2019-12-17",
+      "count": 1949,
+      "totalAmountADay": 10732127374228962
+    },
+    {
+      "date": "2019-12-16",
+      "count": 2002,
+      "totalAmountADay": 11810672772825840
+    },
+    {
+      "date": "2019-12-15",
+      "count": 1968,
+      "totalAmountADay": 14324777497391644
+    },
+    {
+      "date": "2019-12-14",
+      "count": 2048,
+      "totalAmountADay": 9779952569442264
+    },
+    {
+      "date": "2019-12-13",
+      "count": 2182,
+      "totalAmountADay": 14954026868919290
+    },
+    {
+      "date": "2019-12-12",
+      "count": 2179,
+      "totalAmountADay": 10900053448601848
+    },
+    {
+      "date": "2019-12-11",
+      "count": 2055,
+      "totalAmountADay": 12013417371661244
+    },
+    {
+      "date": "2019-12-10",
+      "count": 2137,
+      "totalAmountADay": 10592499557618632
+    },
+    {
+      "date": "2019-12-09",
+      "count": 1960,
+      "totalAmountADay": 10530834639417592
+    },
+    {
+      "date": "2019-12-08",
+      "count": 2060,
+      "totalAmountADay": 10915300153724808
+    },
+    {
+      "date": "2019-12-07",
+      "count": 1855,
+      "totalAmountADay": 11080373645518182
+    },
+    {
+      "date": "2019-12-06",
+      "count": 1862,
+      "totalAmountADay": 10508892956532992
+    },
+    {
+      "date": "2019-12-05",
+      "count": 2041,
+      "totalAmountADay": 9394255256005324
+    },
+    {
+      "date": "2019-12-04",
+      "count": 2071,
+      "totalAmountADay": 9303416970030944
+    },
+    {
+      "date": "2019-12-03",
+      "count": 2021,
+      "totalAmountADay": 9879931921625368
+    },
+    {
+      "date": "2019-12-02",
+      "count": 1997,
+      "totalAmountADay": 13914721672360160
+    },
+    {
+      "date": "2019-12-01",
+      "count": 2022,
+      "totalAmountADay": 10716467990214084
+    },
+    {
+      "date": "2019-11-30",
+      "count": 1964,
+      "totalAmountADay": 10075246463082278
+    },
+    {
+      "date": "2019-11-29",
+      "count": 2059,
+      "totalAmountADay": 10855392298619878
+    },
+    {
+      "date": "2019-11-28",
+      "count": 1964,
+      "totalAmountADay": 11588196962584688
+    },
+    {
+      "date": "2019-11-27",
+      "count": 2034,
+      "totalAmountADay": 10567472171960744
+    },
+    {
+      "date": "2019-11-26",
+      "count": 2066,
+      "totalAmountADay": 12257524682462224
+    },
+    {
+      "date": "2019-11-25",
+      "count": 2025,
+      "totalAmountADay": 9361235077515576
+    },
+    {
+      "date": "2019-11-24",
+      "count": 2090,
+      "totalAmountADay": 9725451677855510
+    },
+    {
+      "date": "2019-11-23",
+      "count": 1972,
+      "totalAmountADay": 10787547476312912
+    },
+    {
+      "date": "2019-11-22",
+      "count": 2047,
+      "totalAmountADay": 10679807674707548
+    },
+    {
+      "date": "2019-11-21",
+      "count": 1993,
+      "totalAmountADay": 10326777226707768
+    },
+    {
+      "date": "2019-11-20",
+      "count": 2059,
+      "totalAmountADay": 9477506879029176
+    },
+    {
+      "date": "2019-11-19",
+      "count": 2045,
+      "totalAmountADay": 9742162207217940
+    },
+    {
+      "date": "2019-11-18",
+      "count": 1957,
+      "totalAmountADay": 9089748401636200
+    },
+    {
+      "date": "2019-11-17",
+      "count": 2028,
+      "totalAmountADay": 8918230841651172
+    },
+    {
+      "date": "2019-11-16",
+      "count": 2026,
+      "totalAmountADay": 11151586871600932
+    },
+    {
+      "date": "2019-11-15",
+      "count": 2059,
+      "totalAmountADay": 10385549466089756
+    },
+    {
+      "date": "2019-11-14",
+      "count": 1906,
+      "totalAmountADay": 7416616863767655
+    },
+    {
+      "date": "2019-11-13",
+      "count": 1867,
+      "totalAmountADay": 9253309571315132
+    },
+    {
+      "date": "2019-11-12",
+      "count": 1877,
+      "totalAmountADay": 8559767313869440
+    },
+    {
+      "date": "2019-11-11",
+      "count": 1949,
+      "totalAmountADay": 9764838713799554
+    },
+    {
+      "date": "2019-11-10",
+      "count": 1876,
+      "totalAmountADay": 9288561790650444
+    },
+    {
+      "date": "2019-11-09",
+      "count": 1890,
+      "totalAmountADay": 9758634229611674
+    },
+    {
+      "date": "2019-11-08",
+      "count": 1976,
+      "totalAmountADay": 9923900867028584
+    },
+    {
+      "date": "2019-11-07",
+      "count": 1958,
+      "totalAmountADay": 20670474936308890
+    },
+    {
+      "date": "2019-11-06",
+      "count": 1847,
+      "totalAmountADay": 8881694910159543
+    },
+    {
+      "date": "2019-11-05",
+      "count": 1906,
+      "totalAmountADay": 7963806266138289
+    },
+    {
+      "date": "2019-11-04",
+      "count": 1989,
+      "totalAmountADay": 11170462537551744
+    },
+    {
+      "date": "2019-11-03",
+      "count": 1861,
+      "totalAmountADay": 6674186097568352
+    },
+    {
+      "date": "2019-11-02",
+      "count": 1906,
+      "totalAmountADay": 7581547712329810
+    },
+    {
+      "date": "2019-11-01",
+      "count": 2041,
+      "totalAmountADay": 10970517341971430
+    },
+    {
+      "date": "2019-10-31",
+      "count": 2010,
+      "totalAmountADay": 11125198973015524
+    },
+    {
+      "date": "2019-10-30",
+      "count": 1969,
+      "totalAmountADay": 13070163021566228
+    },
+    {
+      "date": "2019-10-29",
+      "count": 1879,
+      "totalAmountADay": 7751980825335929
+    },
+    {
+      "date": "2019-10-28",
+      "count": 1900,
+      "totalAmountADay": 11416891007614432
+    },
+    {
+      "date": "2019-10-27",
+      "count": 1862,
+      "totalAmountADay": 10437755622021474
+    },
+    {
+      "date": "2019-10-26",
+      "count": 1852,
+      "totalAmountADay": 6803051582401994
+    },
+    {
+      "date": "2019-10-25",
+      "count": 1988,
+      "totalAmountADay": 7957783073790144
+    },
+    {
+      "date": "2019-10-24",
+      "count": 1923,
+      "totalAmountADay": 10651896431477066
+    },
+    {
+      "date": "2019-10-23",
+      "count": 1881,
+      "totalAmountADay": 7845801652246000
+    },
+    {
+      "date": "2019-10-22",
+      "count": 1872,
+      "totalAmountADay": 7123971801594570
+    },
+    {
+      "date": "2019-10-21",
+      "count": 1867,
+      "totalAmountADay": 7013867275415704
+    },
+    {
+      "date": "2019-10-20",
+      "count": 1852,
+      "totalAmountADay": 7385637241492127
+    },
+    {
+      "date": "2019-10-19",
+      "count": 1899,
+      "totalAmountADay": 9187398726064476
+    },
+    {
+      "date": "2019-10-18",
+      "count": 1904,
+      "totalAmountADay": 8083705093304447
+    },
+    {
+      "date": "2019-10-17",
+      "count": 1901,
+      "totalAmountADay": 6644435205428444
+    },
+    {
+      "date": "2019-10-16",
+      "count": 1890,
+      "totalAmountADay": 7152486545026460
+    },
+    {
+      "date": "2019-10-15",
+      "count": 1823,
+      "totalAmountADay": 6163925186741886
+    },
+    {
+      "date": "2019-10-14",
+      "count": 1886,
+      "totalAmountADay": 6994994927686486
+    },
+    {
+      "date": "2019-10-13",
+      "count": 1867,
+      "totalAmountADay": 7077401626452326
+    },
+    {
+      "date": "2019-10-12",
+      "count": 1837,
+      "totalAmountADay": 7465406265726304
+    },
+    {
+      "date": "2019-10-11",
+      "count": 1862,
+      "totalAmountADay": 6303900125786195
+    },
+    {
+      "date": "2019-10-10",
+      "count": 1800,
+      "totalAmountADay": 9346403116970260
+    },
+    {
+      "date": "2019-10-09",
+      "count": 1797,
+      "totalAmountADay": 8303010622377808
+    },
+    {
+      "date": "2019-10-08",
+      "count": 1852,
+      "totalAmountADay": 8637973281937707
+    },
+    {
+      "date": "2019-10-07",
+      "count": 1890,
+      "totalAmountADay": 11191929880355706
+    },
+    {
+      "date": "2019-10-06",
+      "count": 1910,
+      "totalAmountADay": 11493755185256992
+    },
+    {
+      "date": "2019-10-05",
+      "count": 1784,
+      "totalAmountADay": 9382569041469704
+    },
+    {
+      "date": "2019-10-04",
+      "count": 1909,
+      "totalAmountADay": 9209167748539062
+    },
+    {
+      "date": "2019-10-03",
+      "count": 1884,
+      "totalAmountADay": 6368947139208343
+    },
+    {
+      "date": "2019-10-02",
+      "count": 1952,
+      "totalAmountADay": 10924064143305280
+    },
+    {
+      "date": "2019-10-01",
+      "count": 1929,
+      "totalAmountADay": 6304895301512722
+    },
+    {
+      "date": "2019-09-30",
+      "count": 1905,
+      "totalAmountADay": 6633572826553994
+    },
+    {
+      "date": "2019-09-29",
+      "count": 1855,
+      "totalAmountADay": 5878259251966793
+    },
+    {
+      "date": "2019-09-28",
+      "count": 2022,
+      "totalAmountADay": 10273844061201948
+    },
+    {
+      "date": "2019-09-27",
+      "count": 1986,
+      "totalAmountADay": 7860195783184496
+    },
+    {
+      "date": "2019-09-26",
+      "count": 1941,
+      "totalAmountADay": 7233295874217961
+    },
+    {
+      "date": "2019-09-25",
+      "count": 1929,
+      "totalAmountADay": 6877345533230293
+    },
+    {
+      "date": "2019-09-24",
+      "count": 1942,
+      "totalAmountADay": 9328048134529328
+    },
+    {
+      "date": "2019-09-23",
+      "count": 1887,
+      "totalAmountADay": 6884930708580502
+    },
+    {
+      "date": "2019-09-22",
+      "count": 1958,
+      "totalAmountADay": 7016284261505629
+    },
+    {
+      "date": "2019-09-21",
+      "count": 1970,
+      "totalAmountADay": 7742490000492650
+    },
+    {
+      "date": "2019-09-20",
+      "count": 1944,
+      "totalAmountADay": 6316680826514680
+    },
+    {
+      "date": "2019-09-19",
+      "count": 1910,
+      "totalAmountADay": 7049679978849150
+    },
+    {
+      "date": "2019-09-18",
+      "count": 1943,
+      "totalAmountADay": 5771495374632695
+    },
+    {
+      "date": "2019-09-17",
+      "count": 2018,
+      "totalAmountADay": 7855342641539882
+    },
+    {
+      "date": "2019-09-16",
+      "count": 1929,
+      "totalAmountADay": 4548260116708136
+    },
+    {
+      "date": "2019-09-15",
+      "count": 1917,
+      "totalAmountADay": 4620358584764374
+    },
+    {
+      "date": "2019-09-14",
+      "count": 1854,
+      "totalAmountADay": 4422225045696852
+    },
+    {
+      "date": "2019-09-13",
+      "count": 1893,
+      "totalAmountADay": 5533771710676506
+    },
+    {
+      "date": "2019-09-12",
+      "count": 1907,
+      "totalAmountADay": 5388325310950808
+    },
+    {
+      "date": "2019-09-11",
+      "count": 1939,
+      "totalAmountADay": 7514865833752207
+    },
+    {
+      "date": "2019-09-10",
+      "count": 1888,
+      "totalAmountADay": 6204859379423048
+    },
+    {
+      "date": "2019-09-09",
+      "count": 1914,
+      "totalAmountADay": 6979726538215347
+    },
+    {
+      "date": "2019-09-08",
+      "count": 1845,
+      "totalAmountADay": 5546534799601728
+    },
+    {
+      "date": "2019-09-07",
+      "count": 1834,
+      "totalAmountADay": 4943175779773780
+    },
+    {
+      "date": "2019-09-06",
+      "count": 1866,
+      "totalAmountADay": 6205611936716106
+    },
+    {
+      "date": "2019-09-05",
+      "count": 1853,
+      "totalAmountADay": 5880759373865707
+    },
+    {
+      "date": "2019-09-04",
+      "count": 1856,
+      "totalAmountADay": 4220723151650241
+    },
+    {
+      "date": "2019-09-03",
+      "count": 1883,
+      "totalAmountADay": 7877971306644508
+    },
+    {
+      "date": "2019-09-02",
+      "count": 1891,
+      "totalAmountADay": 6987977034739878
+    },
+    {
+      "date": "2019-09-01",
+      "count": 1856,
+      "totalAmountADay": 4520007185707975
+    },
+    {
+      "date": "2019-08-31",
+      "count": 1917,
+      "totalAmountADay": 6126634592855872
+    },
+    {
+      "date": "2019-08-30",
+      "count": 1910,
+      "totalAmountADay": 5667044951098235
+    },
+    {
+      "date": "2019-08-29",
+      "count": 1865,
+      "totalAmountADay": 3683823912653928
+    },
+    {
+      "date": "2019-08-28",
+      "count": 1888,
+      "totalAmountADay": 4403223712686014
+    },
+    {
+      "date": "2019-08-27",
+      "count": 1773,
+      "totalAmountADay": 5348336856187870
+    },
+    {
+      "date": "2019-08-26",
+      "count": 1763,
+      "totalAmountADay": 4510170954240331
+    },
+    {
+      "date": "2019-08-25",
+      "count": 1773,
+      "totalAmountADay": 4275531508156414
+    },
+    {
+      "date": "2019-08-24",
+      "count": 1800,
+      "totalAmountADay": 4550678638976629
+    },
+    {
+      "date": "2019-08-23",
+      "count": 1876,
+      "totalAmountADay": 3883115870604236
+    },
+    {
+      "date": "2019-08-22",
+      "count": 1772,
+      "totalAmountADay": 4545903707487435
+    },
+    {
+      "date": "2019-08-21",
+      "count": 1764,
+      "totalAmountADay": 5136982825984084
+    },
+    {
+      "date": "2019-08-20",
+      "count": 1786,
+      "totalAmountADay": 5970908222491617
+    },
+    {
+      "date": "2019-08-19",
+      "count": 1757,
+      "totalAmountADay": 2395056487034179
+    },
+    {
+      "date": "2019-08-18",
+      "count": 1768,
+      "totalAmountADay": 5071111624827809
+    },
+    {
+      "date": "2019-08-17",
+      "count": 1729,
+      "totalAmountADay": 3323850572749849
+    },
+    {
+      "date": "2019-08-16",
+      "count": 1791,
+      "totalAmountADay": 3758747462212430
+    },
+    {
+      "date": "2019-08-15",
+      "count": 1814,
+      "totalAmountADay": 6544796631100817
+    },
+    {
+      "date": "2019-08-14",
+      "count": 1609,
+      "totalAmountADay": 2519099429902279
+    },
+    {
+      "date": "2019-08-13",
+      "count": 1747,
+      "totalAmountADay": 5002255292068283
+    },
+    {
+      "date": "2019-08-12",
+      "count": 1655,
+      "totalAmountADay": 3583896177241117
+    },
+    {
+      "date": "2019-08-11",
+      "count": 1697,
+      "totalAmountADay": 2827941472900171
+    },
+    {
+      "date": "2019-08-10",
+      "count": 1702,
+      "totalAmountADay": 4289364184023464
+    },
+    {
+      "date": "2019-08-09",
+      "count": 1813,
+      "totalAmountADay": 11267315800517478
+    },
+    {
+      "date": "2019-08-08",
+      "count": 1714,
+      "totalAmountADay": 5063356223195634
+    },
+    {
+      "date": "2019-08-07",
+      "count": 1609,
+      "totalAmountADay": 2067567675123992
+    },
+    {
+      "date": "2019-08-06",
+      "count": 1671,
+      "totalAmountADay": 2480934063318519
+    },
+    {
+      "date": "2019-08-05",
+      "count": 1670,
+      "totalAmountADay": 2529443985666042
+    },
+    {
+      "date": "2019-08-04",
+      "count": 1638,
+      "totalAmountADay": 2530095046632041
+    },
+    {
+      "date": "2019-08-03",
+      "count": 1616,
+      "totalAmountADay": 2021815836098786
+    },
+    {
+      "date": "2019-08-02",
+      "count": 1734,
+      "totalAmountADay": 3493082145545484
+    },
+    {
+      "date": "2019-08-01",
+      "count": 1647,
+      "totalAmountADay": 1683361464356915
+    },
+    {
+      "date": "2019-07-31",
+      "count": 1643,
+      "totalAmountADay": 2471952691710458
+    },
+    {
+      "date": "2019-07-30",
+      "count": 1645,
+      "totalAmountADay": 2670468146031164
+    },
+    {
+      "date": "2019-07-29",
+      "count": 1647,
+      "totalAmountADay": 3547692903344668
+    },
+    {
+      "date": "2019-07-28",
+      "count": 1637,
+      "totalAmountADay": 2885193207204168
+    },
+    {
+      "date": "2019-07-27",
+      "count": 1596,
+      "totalAmountADay": 2210974844477085
+    },
+    {
+      "date": "2019-07-26",
+      "count": 1669,
+      "totalAmountADay": 4085554772711904
+    },
+    {
+      "date": "2019-07-25",
+      "count": 1674,
+      "totalAmountADay": 2176280768455746
+    },
+    {
+      "date": "2019-07-24",
+      "count": 1829,
+      "totalAmountADay": 3018783953122302
+    },
+    {
+      "date": "2019-07-23",
+      "count": 1621,
+      "totalAmountADay": 3423988961686002
+    },
+    {
+      "date": "2019-07-22",
+      "count": 1662,
+      "totalAmountADay": 3329649393881655
+    },
+    {
+      "date": "2019-07-21",
+      "count": 1648,
+      "totalAmountADay": 3456346083892434
+    },
+    {
+      "date": "2019-07-20",
+      "count": 1638,
+      "totalAmountADay": 1965694439225276
+    },
+    {
+      "date": "2019-07-19",
+      "count": 1655,
+      "totalAmountADay": 3982919565450175
+    },
+    {
+      "date": "2019-07-18",
+      "count": 1638,
+      "totalAmountADay": 2489688785462627
+    },
+    {
+      "date": "2019-07-17",
+      "count": 1605,
+      "totalAmountADay": 2564323229661664
+    },
+    {
+      "date": "2019-07-16",
+      "count": 1598,
+      "totalAmountADay": 2410359597536118
+    },
+    {
+      "date": "2019-07-15",
+      "count": 1623,
+      "totalAmountADay": 4234534763623195
+    },
+    {
+      "date": "2019-07-14",
+      "count": 1611,
+      "totalAmountADay": 2573618097490845
+    },
+    {
+      "date": "2019-07-13",
+      "count": 1569,
+      "totalAmountADay": 1667120886999271
+    },
+    {
+      "date": "2019-07-12",
+      "count": 1661,
+      "totalAmountADay": 3824617161815617
+    },
+    {
+      "date": "2019-07-11",
+      "count": 1658,
+      "totalAmountADay": 2098672040711839
+    },
+    {
+      "date": "2019-07-10",
+      "count": 1587,
+      "totalAmountADay": 2520220216836640
+    },
+    {
+      "date": "2019-07-09",
+      "count": 1583,
+      "totalAmountADay": 3826460404778331
+    },
+    {
+      "date": "2019-07-08",
+      "count": 1623,
+      "totalAmountADay": 2464324914045059
+    },
+    {
+      "date": "2019-07-07",
+      "count": 1549,
+      "totalAmountADay": 2934054549370047
+    },
+    {
+      "date": "2019-07-06",
+      "count": 1646,
+      "totalAmountADay": 2609635307661965
+    },
+    {
+      "date": "2019-07-05",
+      "count": 1847,
+      "totalAmountADay": 616366099413696100
+    },
+    {
+      "date": "2019-07-04",
+      "count": 1482,
+      "totalAmountADay": 2189318857330745
+    },
+    {
+      "date": "2019-07-03",
+      "count": 1525,
+      "totalAmountADay": 1803397332167826
+    },
+    {
+      "date": "2019-07-02",
+      "count": 1487,
+      "totalAmountADay": 1817599635247304
+    },
+    {
+      "date": "2019-07-01",
+      "count": 1517,
+      "totalAmountADay": 2214749292234747
+    },
+    {
+      "date": "2019-06-30",
+      "count": 1465,
+      "totalAmountADay": 2987118830643702
+    },
+    {
+      "date": "2019-06-29",
+      "count": 1457,
+      "totalAmountADay": 1899322864065736
+    },
+    {
+      "date": "2019-06-28",
+      "count": 1530,
+      "totalAmountADay": 2771638116467723
+    },
+    {
+      "date": "2019-06-27",
+      "count": 1726,
+      "totalAmountADay": 51773695409311370
+    },
+    {
+      "date": "2019-06-26",
+      "count": 1530,
+      "totalAmountADay": 7650640220744957
+    },
+    {
+      "date": "2019-06-25",
+      "count": 1455,
+      "totalAmountADay": 2859833569656002
+    },
+    {
+      "date": "2019-06-24",
+      "count": 1436,
+      "totalAmountADay": 1318765438530661
+    },
+    {
+      "date": "2019-06-23",
+      "count": 1431,
+      "totalAmountADay": 868318457216717
+    },
+    {
+      "date": "2019-06-22",
+      "count": 1440,
+      "totalAmountADay": 1570864874678901
+    },
+    {
+      "date": "2019-06-21",
+      "count": 1416,
+      "totalAmountADay": 1420226089360068
+    },
+    {
+      "date": "2019-06-20",
+      "count": 1452,
+      "totalAmountADay": 2348371161413468
+    },
+    {
+      "date": "2019-06-19",
+      "count": 1445,
+      "totalAmountADay": 2132288011196269
+    },
+    {
+      "date": "2019-06-18",
+      "count": 1449,
+      "totalAmountADay": 3736264586363690
+    },
+    {
+      "date": "2019-06-17",
+      "count": 1489,
+      "totalAmountADay": 4196245441866368
+    },
+    {
+      "date": "2019-06-16",
+      "count": 1447,
+      "totalAmountADay": 3750650577331676
+    },
+    {
+      "date": "2019-06-15",
+      "count": 1424,
+      "totalAmountADay": 3780033194537042
+    },
+    {
+      "date": "2019-06-14",
+      "count": 1434,
+      "totalAmountADay": 2566142486681949
+    },
+    {
+      "date": "2019-06-13",
+      "count": 1461,
+      "totalAmountADay": 5052231899972214
+    },
+    {
+      "date": "2019-06-12",
+      "count": 1450,
+      "totalAmountADay": 2661228412932132
+    },
+    {
+      "date": "2019-06-11",
+      "count": 1423,
+      "totalAmountADay": 1663099897426243
+    },
+    {
+      "date": "2019-06-10",
+      "count": 1450,
+      "totalAmountADay": 1773300032054560
+    },
+    {
+      "date": "2019-06-09",
+      "count": 1469,
+      "totalAmountADay": 4377186300875048
+    },
+    {
+      "date": "2019-06-08",
+      "count": 1444,
+      "totalAmountADay": 2549021606707632
+    },
+    {
+      "date": "2019-06-07",
+      "count": 1294,
+      "totalAmountADay": 100243211225201
+    },
+    {
+      "date": "2019-06-06",
+      "count": 1329,
+      "totalAmountADay": 4200201598774900
+    },
+    {
+      "date": "2019-06-05",
+      "count": 1389,
+      "totalAmountADay": 1400211619488243
+    },
+    {
+      "date": "2019-06-04",
+      "count": 1277,
+      "totalAmountADay": 12200202329815116
+    },
+    {
+      "date": "2019-06-03",
+      "count": 1349,
+      "totalAmountADay": 900781661635928
+    },
+    {
+      "date": "2019-06-02",
+      "count": 1468,
+      "totalAmountADay": 446900538765447800
+    },
+    {
+      "date": "2019-06-01",
+      "count": 2180,
+      "totalAmountADay": 149500337890610270
+    },
+    {
+      "date": "2019-05-31",
+      "count": 1957,
+      "totalAmountADay": 49900385559319340
+    },
+    {
+      "date": "2019-05-30",
+      "count": 229,
+      "totalAmountADay": 100000067799980800
+    }
+  ]
+}
+
+var marketsSummary = {
+  "err": 0,
+  "errMessage": "",
+  "data": [
+    {
+      "symbol": "XEM_FIX",
+      "market_name": "New Capital",
+      "price": "170.0000",
+      "volume": "489.00000000",
+      "buyLiquidity": 137861.37,
+      "sellLiquidity": 2991.33,
+      "priceFIX": "170.0000",
+      "priceBtc": 0.000010607967580999999,
+      "priceUsd": 0.07064025947636776,
+      "buyLiquidityBtc": 1.4624289436322457,
+      "sellLiquidityBtc": 0.031731931664072725
+    },
+    {
+      "symbol": "TWINS_FIX",
+      "market_name": "New Capital",
+      "price": "0.32219608",
+      "volume": "14376518.33805480",
+      "buyLiquidity": 56036169.2,
+      "sellLiquidity": 39594114.510000005,
+      "priceFIX": "0.32219608",
+      "priceBtc": 2.0104973949207542e-8,
+      "priceUsd": 0.0001338824393733444,
+      "buyLiquidityBtc": 1.1266057219793861,
+      "sellLiquidityBtc": 0.7960386407654905
+    },
+    {
+      "symbol": "FIX_XEM",
+      "market_name": "New Capital",
+      "price": "0.00588235",
+      "volume": "91350.00000000",
+      "buyLiquidity": 2725894.79,
+      "sellLiquidity": 5219175.779999999,
+      "priceXEM": "0.00588235",
+      "priceBtc": 6.239977810009534e-8,
+      "priceUsd": 0.00041553073033081194,
+      "buyLiquidityBtc": 0.170095230020206,
+      "sellLiquidityBtc": 0.325675410537392
+    },
+    {
+      "symbol": "FIX_TWINS",
+      "market_name": "New Capital",
+      "price": "3.1037",
+      "volume": "4497990.84999994",
+      "buyLiquidity": 25400106.099999998,
+      "sellLiquidity": 9307183.91,
+      "priceTWINS": "3.1037",
+      "priceBtc": 6.239980764615545e-8,
+      "priceUsd": 0.000415530927083049,
+      "buyLiquidityBtc": 1.5849617348319396,
+      "sellLiquidityBtc": 0.580766485711393
+    },
+    {
+      "symbol": "BTC_FIX",
+      "market_name": "New Capital",
+      "price": "16025690",
+      "volume": "0.07674347",
+      "buyLiquidity": 30.004341850000003,
+      "sellLiquidity": 3.2191482899999997,
+      "priceFIX": "16025690",
+      "priceBtc": 0.9999999999009169,
+      "priceUsd": 6659.169999340189,
+      "buyLiquidityBtc": 30.00434184702708,
+      "sellLiquidityBtc": 3.2191482896810366
+    },
+    {
+      "symbol": "FIX_BTC",
+      "market_name": "New Capital",
+      "price": "0.0000000623998093",
+      "volume": "1457609.39957353",
+      "buyLiquidity": 190801004,
+      "sellLiquidity": 13955752,
+      "priceBTC": "0.0000000623998093",
+      "priceBtc": 6.23998093e-8,
+      "priceUsd": 0.000415530938096281,
+      "buyLiquidityBtc": 11.905946263848536,
+      "sellLiquidityBtc": 0.8708362634380935
+    }
+  ]
+};
+
 @Injectable()
 export class MockBackendInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
@@ -7001,6 +8598,16 @@ export class MockBackendInterceptor implements HttpInterceptor {
           var array = url.replace(host, '').split('/');
           var wallet = array[2];
           return getAvailableMarkets(wallet);
+        case url.indexOf('/getTransactionsChart') > -1 && method === 'POST':
+          var host = window.location.protocol + '//' + window.location.host + '/';
+          var array = url.replace(host, '').split('/');
+          var wallet = array[2];
+          return getTransactionsChart(wallet);
+        case url.indexOf('/getMarketsSummary') > -1 && method === 'POST':
+          var host = window.location.protocol + '//' + window.location.host + '/';
+          var array = url.replace(host, '').split('/');
+          var wallet = array[2];
+          return getMarketsSummary(wallet);
         default:
           // pass through any requests not handled above
           return next.handle(request);
@@ -7051,6 +8658,12 @@ export class MockBackendInterceptor implements HttpInterceptor {
     }
     function getMasternodesCollateralCount(wallet) {
       return ok(masternodesCollateralCount);
+    }
+    function getTransactionsChart(wallet) {
+      return ok(transactionsChart);
+    }
+    function getMarketsSummary(wallet) {
+      return ok(marketsSummary);
     }
 
     function ok(body?) {

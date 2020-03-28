@@ -40,7 +40,7 @@
   </nav>
 </div>
 
-<info-bar></info-bar>
+<info-bar *ngIf="router.url !== '/masternodes'"></info-bar>
 
 <div class="d-flex justify-content-center loader" *ngIf="searching">
   <div class="d-table h-100">

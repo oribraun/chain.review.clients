@@ -17,6 +17,7 @@ export class MovementComponent implements OnInit {
   public emptyTable: any[] = [];
   public currentTable: any[] = [];
   public gettingTxs = false;
+  public gettingTxsChart = false;
   public gettingTxVinVoutCount = false;
   public showPagination = false;
   public pagination: any = {
@@ -50,6 +51,7 @@ export class MovementComponent implements OnInit {
   ngOnInit() {
     this.setCurrentTable();
     this.getTxVinVoutCount();
+    // this.getTransactionsChart();
 
   }
 
@@ -176,6 +178,22 @@ export class MovementComponent implements OnInit {
       (error) => {
         console.log(error)
         this.gettingTxs = false;
+      }
+    )
+  }
+  getTransactionsChart() {
+    this.gettingTxsChart = true;
+    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getTransactionsChart';
+    this.http.post(url, {}).subscribe(
+      (response: any) => {
+        if(!response.err) {
+          console.log(response.data);
+        }
+        this.gettingTxsChart = false;
+      },
+      (error) => {
+        console.log(error)
+        this.gettingTxsChart = false;
       }
     )
   }
