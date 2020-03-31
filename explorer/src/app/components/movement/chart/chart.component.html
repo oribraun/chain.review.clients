@@ -1,15 +1,26 @@
-<apx-chart class="with-custom-buttons"
-  [ngClass]="{'active-transactions': chartType === 'Transactions', 'active-amount': chartType === 'Amount'}"
-  [series]="options.series"
-  [chart]="options.chart"
-  [dataLabels]="options.dataLabels"
-  [markers]="options.markers"
-  [colors]="options.colors"
-  [title]="options.title"
-  [fill]="options.fill"
-  [yaxis]="options.yaxis"
-  [xaxis]="options.xaxis"
-  [tooltip]="options.tooltip"
-  [noData]="options.noData"
-  [autoUpdateSeries]="true"
-></apx-chart>
+<div class="chart">
+  <apx-chart class="with-custom-buttons"
+    [ngClass]="{'active-transactions': chartType === 'Transactions', 'active-amount': chartType === 'Amount'}"
+    [series]="options.series"
+    [chart]="options.chart"
+    [dataLabels]="options.dataLabels"
+    [markers]="options.markers"
+    [colors]="options.colors"
+    [title]="options.title"
+    [fill]="options.fill"
+    [yaxis]="options.yaxis"
+    [xaxis]="options.xaxis"
+    [tooltip]="options.tooltip"
+    [noData]="options.noData"
+    [autoUpdateSeries]="true"
+  ></apx-chart>
+  <div class="d-flex justify-content-center loader" *ngIf="gettingTxsChart">
+    <div class="d-table h-100">
+      <div class="d-table-cell align-middle">
+        <div class="spinner-grow" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

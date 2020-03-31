@@ -1636,7 +1636,7 @@ export class MovementChartComponent implements OnInit{
         }
       },
       noData: {
-        text: 'Loading...'
+        // text: 'Loading...'
       }
     };
   }
