@@ -1616,7 +1616,7 @@ export class MovementChartComponent implements OnInit{
       },
       yaxis: {
         labels: {
-          formatter: function(val) {
+          formatter: (val) => {
             return (val).toFixed(0);
           }
         },
@@ -1630,7 +1630,7 @@ export class MovementChartComponent implements OnInit{
       tooltip: {
         shared: false,
         y: {
-          formatter: function(val) {
+          formatter: (val) => {
             return (val);
           }
         }
