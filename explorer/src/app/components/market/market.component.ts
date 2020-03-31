@@ -118,17 +118,18 @@ export class MarketComponent implements OnInit {
           sellLquidityOptions: []
         };
       }
-      this.marketData[this.marketSummary[i].market_name].buyLiquidity += this.marketSummary[i].buyLiquidityBtc;
-      this.marketData[this.marketSummary[i].market_name].sellLiquidity += this.marketSummary[i].sellLiquidityBtc;
-      this.marketData[this.marketSummary[i].market_name]['24hVolume'] += parseFloat(this.marketSummary[i].volume) * parseFloat(this.marketSummary[i].priceBtc);
-      if(this.marketSummary[i].symbol.indexOf('BTC_') === -1) {
-        this.marketData[this.marketSummary[i].market_name].totalPriceBtc += this.marketSummary[i].priceBtc;
-        this.marketData[this.marketSummary[i].market_name].totalPriceCount += 1;
-      }
-      const symbolSplit = this.marketSummary[i].symbol.split('_');
-      const fromCoin = symbolSplit[0];
-      const toCoin = symbolSplit[1];
-      // if(fromCoin !== 'BTC') {
+      const setDataBasedOnLastPrice = () => {
+        this.marketData[this.marketSummary[i].market_name].buyLiquidity += this.marketSummary[i].buyLiquidityBtc;
+        this.marketData[this.marketSummary[i].market_name].sellLiquidity += this.marketSummary[i].sellLiquidityBtc;
+        this.marketData[this.marketSummary[i].market_name]['24hVolume'] += parseFloat(this.marketSummary[i].volume) * parseFloat(this.marketSummary[i].leftCoinPriceBtc);
+        if (this.marketSummary[i].symbol.indexOf('BTC_') === -1) {
+          this.marketData[this.marketSummary[i].market_name].totalPriceBtc += this.marketSummary[i].leftCoinPriceBtc;
+          this.marketData[this.marketSummary[i].market_name].totalPriceCount += 1;
+        }
+        const symbolSplit = this.marketSummary[i].symbol.split('_');
+        const fromCoin = symbolSplit[0];
+        const toCoin = symbolSplit[1];
+        // if(fromCoin !== 'BTC') {
         this.marketData[this.marketSummary[i].market_name].buyLquidityOptions.push({
           fromCoin: fromCoin,
           fromAmount: this.marketSummary[i].buyLiquidity.toFixed(6),
@@ -143,7 +144,38 @@ export class MarketComponent implements OnInit {
           toMainCoin: 'BTC',
           toAmount: this.marketSummary[i].sellLiquidityBtc.toFixed(6)
         })
-      // }
+        // }
+      }
+
+      const setDataBasedOnRealPrice = () => {
+        this.marketData[this.marketSummary[i].market_name].buyLiquidity += this.marketSummary[i].realBuyLiquidityBtc;
+        this.marketData[this.marketSummary[i].market_name].sellLiquidity += this.marketSummary[i].realSellLiquidityBtc;
+        this.marketData[this.marketSummary[i].market_name]['24hVolume'] += parseFloat(this.marketSummary[i].volume) * parseFloat(this.marketSummary[i].leftCoinPriceBtc);
+        if(this.marketSummary[i].symbol.indexOf('BTC_') === -1) {
+          this.marketData[this.marketSummary[i].market_name].totalPriceBtc += this.marketSummary[i].leftCoinPriceBtc;
+          this.marketData[this.marketSummary[i].market_name].totalPriceCount += 1;
+        }
+        const symbolSplit = this.marketSummary[i].symbol.split('_');
+        const fromCoin = symbolSplit[0];
+        const toCoin = symbolSplit[1];
+        // if(fromCoin !== 'BTC') {
+        this.marketData[this.marketSummary[i].market_name].buyLquidityOptions.push({
+          fromCoin: fromCoin,
+          fromAmount: this.marketSummary[i].realBuyLiquidity.toFixed(6),
+          toCoin: toCoin,
+          toMainCoin: 'BTC',
+          toAmount: this.marketSummary[i].realBuyLiquidityBtc.toFixed(6),
+        })
+        this.marketData[this.marketSummary[i].market_name].sellLquidityOptions.push({
+          fromCoin: fromCoin,
+          fromAmount: this.marketSummary[i].realSellLiquidity.toFixed(6),
+          toCoin: toCoin,
+          toMainCoin: 'BTC',
+          toAmount: this.marketSummary[i].realSellLiquidityBtc.toFixed(6)
+        })
+      }
+
+      setDataBasedOnRealPrice();
     }
     for(var i in this.marketData) {
       this.marketData[i].avgPriceBtc = (this.marketData[i].totalPriceBtc / this.marketData[i].totalPriceCount).toFixed(8);
