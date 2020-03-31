@@ -1475,7 +1475,6 @@ export class MovementChartComponent implements OnInit{
     }
     // console.log(data);
     this.data = data;
-    this.getTransactionsChart();
     let ts2 = 1484418600000;
     let dates = [];
     for (let i = 0; i < 120; i++) {
@@ -1483,6 +1482,9 @@ export class MovementChartComponent implements OnInit{
       dates.push([ts2, mockedData.dataSeries[1][i].value]);
     }
     this.setChart("");
+    setTimeout(() => {
+      this.getTransactionsChart();
+    })
   }
 
   ngOnInit(): void {
@@ -1521,7 +1523,7 @@ export class MovementChartComponent implements OnInit{
   }
 
   setTransactionChartData() {
-    this.chartData = this.httpData.map((obj) => ([ new Date(obj.date).getTime(), obj.count]));
+    this.chartData = this.httpData.map((obj) => ([ new Date(obj.d).getTime(), obj.c]));
     if(this.chartType !== "Transactions") {
       this.setChart("Transactions");
     }
@@ -1534,7 +1536,7 @@ export class MovementChartComponent implements OnInit{
   }
 
   setAmountChartData() {
-    this.chartData = this.httpData.map((obj) => ([ new Date(obj.date).getTime(), (obj.totalAmountADay / 100000000).toFixed(1)]));
+    this.chartData = this.httpData.map((obj) => ([ new Date(obj.d).getTime(), (obj.t / 100000000).toFixed(1)]));
     console.log('this.chartData', this.chartData);
     if(this.chartType !== "Amount") {
       this.setChart("Amount");
@@ -1590,6 +1592,19 @@ export class MovementChartComponent implements OnInit{
                 },
               }
             ]
+          }
+        },
+        animations: {
+          enabled: true,
+          easing: 'easeinout',
+          speed: 800,
+          animateGradually: {
+            enabled: true,
+            delay: 150
+          },
+          dynamicAnimation: {
+            enabled: true,
+            speed: 350
           }
         }
       },
