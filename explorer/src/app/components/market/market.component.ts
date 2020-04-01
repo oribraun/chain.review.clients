@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {ActivatedRoute, Router} from "@angular/router";
-import {MaxAfterDotPipe} from "../../pipes/maxAfterDot/max-after-dot.pipe";
-import {Title} from "@angular/platform-browser";
+import {HttpClient} from '@angular/common/http';
+import {ActivatedRoute, Router} from '@angular/router';
+import {MaxAfterDotPipe} from '../../pipes/maxAfterDot/max-after-dot.pipe';
+import {Title} from '@angular/platform-browser';
 
 declare var DATA: any;
 @Component({
@@ -13,16 +13,16 @@ declare var DATA: any;
 export class MarketComponent implements OnInit {
 
   public data;
-  public currentSymbol: string = '';
-  public currentFromCoin: string = '';
-  public currentToCoin: string = '';
+  public currentSymbol = '';
+  public currentFromCoin = '';
+  public currentToCoin = '';
   public market: any;
   public avaliableMarkets: any;
   public marketSummary: any;
   public marketData: any = {};
-  public gettingAvailableMarkets: boolean = false;
-  public gettingMarketSummary: boolean = false;
-  public gettingMarket: boolean = false;
+  public gettingAvailableMarkets = false;
+  public gettingMarketSummary = false;
+  public gettingMarket = false;
 
   private http: HttpClient;
   private route: ActivatedRoute;
@@ -42,8 +42,8 @@ export class MarketComponent implements OnInit {
       //   this.currentToCoin = coins[0];
       // }
       let data: any = {}; /// from server node ejs data
-      if (typeof (<any>window).DATA !== "undefined") {
-        data = (<any>window).DATA;
+      if (typeof (window as any).DATA !== 'undefined') {
+        data = (window as any).DATA;
       }
       this.data = data;
       this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Market Overview | Chain Review' );
@@ -60,10 +60,10 @@ export class MarketComponent implements OnInit {
 
   getAvaliableMarkets() {
     this.gettingAvailableMarkets = true;
-    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getAvailableMarkets';
+    const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getAvailableMarkets';
     this.http.get(url).subscribe(
       (response: any) => {
-        if(!response.err) {
+        if (!response.err) {
           this.avaliableMarkets = response.data;
           // var symbols = this.avaliableMarkets.map(function(obj) { return obj.symbol});
           // var index = symbols.indexOf(this.currentSymbol);
@@ -81,15 +81,16 @@ export class MarketComponent implements OnInit {
         console.log(error);
         this.gettingAvailableMarkets = false;
       }
-    )
+    );
   }
   getMarketsSummary() {
     this.gettingMarketSummary = true;
-    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getMarketsSummary';
+    const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getMarketsSummary';
     this.http.post(url, {}).subscribe(
       (response: any) => {
         if (!response.err) {
           this.marketSummary = response.data;
+          this.removeDuplicateSummary();
           this.calcMarketData();
           console.log('getMarketsSummary', response.data);
         }
@@ -99,9 +100,27 @@ export class MarketComponent implements OnInit {
         console.log(error);
         this.gettingMarketSummary = false;
       }
-    )
+    );
   }
 
+  removeDuplicateSummary() {
+    console.log('before remove duplicate this.marketSummary', this.marketSummary);
+    const symbolsToCalc = [];
+    for (let i = 0; i < this.marketSummary.length; i++) {
+      const symbolSplit = this.marketSummary[i].symbol.split('_');
+      const fromCoin = symbolSplit[0];
+      const toCoin = symbolSplit[1];
+      const regularSymbol = fromCoin + '_' + toCoin;
+      const switchedSymbol = toCoin + '_' + fromCoin;
+      if (symbolsToCalc.indexOf(regularSymbol) === -1 && symbolsToCalc.indexOf(switchedSymbol) === -1) {
+        symbolsToCalc.push(regularSymbol);
+      } else {
+        this.marketSummary.splice(i, 1);
+        i--;
+      }
+    }
+    console.log('after remove duplicate this.marketSummary', this.marketSummary);
+  }
   calcMarketData() {
     for (const i in this.marketSummary) {
       if (!this.marketData[this.marketSummary[i].market_name]) {
@@ -111,9 +130,9 @@ export class MarketComponent implements OnInit {
           buyLiquidity: 0,
           '24hDeposits': 0,
           '24hWithdrawals': 0,
-          'totalPriceBtc': 0,
-          'totalPriceCount': 0,
-          'avgPriceBtc': 0,
+          totalPriceBtc: 0,
+          totalPriceCount: 0,
+          avgPriceBtc: 0,
           buyLquidityOptions: [],
           sellLquidityOptions: []
         };
@@ -131,27 +150,27 @@ export class MarketComponent implements OnInit {
         const toCoin = symbolSplit[1];
         // if(fromCoin !== 'BTC') {
         this.marketData[this.marketSummary[i].market_name].buyLquidityOptions.push({
-          fromCoin: fromCoin,
+          fromCoin,
           fromAmount: this.marketSummary[i].buyLiquidity.toFixed(6),
-          toCoin: toCoin,
+          toCoin,
           toMainCoin: 'BTC',
           toAmount: this.marketSummary[i].buyLiquidityBtc.toFixed(6),
-        })
+        });
         this.marketData[this.marketSummary[i].market_name].sellLquidityOptions.push({
-          fromCoin: fromCoin,
+          fromCoin,
           fromAmount: this.marketSummary[i].sellLiquidity.toFixed(6),
-          toCoin: toCoin,
+          toCoin,
           toMainCoin: 'BTC',
           toAmount: this.marketSummary[i].sellLiquidityBtc.toFixed(6)
-        })
+        });
         // }
-      }
+      };
 
       const setDataBasedOnRealPrice = () => {
         this.marketData[this.marketSummary[i].market_name].buyLiquidity += this.marketSummary[i].realBuyLiquidityBtc;
         this.marketData[this.marketSummary[i].market_name].sellLiquidity += this.marketSummary[i].realSellLiquidityBtc;
         this.marketData[this.marketSummary[i].market_name]['24hVolume'] += parseFloat(this.marketSummary[i].volume) * parseFloat(this.marketSummary[i].leftCoinPriceBtc);
-        if(this.marketSummary[i].symbol.indexOf('BTC_') === -1) {
+        if (this.marketSummary[i].symbol.indexOf('BTC_') === -1) {
           this.marketData[this.marketSummary[i].market_name].totalPriceBtc += this.marketSummary[i].leftCoinPriceBtc;
           this.marketData[this.marketSummary[i].market_name].totalPriceCount += 1;
         }
@@ -160,41 +179,41 @@ export class MarketComponent implements OnInit {
         const toCoin = symbolSplit[1];
         // if(fromCoin !== 'BTC') {
         this.marketData[this.marketSummary[i].market_name].buyLquidityOptions.push({
-          fromCoin: fromCoin,
+          fromCoin,
           fromAmount: this.marketSummary[i].realBuyLiquidity.toFixed(6),
-          toCoin: toCoin,
+          toCoin,
           toMainCoin: 'BTC',
           toAmount: this.marketSummary[i].realBuyLiquidityBtc.toFixed(6),
-        })
+        });
         this.marketData[this.marketSummary[i].market_name].sellLquidityOptions.push({
-          fromCoin: fromCoin,
+          fromCoin,
           fromAmount: this.marketSummary[i].realSellLiquidity.toFixed(6),
-          toCoin: toCoin,
+          toCoin,
           toMainCoin: 'BTC',
           toAmount: this.marketSummary[i].realSellLiquidityBtc.toFixed(6)
-        })
-      }
+        });
+      };
 
-      setDataBasedOnRealPrice();
+      setDataBasedOnLastPrice();
     }
-    for(var i in this.marketData) {
+    for (const i in this.marketData) {
       this.marketData[i].avgPriceBtc = (this.marketData[i].totalPriceBtc / this.marketData[i].totalPriceCount).toFixed(8);
       this.marketData[i].buyLiquidity = this.marketData[i].buyLiquidity.toFixed(8);
       this.marketData[i].sellLiquidity = this.marketData[i].sellLiquidity.toFixed(8);
       this.marketData[i]['24hVolume'] = this.marketData[i]['24hVolume'].toFixed(8);
     }
-    console.log('this.marketData', this.marketData)
+    console.log('this.marketData', this.marketData);
   }
 
   getMarket() {
     this.gettingMarket = true;
     this.market = null;
-    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getMarket/' + this.currentSymbol;
+    const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getMarket/' + this.currentSymbol;
     this.http.get(url).subscribe(
       (response: any) => {
-        if(!response.err) {
+        if (!response.err) {
           this.market = response.data;
-          console.log('this.market', this.market)
+          console.log('this.market', this.market);
         } else {
           this.router.navigateByUrl('/');
         }
@@ -204,7 +223,7 @@ export class MarketComponent implements OnInit {
         console.log(error);
         this.gettingMarket = false;
       }
-    )
+    );
   }
 
   setCurrentTable(symbol) {
@@ -216,33 +235,28 @@ export class MarketComponent implements OnInit {
   }
 
   setTotal(price) {
-    var res;
-      if(this.currentFromCoin === 'BTC') {
-        res = parseFloat(this.maxAfterDotPipe.transform(price, 8)).toFixed(8);
-      }
-      else {
-        res = parseFloat(this.maxAfterDotPipe.transform(price, 2)).toFixed(2);
-      }
+    let res;
+    if (this.currentFromCoin === 'BTC') {
+      res = parseFloat(this.maxAfterDotPipe.transform(price, 8)).toFixed(8);
+    } else {
+      res = parseFloat(this.maxAfterDotPipe.transform(price, 2)).toFixed(2);
+    }
     return res;
   }
   setPrice(total) {
-    var res;
-    if(this.currentFromCoin === 'BTC') {
+    let res;
+    if (this.currentFromCoin === 'BTC') {
       res = parseFloat(this.maxAfterDotPipe.transform(total, 8)).toFixed(8);
-    }
-    else if(this.currentFromCoin === 'XEM' || this.currentFromCoin === 'DOGEC' || this.currentFromCoin === 'STREAM') {
+    } else if (this.currentFromCoin === 'XEM' || this.currentFromCoin === 'DOGEC' || this.currentFromCoin === 'STREAM') {
       res = parseFloat(this.maxAfterDotPipe.transform(total, 8)).toFixed(8);
-    }
-    else if(this.currentFromCoin === 'TWINS') {
+    } else if (this.currentFromCoin === 'TWINS') {
       res = parseFloat(this.maxAfterDotPipe.transform(total, 4)).toFixed(4);
-    }
-    else if(this.currentFromCoin === 'FIX') {
+    } else if (this.currentFromCoin === 'FIX') {
       res = parseFloat(this.maxAfterDotPipe.transform(total, 8));
-      if(res < 1) {
+      if (res < 1) {
         res = res.toFixed(8);
       }
-    }
-    else {
+    } else {
       res = parseFloat(this.maxAfterDotPipe.transform(total, 2)).toFixed(2);
     }
     return res;

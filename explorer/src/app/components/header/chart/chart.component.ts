@@ -1,4 +1,4 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit} from '@angular/core';
 
 // const mockedData = {
 //   currency: "USD",
@@ -8,16 +8,16 @@ import {Component, OnInit} from "@angular/core";
 declare var DATA: any;
 
 @Component({
-  selector: "header-chart",
-  templateUrl: "./chart.component.html",
+  selector: 'header-chart',
+  templateUrl: './chart.component.html',
 })
-export class HeaderChartComponent implements OnInit{
-  public data:any;
+export class HeaderChartComponent implements OnInit {
+  public data: any;
   public options = {
     series: [{
       // name: mockedData.currency,
       // data: mockedData.y,
-      name: "",
+      name: '',
       data: [],
     }],
     chart: {
@@ -31,7 +31,7 @@ export class HeaderChartComponent implements OnInit{
       },
       offsetY: -12,
     },
-    colors: ["#212529"],
+    colors: ['#212529'],
     dataLabels: {
       enabled: false
     },
@@ -41,7 +41,7 @@ export class HeaderChartComponent implements OnInit{
     },
     grid: {
       show: true,
-      borderColor: "#eaebf1",
+      borderColor: '#eaebf1',
     },
     xaxis: {
       categories: [],
@@ -62,8 +62,8 @@ export class HeaderChartComponent implements OnInit{
   ngOnInit(): void {
     let data: any = {}; /// from server node ejs data
     // console.log('window.DATA', (<any>window).DATA)
-    if (typeof (<any>window).DATA !== "undefined") {
-      data = (<any>window).DATA;
+    if (typeof (window as any).DATA !== 'undefined') {
+      data = (window as any).DATA;
     }
     // console.log('session data');
     // console.log(data);

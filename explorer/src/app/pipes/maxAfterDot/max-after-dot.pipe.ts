@@ -6,8 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class MaxAfterDotPipe implements PipeTransform {
 
   transform(value: any, numberAfterDot: number): any {
-    var num = Math.pow(10, numberAfterDot);
-    var decimal = this.exponentialToDecimal(Math.round(value * num)/num);
+    const num = Math.pow(10, numberAfterDot);
+    const decimal = this.exponentialToDecimal(Math.round(value * num) / num);
     // var decimalAfterDot = decimal.substr(decimal.indexOf('.') + 1, decimal.length);
     // var arr = decimal.toString().split('.');
     // var decimalLength = 0;
@@ -58,6 +58,6 @@ export class MaxAfterDotPipe implements PipeTransform {
       decimal = prefix + exponentialSplitted[0].replace('.', '');
     }
     return decimal;
-  };
+  }
 
 }

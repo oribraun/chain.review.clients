@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from './../../environments/environment';
-import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
-import {NavigationEnd, NavigationStart, Router} from "@angular/router";
-import {Title} from "@angular/platform-browser";
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
+import {NavigationEnd, NavigationStart, Router} from '@angular/router';
+import {Title} from '@angular/platform-browser';
 
 declare var ga: any;
 @Injectable({
@@ -23,10 +23,10 @@ export class AnalyticsService {
         // 'Authorization': 'my-auth-token'
         'Access-Control-Allow-Origin': '*',
         // 'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Methods': "GET, POST, DELETE, PUT"
+        'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT'
       })
     };
-    console.log('this.headers', this.headers)
+    console.log('this.headers', this.headers);
 
     this.httpClient = httpClient;
     this.router = router;
@@ -34,7 +34,7 @@ export class AnalyticsService {
     this.analyticsId = environment.analyticsId;
     AnalyticsService.loadGoogleAnalytics2(this.analyticsId);
     router.events.forEach((event) => {
-      if(event instanceof NavigationEnd) {
+      if (event instanceof NavigationEnd) {
         setTimeout(() => {
           this.trackPageView();
         });
@@ -48,11 +48,11 @@ export class AnalyticsService {
 
   static loadGoogleAnalytics(trackingID: string): void {
 
-    let gaScript = document.createElement('script');
+    const gaScript = document.createElement('script');
     gaScript.setAttribute('async', 'true');
     gaScript.setAttribute('src', `https://www.googletagmanager.com/gtag/js?id=${ trackingID }`);
 
-    let gaScript2 = document.createElement('script');
+    const gaScript2 = document.createElement('script');
     gaScript2.innerText = `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag(\'js\', new Date());gtag(\'config\', \'${ trackingID }\');`;
 
     document.documentElement.firstChild.appendChild(gaScript);
@@ -61,13 +61,13 @@ export class AnalyticsService {
 
   static loadGoogleAnalytics2(trackingID: string): void {
 
-    let gaScript = document.createElement('script');
-    gaScript.innerText = "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n" +
-      "  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n" +
-      "  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n" +
-      "  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');\n" +
-      "\n" +
-      "  ga('create', '" + trackingID + "', 'auto');\n";
+    const gaScript = document.createElement('script');
+    gaScript.innerText = '(function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){\n' +
+      '  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n' +
+      '  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n' +
+      '  })(window,document,\'script\',\'https://www.google-analytics.com/analytics.js\',\'ga\');\n' +
+      '\n' +
+      '  ga(\'create\', \'' + trackingID + '\', \'auto\');\n';
       // "  ga('send', 'pageview');";
 
     document.documentElement.lastChild.appendChild(gaScript);
@@ -123,8 +123,8 @@ export class AnalyticsService {
     // console.log('ga', ga)
     ga('send', {
       hitType: 'pageview',
-      page: location.pathname + "/" + location.hash,
-      location: location.pathname + "/" + location.hash,
+      page: location.pathname + '/' + location.hash,
+      location: location.pathname + '/' + location.hash,
       title: this.titleService.getTitle()
     });
   }

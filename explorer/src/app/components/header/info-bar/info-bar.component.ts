@@ -1,4 +1,4 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit} from '@angular/core';
 
 declare var DATA: any;
 
@@ -13,8 +13,8 @@ export class InfoBarComponent implements OnInit {
   ngOnInit() {
     let data: any = {};
 
-    if (typeof (<any>window).DATA !== "undefined") {
-      data = (<any>window).DATA;
+    if (typeof (window as any).DATA !== 'undefined') {
+      data = (window as any).DATA;
     }
 
     this.data = data;

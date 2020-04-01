@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Router} from "@angular/router";
+import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 
 declare var DATA: any;
 declare var $: any;
@@ -11,9 +11,9 @@ declare var $: any;
 })
 export class HeaderComponent implements OnInit {
 
-  public data:any;
+  public data: any;
   public search: string;
-  public searching: boolean = false;
+  public searching = false;
   private http: HttpClient;
   public router: Router;
   constructor(http: HttpClient, router: Router) {
@@ -24,8 +24,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     let data: any = {}; /// from server node ejs data
     // console.log('window.DATA', (<any>window).DATA)
-    if (typeof (<any>window).DATA !== "undefined") {
-      data = (<any>window).DATA;
+    if (typeof (window as any).DATA !== 'undefined') {
+      data = (window as any).DATA;
     }
     // console.log('session data');
     // console.log(data);
@@ -33,38 +33,38 @@ export class HeaderComponent implements OnInit {
   }
 
   onSearch() {
-    if(!this.search) {
+    if (!this.search) {
       return;
     }
     // console.log('this.search', this.search)
-    var currentRouteArray = this.router.url.split('/');
-    var currentHash = currentRouteArray[currentRouteArray.length - 1];
-    if(this.search === currentHash) {
+    const currentRouteArray = this.router.url.split('/');
+    const currentHash = currentRouteArray[currentRouteArray.length - 1];
+    if (this.search === currentHash) {
       return;
     }
     // console.log('currentHash', currentHash)
     this.searching = true;
-    let url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/search/' + this.search;
+    const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/search/' + this.search;
     console.log('url', url);
     $('.navbar-collapse').collapse('hide');
     this.http.get(url).subscribe(
       (response: any) => {
-        if(!response.err) {
+        if (!response.err) {
           if (response.data && response.data.type && response.data.result) {
             this.router.navigateByUrl('/' + response.data.type + '/' + response.data.result);
           } else {
-            alert('Search found no results for: ' + this.search)
+            alert('Search found no results for: ' + this.search);
           }
         } else {
-          alert('Search found no results for: ' + this.search)
+          alert('Search found no results for: ' + this.search);
         }
         this.searching = false;
       },
       (error) => {
-        console.log(error)
+        console.log(error);
         this.searching = false;
       }
-    )
+    );
   }
 
 }

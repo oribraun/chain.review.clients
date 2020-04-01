@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {BlocksComponent} from "./components/blocks/blocks.component";
-import {TxComponent} from "./components/tx/tx.component";
-import {BlockComponent} from "./components/block/block.component";
-import {AddressComponent} from "./components/address/address.component";
-import {RichlistComponent} from "./components/richlist/richlist.component";
-import {MasternodesComponent} from "./components/masternodes/masternodes.component";
-import {MovementComponent} from "./components/movement/movement.component";
-import {ApiComponent} from "./components/api/api.component";
-import {MarketComponent} from "./components/market/market.component";
+import {BlocksComponent} from './components/blocks/blocks.component';
+import {TxComponent} from './components/tx/tx.component';
+import {BlockComponent} from './components/block/block.component';
+import {AddressComponent} from './components/address/address.component';
+import {RichlistComponent} from './components/richlist/richlist.component';
+import {MasternodesComponent} from './components/masternodes/masternodes.component';
+import {MovementComponent} from './components/movement/movement.component';
+import {ApiComponent} from './components/api/api.component';
+import {MarketComponent} from './components/market/market.component';
 
 
 const routes: Routes = [

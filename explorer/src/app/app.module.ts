@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from "@angular/forms";
-import { NgApexchartsModule } from "ng-apexcharts";
+import { FormsModule } from '@angular/forms';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,8 +22,8 @@ import { PrettyDaysHoursMinutesPipe } from './pipes/prettyDaysHoursMinutes/prett
 import { OrderByPipe } from './pipes/orderBy/order-by.pipe';
 import { MarketComponent } from './components/market/market.component';
 import { ToFixedPipe } from './pipes/toFixed/to-fixed.pipe';
-import { InfoBarComponent } from "./components/header/info-bar/info-bar.component";
-import { HeaderChartComponent } from "./components/header/chart/chart.component";
+import { InfoBarComponent } from './components/header/info-bar/info-bar.component';
+import { HeaderChartComponent } from './components/header/chart/chart.component';
 import { MaxAfterDotPipe } from './pipes/maxAfterDot/max-after-dot.pipe';
 import { MovementChartComponent } from './components/movement/chart/chart.component';
 

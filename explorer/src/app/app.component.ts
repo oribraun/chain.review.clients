@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from "@angular/platform-browser";
-import {AnalyticsService} from "./services/analytics.service";
+import {Title} from '@angular/platform-browser';
+import {AnalyticsService} from './services/analytics.service';
 
 declare let DATA: any;
 @Component({
@@ -8,7 +8,7 @@ declare let DATA: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'explorer';
   // data;
   private data: any;
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
     // analyticsService.trackPageView()
     this.titleService = titleService;
     let data: any = {}; /// from server node ejs data
-    if (typeof DATA !== "undefined") {
+    if (typeof DATA !== 'undefined') {
       data = DATA;
     }
     this.data = data;

@@ -6,14 +6,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ToFixedPipe implements PipeTransform {
 
   transform(value: any, numberAfterDot: number): any {
-    var num = Math.pow(10, numberAfterDot);
+    const num = Math.pow(10, numberAfterDot);
     // return Number(Math.round(value * num)/num).toFixed(numberAfterDot);
-    var decimal = this.exponentialToDecimal(Math.round(value * num)/num);
-    var decimalAfterDot = decimal.substr(decimal.indexOf('.') + 1, decimal.length);
-    for(var i = 0; i < numberAfterDot - decimalAfterDot.length; i++) {
+    let decimal = this.exponentialToDecimal(Math.round(value * num) / num);
+    const decimalAfterDot = decimal.substr(decimal.indexOf('.') + 1, decimal.length);
+    for (let i = 0; i < numberAfterDot - decimalAfterDot.length; i++) {
       decimal += '0';
     }
-    return decimal
+    return decimal;
   }
 
   exponentialToDecimal(exponential) {
@@ -52,6 +52,6 @@ export class ToFixedPipe implements PipeTransform {
       decimal = prefix + exponentialSplitted[0].replace('.', '');
     }
     return decimal;
-  };
+  }
 
 }
