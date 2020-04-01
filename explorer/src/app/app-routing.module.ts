@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'block/:hash', component: BlockComponent },
   { path: 'tx/:hash', component: TxComponent },
   { path: 'address/:address', component: AddressComponent },
-  { path: 'richlist', component: RichlistComponent },
+  { path: 'addresses', component: RichlistComponent },
   { path: 'masternodes', component: MasternodesComponent },
   { path: 'transactions', component: MovementComponent },
   { path: 'api', component: ApiComponent },

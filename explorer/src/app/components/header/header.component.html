@@ -9,22 +9,22 @@
     <div class="collapse navbar-collapse my-navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="header-menu__item" href="#" [routerLink]="'/'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Explorer</a>
-        </li>
-        <li data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="header-menu__item" href="#" [routerLink]="'/richlist'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Richlist</a>
-        </li>
-        <li data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="header-menu__item" href="#" [routerLink]="'/masternodes'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Masternodes</a>
+          <a class="header-menu__item" href="#" [routerLink]="'/'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Block Explorer</a>
         </li>
         <li data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="header-menu__item" href="#" [routerLink]="'/transactions'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Transactions</a>
         </li>
         <li data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="header-menu__item" href="#" [routerLink]="'/api'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Api</a>
+          <a class="header-menu__item" href="#" [routerLink]="'/addresses'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Addresses</a>
+        </li>
+        <li data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="header-menu__item" href="#" [routerLink]="'/masternodes'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Masternodes</a>
         </li>
         <li data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="header-menu__item" href="#"  [routerLink]="'/market'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:false}">Market</a>
+        </li>
+        <li data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="header-menu__item" href="#" [routerLink]="'/api'" [routerLinkActive]="'header-menu__item--active'" [routerLinkActiveOptions]="{exact:true}">Api</a>
         </li>
       </ul>
       <form class="header-search app-header__search" (ngSubmit)="onSearch()">

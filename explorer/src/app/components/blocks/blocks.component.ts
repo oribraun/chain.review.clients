@@ -38,7 +38,7 @@ export class BlocksComponent implements OnInit {
     }
     // console.log(data);
     this.data = data;
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Blockchain Explorer | Chain Review' );
+    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Block Explorer | Chain Review' );
   }
 
   ngOnInit() {
