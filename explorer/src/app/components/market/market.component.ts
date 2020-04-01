@@ -111,10 +111,7 @@ export class MarketComponent implements OnInit {
       const fromCoin = symbolSplit[0];
       const toCoin = symbolSplit[1];
       const regularSymbol = fromCoin + '_' + toCoin;
-      const switchedSymbol = toCoin + '_' + fromCoin;
-      if (symbolsToCalc.indexOf(regularSymbol) === -1 && symbolsToCalc.indexOf(switchedSymbol) === -1) {
-        symbolsToCalc.push(regularSymbol);
-      } else {
+      if (!regularSymbol.includes(this.data.wallet.toUpperCase() + '_')) {
         this.marketSummary.splice(i, 1);
         i--;
       }
