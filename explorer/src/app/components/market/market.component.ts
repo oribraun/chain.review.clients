@@ -92,7 +92,7 @@ export class MarketComponent implements OnInit {
           this.marketSummary = response.data;
           this.removeDuplicateSummary();
           this.calcMarketData();
-          console.log('getMarketsSummary', response.data);
+          // console.log('getMarketsSummary', response.data);
         }
         this.gettingMarketSummary = false;
       },
@@ -104,7 +104,7 @@ export class MarketComponent implements OnInit {
   }
 
   removeDuplicateSummary() {
-    console.log('before remove duplicate this.marketSummary', this.marketSummary);
+    // console.log('before remove duplicate this.marketSummary', this.marketSummary);
     const symbolsToCalc = [];
     for (let i = 0; i < this.marketSummary.length; i++) {
       const symbolSplit = this.marketSummary[i].symbol.split('_');
@@ -116,7 +116,7 @@ export class MarketComponent implements OnInit {
         i--;
       }
     }
-    console.log('after remove duplicate this.marketSummary', this.marketSummary);
+    // console.log('after remove duplicate this.marketSummary', this.marketSummary);
   }
   calcMarketData() {
     for (const i in this.marketSummary) {
@@ -135,8 +135,8 @@ export class MarketComponent implements OnInit {
         };
       }
       const setDataBasedOnLastPrice = () => {
-        this.marketData[this.marketSummary[i].market_name].buyLiquidity += this.marketSummary[i].buyLiquidityBtc;
-        this.marketData[this.marketSummary[i].market_name].sellLiquidity += this.marketSummary[i].sellLiquidityBtc;
+        this.marketData[this.marketSummary[i].market_name].buyLiquidity += this.marketSummary[i].totalBuyLiquidityBtc;
+        this.marketData[this.marketSummary[i].market_name].sellLiquidity += this.marketSummary[i].amountSellLiquidityBtc;
         this.marketData[this.marketSummary[i].market_name]['24hVolume'] += parseFloat(this.marketSummary[i].volume) * parseFloat(this.marketSummary[i].leftCoinPriceBtc);
         if (this.marketSummary[i].symbol.indexOf('BTC_') === -1) {
           this.marketData[this.marketSummary[i].market_name].totalPriceBtc += this.marketSummary[i].leftCoinPriceBtc;
@@ -148,24 +148,24 @@ export class MarketComponent implements OnInit {
         // if(fromCoin !== 'BTC') {
         this.marketData[this.marketSummary[i].market_name].buyLquidityOptions.push({
           fromCoin,
-          fromAmount: this.marketSummary[i].buyLiquidity.toFixed(6),
+          fromAmount: this.marketSummary[i].totalBuyLiquidity.toFixed(6),
           toCoin,
           toMainCoin: 'BTC',
-          toAmount: this.marketSummary[i].buyLiquidityBtc.toFixed(6),
+          toAmount: this.marketSummary[i].totalBuyLiquidityBtc.toFixed(6),
         });
         this.marketData[this.marketSummary[i].market_name].sellLquidityOptions.push({
           fromCoin,
-          fromAmount: this.marketSummary[i].sellLiquidity.toFixed(6),
+          fromAmount: this.marketSummary[i].amountSellLiquidity.toFixed(6),
           toCoin,
           toMainCoin: 'BTC',
-          toAmount: this.marketSummary[i].sellLiquidityBtc.toFixed(6)
+          toAmount: this.marketSummary[i].amountSellLiquidityBtc.toFixed(6)
         });
         // }
       };
 
       const setDataBasedOnRealPrice = () => {
-        this.marketData[this.marketSummary[i].market_name].buyLiquidity += this.marketSummary[i].realBuyLiquidityBtc;
-        this.marketData[this.marketSummary[i].market_name].sellLiquidity += this.marketSummary[i].realSellLiquidityBtc;
+        this.marketData[this.marketSummary[i].market_name].buyLiquidity += this.marketSummary[i].totalBuyLiquidityBtc;
+        this.marketData[this.marketSummary[i].market_name].sellLiquidity += this.marketSummary[i].totalSellLiquidityBtc;
         this.marketData[this.marketSummary[i].market_name]['24hVolume'] += parseFloat(this.marketSummary[i].volume) * parseFloat(this.marketSummary[i].leftCoinPriceBtc);
         if (this.marketSummary[i].symbol.indexOf('BTC_') === -1) {
           this.marketData[this.marketSummary[i].market_name].totalPriceBtc += this.marketSummary[i].leftCoinPriceBtc;
@@ -177,17 +177,17 @@ export class MarketComponent implements OnInit {
         // if(fromCoin !== 'BTC') {
         this.marketData[this.marketSummary[i].market_name].buyLquidityOptions.push({
           fromCoin,
-          fromAmount: this.marketSummary[i].realBuyLiquidity.toFixed(6),
+          fromAmount: this.marketSummary[i].totalBuyLiquidity.toFixed(6),
           toCoin,
           toMainCoin: 'BTC',
-          toAmount: this.marketSummary[i].realBuyLiquidityBtc.toFixed(6),
+          toAmount: this.marketSummary[i].totalBuyLiquidityBtc.toFixed(6),
         });
         this.marketData[this.marketSummary[i].market_name].sellLquidityOptions.push({
           fromCoin,
-          fromAmount: this.marketSummary[i].realSellLiquidity.toFixed(6),
+          fromAmount: this.marketSummary[i].totalSellLiquidity.toFixed(6),
           toCoin,
           toMainCoin: 'BTC',
-          toAmount: this.marketSummary[i].realSellLiquidityBtc.toFixed(6)
+          toAmount: this.marketSummary[i].totalSellLiquidityBtc.toFixed(6)
         });
       };
 
@@ -199,7 +199,7 @@ export class MarketComponent implements OnInit {
       this.marketData[i].sellLiquidity = this.marketData[i].sellLiquidity.toFixed(8);
       this.marketData[i]['24hVolume'] = this.marketData[i]['24hVolume'].toFixed(8);
     }
-    console.log('this.marketData', this.marketData);
+    // console.log('this.marketData', this.marketData);
   }
 
   getMarket() {
