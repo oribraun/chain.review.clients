@@ -1611,8 +1611,21 @@ export class MovementChartComponent implements OnInit {
       dataLabels: {
         enabled: false
       },
+      stroke: {
+        width: 2,
+        // curve: 'stepline',
+        // show?: boolean;
+        // curve?: "smooth" | "straight" | "stepline";
+        // lineCap?: "butt" | "square" | "round";
+        // colors?: string[];
+        // width?: number | number[];
+        // dashArray?: number | number[];
+      },
       markers: {
-        size: 0
+        size: 0,
+        hover: {
+          size: 4
+        }
       },
       colors: ['#212529'],
       title: {
