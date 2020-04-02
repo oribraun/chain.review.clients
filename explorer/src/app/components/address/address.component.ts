@@ -173,9 +173,9 @@ export class AddressComponent implements OnInit {
 
   getAddressDetails() {
     this.gettingAddressDetails = true;
-    const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getAddressDetails/' + this.addr;
+    const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getAddressDetails';
     console.log('url', url);
-    this.http.get(url).subscribe(
+    this.http.post(url, {address: this.addr}).subscribe(
         (response: any) => {
           if (!response.err) {
             this.addressDetails = response.data;

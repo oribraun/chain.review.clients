@@ -8942,7 +8942,7 @@ export class MockBackendInterceptor implements HttpInterceptor {
           limit = parseInt(body.limit);
           offset = parseInt(body.offset);
           return getAddressTxs(wallet, limit, offset);
-        case url.indexOf('/getAddressDetails') > -1 && method === 'GET':
+        case url.indexOf('/getAddressDetails') > -1 && method === 'POST':
           host = window.location.protocol + '//' + window.location.host + '/';
           array = url.replace(host, '').split('/');
           wallet = array[2];
