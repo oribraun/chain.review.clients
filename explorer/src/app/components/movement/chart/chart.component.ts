@@ -25,25 +25,10 @@ export class MovementChartComponent implements OnInit {
     // console.log(data);
     this.data = data;
     this.setChart('Transactions', false);
-    setTimeout(() => {
-      this.getTransactionsChart();
-    });
   }
 
   ngOnInit(): void {
-    let data: any = {}; /// from server node ejs data
-    // console.log('window.DATA', (<any>window).DATA)
-    if (typeof (window as any).DATA !== 'undefined') {
-      data = (window as any).DATA;
-    }
-    // console.log('session data');
-    // console.log(data);
-    this.data = data;
-    // this.options.series = [{
-    //   name: this.data.chartData.currency,
-    //   data: this.data.chartData.y,
-    // }];
-    // this.options.xaxis.categories = this.data.chartData.x;
+    this.getTransactionsChart();
   }
 
   getTransactionsChart() {
