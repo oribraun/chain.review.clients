@@ -60,14 +60,14 @@ export class AddressChartComponent implements OnInit {
   }
 
   setSentAmountChartData() {
-    this.chartData = this.httpData.map((obj) => ([ new Date(obj.date).getTime(), (obj.totalSentADay / 100000000).toFixed(1)]));
+    this.chartData = this.httpData.filter((obj1) => (obj1.totalSentADay)).map((obj) => ([ new Date(obj.date).getTime(), (obj.totalSentADay / 100000000).toFixed(1)]));
     if (this.chartType !== 'Sent') {
       this.setChart('Sent', true);
     }
   }
 
   setReceivedAmountChartData() {
-    this.chartData = this.httpData.map((obj) => ([ new Date(obj.date).getTime(), (obj.totalReceivedADay / 100000000).toFixed(1)]));
+    this.chartData = this.httpData.filter((obj1) => (obj1.totalReceivedADay)).map((obj) => ([ new Date(obj.date).getTime(), (obj.totalReceivedADay / 100000000).toFixed(1)]));
     if (this.chartType !== 'Received') {
       this.setChart('Received', true);
     }
