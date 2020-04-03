@@ -27,6 +27,7 @@ import { InfoBarComponent } from './components/header/info-bar/info-bar.componen
 import { HeaderChartComponent } from './components/header/chart/chart.component';
 import { MaxAfterDotPipe } from './pipes/maxAfterDot/max-after-dot.pipe';
 import { MovementChartComponent } from './components/movement/chart/chart.component';
+import { AddressChartComponent } from './components/address/chart/chart.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { MovementChartComponent } from './components/movement/chart/chart.compon
     ToFixedPipe,
     MaxAfterDotPipe,
     MovementChartComponent,
+    AddressChartComponent,
   ],
   imports: [
     BrowserModule,
