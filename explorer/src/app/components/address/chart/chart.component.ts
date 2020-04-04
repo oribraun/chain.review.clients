@@ -14,6 +14,7 @@ export class AddressChartComponent implements OnInit {
   public httpData: any = [];
   public chartData: any = [];
   public chartType: string;
+  public chartsAvaliable: any = {};
   private http: HttpClient;
   public options: any;
   @Input('addr') currentAddress: any;
@@ -39,6 +40,12 @@ export class AddressChartComponent implements OnInit {
       (response: any) => {
         if (!response.err) {
           this.httpData = response.data;
+          const sent = this.httpData.filter((obj1) => (obj1.totalSentADay));
+          const received = this.httpData.filter((obj1) => (obj1.totalReceivedADay));
+          this.chartsAvaliable = {
+            sent: !!sent.length,
+            received: !!received.length,
+          }
           this.setTransactionChartData();
           console.log('this.httpData', this.httpData);
         }
@@ -96,38 +103,7 @@ export class AddressChartComponent implements OnInit {
         toolbar: {
           autoSelected: '',
           tools: {
-            customIcons: [
-              {
-                // icon: '<i class="fa fa-dollar"></i>',
-                icon: '<span class="">Received</span> ',
-                index: -8,
-                class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-amount',
-                title: 'Amount chart',
-                click: (chart, options, e) => {
-                  this.setReceivedAmountChartData();
-                },
-              },
-              {
-                // icon: '<i class="fa fa-dollar"></i>',
-                icon: '<span class="">Sent</span> ',
-                index: -9,
-                class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-amount',
-                title: 'Amount chart',
-                click: (chart, options, e) => {
-                  this.setSentAmountChartData();
-                },
-              },
-              {
-                // icon: '<i class="fa fa-dollar"></i>',
-                icon: '<span class="">Transactions</span> ',
-                index: -10,
-                class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-transactions',
-                title: 'Transactions chart',
-                click: (chart, options, e) => {
-                  this.setTransactionChartData();
-                },
-              }
-            ]
+            customIcons: []
           }
         },
         animations: {
@@ -203,5 +179,43 @@ export class AddressChartComponent implements OnInit {
         // text: 'Loading...'
       }
     };
+
+    if(this.chartsAvaliable.received) {
+      this.options.chart.toolbar.tools.customIcons.push(
+        {
+          icon: '<span class="">Received</span> ',
+          index: -8,
+          class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-amount',
+          title: 'Amount chart',
+          click: (chart, options, e) => {
+            this.setReceivedAmountChartData();
+          },
+        }
+      );
+    }
+    if(this.chartsAvaliable.sent) {
+      this.options.chart.toolbar.tools.customIcons.push(
+        {
+          icon: '<span class="">Sent</span> ',
+          index: -9,
+          class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-amount',
+          title: 'Amount chart',
+          click: (chart, options, e) => {
+            this.setSentAmountChartData();
+          },
+        }
+      );
+    }
+    this.options.chart.toolbar.tools.customIcons.push(
+      {
+        icon: '<span class="">Transactions</span> ',
+        index: -10,
+        class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-transactions',
+        title: 'Transactions chart',
+        click: (chart, options, e) => {
+          this.setTransactionChartData();
+        },
+      }
+    );
   }
 }
