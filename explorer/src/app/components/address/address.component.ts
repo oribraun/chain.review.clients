@@ -48,6 +48,7 @@ export class AddressComponent implements OnInit {
     this.data = data;
     this.route.params.subscribe(params => {
       this.addr = params.address;
+      this.resetPagination();
       this.setCurrentTable();
       this.getAddressDetails();
     });
@@ -57,6 +58,17 @@ export class AddressComponent implements OnInit {
   ngOnInit() {
   }
 
+  resetPagination() {
+    this.pagination = {
+      current: 1,
+      start: 1,
+      end: 10,
+      pages: 0,
+      maxPages: 10,
+      offset: 0,
+      limit: 25
+    };
+  }
   setCurrentTable() {
     for (let i = 0; i < this.pagination.limit; i++) {
       this.emptyTable.push( {txid: '&nbsp;', timestamp: '', sent: '', received: '', balance: '', type: '', blockindex: ''});

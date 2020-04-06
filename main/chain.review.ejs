@@ -20,18 +20,19 @@
     <div class="my-table">
         <div class="header d-none d-md-block">
             <div class="row">
-                <div class="col-md-3 my-th">Coin</div>
+                <div class="col-md-2 my-th">Coin</div>
 <!--                <div class="col-md-4 my-th">Explorer</div>-->
                 <div class="col-md-3 my-th">Last Block</div>
                 <div class="col-md-3 my-th">Masternodes</div>
-                <div class="col-md-3 my-th">Version</div>
+                <div class="col-md-2 my-th">Version</div>
+                <div class="col-md-2 my-th">Protocol</div>
             </div>
         </div>
         <div class="body">
             <% for(var i = 0 ; i < data.length ; i++) { %>
                 <div class="my-tr">
                     <div class="row">
-                        <div class="col-md-3 my-td">
+                        <div class="col-md-2 my-td">
                             <span class="label font-weight-bold d-md-none">Coin:&nbsp;</span>
                             <span class=""><a href="<%= data[i].explorer %>"><%= data[i].wallet.toUpperCase() %></a></span>
                         </div>
@@ -53,10 +54,16 @@
                                 <%= data[i].stats.masternodesCount.total %>/<%= data[i].stats.masternodesCount.enabled %>
                             </span>
                         </div>
-                        <div class="col-md-3 my-td">
+                        <div class="col-md-2 my-td">
                             <span class="label font-weight-bold d-md-none">Version:&nbsp;</span>
                             <span class="">
                                 <%= data[i].stats.version.toString().replace(/(.)./g, "$1."); %>
+                            </span>
+                        </div>
+                        <div class="col-md-2 my-td">
+                            <span class="label font-weight-bold d-md-none">Version:&nbsp;</span>
+                            <span class="">
+                                <%= data[i].stats.protocol.toString(); %>
                             </span>
                         </div>
                     </div>

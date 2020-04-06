@@ -1,21 +1,23 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
 declare var DATA: any;
 
 @Component({
-  selector: 'movement-chart',
+  selector: 'address-chart',
   templateUrl: './chart.component.html',
   styleUrls: ['./chart.component.less']
 })
-export class MovementChartComponent implements OnInit {
+export class AddressChartComponent implements OnInit {
   public data: any;
-  public gettingTxsChart = false;
+  public gettingAddressChart = false;
   public httpData: any = [];
   public chartData: any = [];
   public chartType: string;
+  public chartsAvaliable: any = {};
   private http: HttpClient;
   public options: any;
+  @Input('addr') currentAddress: any;
   constructor(http: HttpClient) {
     this.http = http;
     let data: any = {}; /// from server node ejs data
@@ -32,36 +34,49 @@ export class MovementChartComponent implements OnInit {
   }
 
   getTransactionsChart() {
-    this.gettingTxsChart = true;
-    const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getTransactionsChart';
-    this.http.post(url, {}).subscribe(
+    this.gettingAddressChart = true;
+    const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getAddressTxChart';
+    this.http.post(url, {address: this.currentAddress}).subscribe(
       (response: any) => {
         if (!response.err) {
           this.httpData = response.data;
+          const sent = this.httpData.filter((obj1) => (obj1.totalSentADay));
+          const received = this.httpData.filter((obj1) => (obj1.totalReceivedADay));
+          this.chartsAvaliable = {
+            sent: sent.length,
+            received: received.length,
+          }
           this.setTransactionChartData();
-          // console.log(response.data);
+          console.log('this.httpData', this.httpData);
         }
-        this.gettingTxsChart = false;
+        this.gettingAddressChart = false;
       },
       (error) => {
         console.log(error);
-        this.gettingTxsChart = false;
+        this.gettingAddressChart = false;
       }
     );
   }
 
   setTransactionChartData() {
-    this.chartData = this.httpData.map((obj) => ([ new Date(obj.d).getTime(), obj.c]));
+    this.chartData = this.httpData.map((obj) => ([ new Date(obj.date).getTime(), obj.count]));
+    console.log(this.chartData);
     if (this.chartType !== 'Transactions') {
       this.setChart('Transactions', true);
     }
   }
 
-  setAmountChartData() {
-    this.chartData = this.httpData.map((obj) => ([ new Date(obj.d).getTime(), (obj.t / 100000000).toFixed(1)]));
-    console.log('this.chartData', this.chartData);
-    if (this.chartType !== 'Amount') {
-      this.setChart('Amount', true);
+  setSentAmountChartData() {
+    this.chartData = this.httpData.filter((obj1) => (obj1.totalSentADay)).map((obj) => ([ new Date(obj.date).getTime(), (obj.totalSentADay / 100000000).toFixed(1)]));
+    if (this.chartType !== 'Sent') {
+      this.setChart('Sent', true);
+    }
+  }
+
+  setReceivedAmountChartData() {
+    this.chartData = this.httpData.filter((obj1) => (obj1.totalReceivedADay)).map((obj) => ([ new Date(obj.date).getTime(), (obj.totalReceivedADay / 100000000).toFixed(1)]));
+    if (this.chartType !== 'Received') {
+      this.setChart('Received', true);
     }
   }
 
@@ -88,28 +103,7 @@ export class MovementChartComponent implements OnInit {
         toolbar: {
           autoSelected: '',
           tools: {
-            customIcons: [
-              {
-                // icon: '<i class="fa fa-dollar"></i>',
-                icon: '<span class="">Amount</span> ',
-                index: -7,
-                class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-amount',
-                title: 'Amount chart',
-                click: (chart, options, e) => {
-                  this.setAmountChartData();
-                },
-              },
-              {
-                // icon: '<i class="fa fa-dollar"></i>',
-                icon: '<span class="">Transactions</span> ',
-                index: -8,
-                class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-transactions',
-                title: 'Transactions chart',
-                click: (chart, options, e) => {
-                  this.setTransactionChartData();
-                },
-              }
-            ]
+            customIcons: []
           }
         },
         animations: {
@@ -147,7 +141,7 @@ export class MovementChartComponent implements OnInit {
       },
       colors: ['#212529'],
       title: {
-        text: chartName + ' Movement',
+        text: chartName,
         align: 'left'
       },
       fill: {
@@ -185,5 +179,49 @@ export class MovementChartComponent implements OnInit {
         // text: 'Loading...'
       }
     };
+
+    if(this.chartsAvaliable.received > 0) {
+      if(this.chartsAvaliable.received === 1) {
+        this.options.markers.size = 4;
+      }
+      this.options.chart.toolbar.tools.customIcons.push(
+        {
+          icon: '<span class="">Received</span> ',
+          index: -8,
+          class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-amount',
+          title: 'Amount chart',
+          click: (chart, options, e) => {
+            this.setReceivedAmountChartData();
+          },
+        }
+      );
+    }
+    if(this.chartsAvaliable.sent > 0) {
+      if(this.chartsAvaliable.sent === 1) {
+        this.options.markers.size = 4;
+      }
+      this.options.chart.toolbar.tools.customIcons.push(
+        {
+          icon: '<span class="">Sent</span> ',
+          index: -9,
+          class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-amount',
+          title: 'Amount chart',
+          click: (chart, options, e) => {
+            this.setSentAmountChartData();
+          },
+        }
+      );
+    }
+    this.options.chart.toolbar.tools.customIcons.push(
+      {
+        icon: '<span class="">Transactions</span> ',
+        index: -10,
+        class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-transactions',
+        title: 'Transactions chart',
+        click: (chart, options, e) => {
+          this.setTransactionChartData();
+        },
+      }
+    );
   }
 }

@@ -5,9 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "start-mock": "ng serve explorer-mock",
-    "build1": "ng build --prod  --deploy-url /exp/ --base-href ./ --aot --output-hashing",
-    "build": "ng build explorer --prod --aot --deploy-url /exp/ --base-href  --output-hashing=none",
-    "build-dev": "ng build explorer --aot --deploy-url /exp/ --base-href  --output-hashing=none",
+    "build1": "ng build --prod  --deploy-url /exp/ --base-href ./ --aot --output-hashing  --deleteOutputPath=false",
+    "build": "ng build explorer --prod --aot --deploy-url /exp/ --base-href  --output-hashing=none --deleteOutputPath=false",
+    "build-dev": "ng build explorer --aot --deploy-url /exp/ --base-href  --output-hashing=none  --deleteOutputPath=false\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
