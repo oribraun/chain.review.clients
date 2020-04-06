@@ -43,8 +43,8 @@ export class AddressChartComponent implements OnInit {
           const sent = this.httpData.filter((obj1) => (obj1.totalSentADay));
           const received = this.httpData.filter((obj1) => (obj1.totalReceivedADay));
           this.chartsAvaliable = {
-            sent: !!sent.length,
-            received: !!received.length,
+            sent: sent.length,
+            received: received.length,
           }
           this.setTransactionChartData();
           console.log('this.httpData', this.httpData);
@@ -180,7 +180,10 @@ export class AddressChartComponent implements OnInit {
       }
     };
 
-    if(this.chartsAvaliable.received) {
+    if(this.chartsAvaliable.received > 0) {
+      if(this.chartsAvaliable.received === 1) {
+        this.options.markers.size = 4;
+      }
       this.options.chart.toolbar.tools.customIcons.push(
         {
           icon: '<span class="">Received</span> ',
@@ -193,7 +196,10 @@ export class AddressChartComponent implements OnInit {
         }
       );
     }
-    if(this.chartsAvaliable.sent) {
+    if(this.chartsAvaliable.sent > 0) {
+      if(this.chartsAvaliable.sent === 1) {
+        this.options.markers.size = 4;
+      }
       this.options.chart.toolbar.tools.customIcons.push(
         {
           icon: '<span class="">Sent</span> ',
