@@ -42,9 +42,11 @@ export class AddressChartComponent implements OnInit {
           this.httpData = response.data;
           const sent = this.httpData.filter((obj1) => (obj1.totalSentADay));
           const received = this.httpData.filter((obj1) => (obj1.totalReceivedADay));
+          const transactions = this.httpData.filter((obj1) => (obj1.count));
           this.chartsAvaliable = {
             sent: sent.length,
             received: received.length,
+            transactions: transactions.length,
           }
           this.setTransactionChartData();
           console.log('this.httpData', this.httpData);
@@ -220,7 +222,10 @@ export class AddressChartComponent implements OnInit {
         },
       }
     );
-    if (this.chartsAvaliable.sent === 1 && this.chartType === 'SENT') {
+    if (this.chartsAvaliable.transactions === 1 && this.chartType === 'Transactions') {
+      this.options.markers.size = 4;
+    }
+    if (this.chartsAvaliable.sent === 1 && this.chartType === 'Sent') {
       this.options.markers.size = 4;
     }
     if (this.chartsAvaliable.received === 1 && this.chartType === 'Received') {
