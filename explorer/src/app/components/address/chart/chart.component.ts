@@ -197,9 +197,6 @@ export class AddressChartComponent implements OnInit {
       );
     }
     if(this.chartsAvaliable.sent > 0) {
-      if(this.chartsAvaliable.sent === 1) {
-        this.options.markers.size = 4;
-      }
       this.options.chart.toolbar.tools.customIcons.push(
         {
           icon: '<span class="">Sent</span> ',
@@ -223,5 +220,11 @@ export class AddressChartComponent implements OnInit {
         },
       }
     );
+    if (this.chartsAvaliable.sent === 1 && this.chartType === 'SENT') {
+      this.options.markers.size = 4;
+    }
+    if (this.chartsAvaliable.received === 1 && this.chartType === 'Received') {
+      this.options.markers.size = 4;
+    }
   }
 }
