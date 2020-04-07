@@ -1,6 +1,6 @@
 <div class="chart">
   <apx-chart class="with-custom-buttons"
-    [ngClass]="{'active-transactions': chartType === 'Transactions', 'active-amount': chartType === 'Amount'}"
+    [ngClass]="{'active-transactions': chartType === 'Transactions', 'active-sent': chartType === 'Sent', 'active-received': chartType === 'Received'}"
     [series]="options.series"
     [chart]="options.chart"
     [dataLabels]="options.dataLabels"

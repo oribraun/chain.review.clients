@@ -188,8 +188,8 @@ export class AddressChartComponent implements OnInit {
         {
           icon: '<span class="">Received</span> ',
           index: -8,
-          class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-amount',
-          title: 'Amount chart',
+          class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-received',
+          title: 'Received chart',
           click: (chart, options, e) => {
             this.setReceivedAmountChartData();
           },
@@ -204,8 +204,8 @@ export class AddressChartComponent implements OnInit {
         {
           icon: '<span class="">Sent</span> ',
           index: -9,
-          class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-amount',
-          title: 'Amount chart',
+          class: 'apexcharts-custom-icon-button apexcharts-custom-icon-button-sent',
+          title: 'Sent chart',
           click: (chart, options, e) => {
             this.setSentAmountChartData();
           },
