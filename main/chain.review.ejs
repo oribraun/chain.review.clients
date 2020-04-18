@@ -21,52 +21,38 @@
     <div class="my-table">
         <div class="header d-none d-md-block">
             <div class="row">
-                <div class="col-md-2 my-th">Coin</div>
+                <div class="col-md-3 my-th">Coin</div>
 <!--                <div class="col-md-4 my-th">Explorer</div>-->
+                <div class="col-md-3 my-th">User Tx 24h</div>
                 <div class="col-md-3 my-th">Last Block</div>
                 <div class="col-md-3 my-th">Masternodes</div>
-                <div class="col-md-2 my-th">Version</div>
-                <div class="col-md-2 my-th">Protocol</div>
+<!--                <div class="col-md-2 my-th">Version</div>-->
             </div>
         </div>
         <div class="body">
             <% for(var i = 0 ; i < data.length ; i++) { %>
                 <div class="my-tr">
                     <div class="row">
-                        <div class="col-md-2 my-td">
+                        <div class="col-md-3 my-td">
                             <span class="label font-weight-bold d-md-none">Coin:&nbsp;</span>
-                            <span class=""><a href="<%= data[i].explorer %>"><%= data[i].wallet.toUpperCase() %></a></span>
+                            <span class="wallet-<%=i%>">&nbsp;</span>
                         </div>
-<!--                        <div class="col-md-4 my-td">-->
-<!--                            <span class="label font-weight-bold d-md-none">Explorer:&nbsp;</span>-->
-<!--                            <span class="">-->
-<!--                                <a href="<%= data[i].explorer %>"><%= data[i].explorer %></a>-->
-<!--                            </span>-->
-<!--                        </div>-->
+                        <div class="col-md-3 my-td">
+                            <span class="label font-weight-bold d-md-none">User Tx 24h:&nbsp;</span>
+                            <span class="users_tx_count-<%=i%>">&nbsp;</span>
+                        </div>
                         <div class="col-md-3 my-td">
                             <span class="label font-weight-bold d-md-none">Last Block:&nbsp;</span>
-                            <span class="">
-                                <%= data[i].stats.last_block %>
-                            </span>
+                            <span class="last_block-<%=i%>">&nbsp;</span>
                         </div>
                         <div class="col-md-3 my-td">
                             <span class="label font-weight-bold d-md-none">Masternodes:&nbsp;</span>
-                            <span class="">
-                                <%= data[i].stats.masternodesCount.total %>/<%= data[i].stats.masternodesCount.enabled %>
-                            </span>
+                            <span class="masternodes-<%=i%>">&nbsp;</span>
                         </div>
-                        <div class="col-md-2 my-td">
-                            <span class="label font-weight-bold d-md-none">Version:&nbsp;</span>
-                            <span class="">
-                                <%= data[i].stats.version.toString().replace(/(.)./g, "$1."); %>
-                            </span>
-                        </div>
-                        <div class="col-md-2 my-td">
-                            <span class="label font-weight-bold d-md-none">Version:&nbsp;</span>
-                            <span class="">
-                                <%= data[i].stats.protocol.toString(); %>
-                            </span>
-                        </div>
+<!--                        <div class="col-md-2 my-td">-->
+<!--                            <span class="label font-weight-bold d-md-none">Version:&nbsp;</span>-->
+<!--                            <span class="version-<%=i%>">&nbsp;</span>-->
+<!--                        </div>-->
                     </div>
                 </div>
             <% } %>
@@ -74,6 +60,49 @@
     </div>
 </div>
 
+<script
+        src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+        crossorigin="anonymous"></script>
+
+<script>
+    var data = <%-JSON.stringify(data)%>;
+
+    function updateTable() {
+        $.ajax({
+            url: '/main/getUsersStats',
+            method: 'get',
+            contentType: "application/json",
+            success: function(response) {
+                if(!response.err) {
+                    data = response.data;
+                    setUpTable();
+                }
+            },
+            error: function(err) {
+
+            }
+        })
+    }
+
+    setInterval(function() {
+        updateTable()
+    },1000 * 60)// every minute
+
+    function setUpTable() {
+        data = data.sort(function(a,b) {return b.stats.users_tx_count_24_hours - a.stats.users_tx_count_24_hours}); // desc
+        // data = data.sort(function(a,b) {return a.stats.users_tx_count - b.stats.users_tx_count}); // asc
+        for(var i in data) {
+            var coin = data[i];
+            $('.wallet-' + i).html('<a href="' +  coin.explorer  + '">' + coin.wallet.toUpperCase() + '</a>')
+            $('.last_block-' + i).html(coin.stats.last_block);
+            $('.masternodes-' + i).html(coin.stats.masternodesCount.total + '/' + coin.stats.masternodesCount.enabled);
+            // $('.version-' + i).html(coin.stats.version.toString().replace(/(.)./g, "$1."));
+            $('.users_tx_count-' + i).html(coin.stats.users_tx_count_24_hours);
+        }
+    }
+    setUpTable();
+</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112004141-3"></script>
 <script>

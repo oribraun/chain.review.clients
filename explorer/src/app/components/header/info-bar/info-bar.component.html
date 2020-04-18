@@ -1,7 +1,11 @@
 <div class="info-bar">
-  <div class="info-bar__chain-info chain-info">
+  <div class="info-bar__chain-info chain-info chain-with-version-and-protocol">
     <div class="chain-info__logo--{{data.wallet}} chain-info__logo"></div>
     <div class="chain-info__name">{{data.wallet.replace('dogecash', 'dogec') | uppercase}} Coin</div>
+    <div class="break"></div>
+    <div class="version-and-protocol">
+      <div class="tiny"><span class="block with-border"><span>version:</span>{{preetyVersion}}</span> <span class="block"><span>protocol:</span>{{data.stats.protocol}}</span></div>
+    </div>
   </div>
 
   <div class="info-bar__stats stats">

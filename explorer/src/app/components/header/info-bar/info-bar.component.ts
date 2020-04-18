@@ -9,6 +9,7 @@ declare var DATA: any;
 })
 export class InfoBarComponent implements OnInit {
   public data: any = {};
+  public preetyVersion: string;
 
   ngOnInit() {
     let data: any = {};
@@ -18,5 +19,6 @@ export class InfoBarComponent implements OnInit {
     }
 
     this.data = data;
+    this.preetyVersion = this.data.stats.version.toString().replace(/(.)./g, "$1.");
   }
 }
