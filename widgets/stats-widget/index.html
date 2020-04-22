@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .buttons {
+        margin: 10px 0;
+    }
+    button {
+        color: #fff !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #60a3bc;
+        padding: 10px 20px;
+        border-radius: 50px;
+        display: inline-block;
+        border: none;
+        transition: all 0.4s ease 0s;
+    }
+    button:hover {
+        text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        transition: all 0.4s ease 0s;
+    }
+</style>
+<body>
+<div class="buttons">
+    <button onclick="document.getElementsByTagName('stats-widget')[0].setAttribute('wallet', 'fix');">Fix</button>
+    <button onclick="document.getElementsByTagName('stats-widget')[0].setAttribute('wallet', 'twins');">Twins</button>
+    <button onclick="document.getElementsByTagName('stats-widget')[0].setAttribute('wallet', 'trittium');">Trittium</button>
+    <button onclick="document.getElementsByTagName('stats-widget')[0].setAttribute('wallet', 'dogecash');">Dogecash</button>
+    <button onclick="document.getElementsByTagName('stats-widget')[0].setAttribute('wallet', 'stream');">Stream</button>
+</div>
+<div class="body" style="max-width: 400px;">
+    <script src="https://sandbox.chain.review/widgets/stats-widget/script.js"></script>
+    <stats-widget wallet="twins"/>
+</div>
+</body>
+</html>
