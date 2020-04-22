@@ -1,7 +1,7 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Title} from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 declare var DATA: any;
 @Component({
@@ -52,7 +52,7 @@ export class AddressComponent implements OnInit {
       this.setCurrentTable();
       this.getAddressDetails();
     });
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Address ' + this.addr + ' | Chain Review' );
+    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Address ' + this.addr + ' | Chain Review' );
   }
 
   ngOnInit() {
@@ -191,7 +191,7 @@ export class AddressComponent implements OnInit {
         (response: any) => {
           if (!response.err) {
             this.addressDetails = response.data;
-            this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Address ' + this.addressDetails.address + ' | Chain Review' );
+            this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Address ' + this.addressDetails.address + ' | Chain Review' );
             this.getAddressTxList();
           } else {
             if (response.errMessage === 'no address found') {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Title} from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 declare var DATA: any;
 @Component({
@@ -35,7 +35,7 @@ export class TxComponent implements OnInit {
       this.hash = params.hash;
       this.getTxDetails();
     });
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Tx ' + this.hash + ' | Chain Review' );
+    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Tx ' + this.hash + ' | Chain Review' );
   }
 
   ngOnInit() {
@@ -49,7 +49,7 @@ export class TxComponent implements OnInit {
       (response: any) => {
         if (!response.err) {
           this.tx = response.data;
-          this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Tx ' + this.tx.txid + ' | Chain Review' );
+          this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Tx ' + this.tx.txid + ' | Chain Review' );
         } else {
           this.router.navigateByUrl('/');
         }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ActivatedRoute, Router} from '@angular/router';
 import {MaxAfterDotPipe} from '../../pipes/maxAfterDot/max-after-dot.pipe';
-import {Title} from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 declare var DATA: any;
 @Component({
@@ -46,7 +46,7 @@ export class MarketComponent implements OnInit {
         data = (window as any).DATA;
       }
       this.data = data;
-      this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Market Overview | Chain Review' );
+      this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Market Overview | Chain Review' );
       // if(this.avaliableMarkets) {
       //   this.getMarket();
       // }

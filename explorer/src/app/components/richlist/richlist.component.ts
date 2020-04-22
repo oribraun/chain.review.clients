@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ActivatedRoute} from '@angular/router';
-import {Title} from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 declare var DATA: any;
 declare var $: any;
@@ -40,7 +40,7 @@ export class RichlistComponent implements OnInit {
     }
     // console.log(data);
     this.data = data;
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Addresses | Chain Review' );
+    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Addresses | Chain Review' );
   }
 
   ngOnInit() {

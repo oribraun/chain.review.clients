@@ -1,6 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Title} from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 declare var DATA: any;
 @Component({
@@ -45,7 +45,7 @@ export class MovementComponent implements OnInit {
     }
     // console.log(data);
     this.data = data;
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Transactions | Chain Review' );
+    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Transactions | Chain Review' );
   }
 
   ngOnInit() {

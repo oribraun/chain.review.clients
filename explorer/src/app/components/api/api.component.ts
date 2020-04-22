@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 declare let DATA: any;
 @Component({
@@ -19,7 +19,7 @@ export class ApiComponent implements OnInit {
       data = (window as any).DATA;
     }
     this.data = data;
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Free Blockchain API | Chain Review' );
+    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Free Blockchain API | Chain Review' );
   }
 
   ngOnInit() {

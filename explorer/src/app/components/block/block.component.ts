@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Title} from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 declare var DATA: any;
 @Component({
@@ -36,7 +36,7 @@ export class BlockComponent implements OnInit {
       this.hash = params.hash;
       this.getBlock();
     });
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Block ' + this.hash + ' | Chain Review' );
+    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Block ' + this.hash + ' | Chain Review' );
   }
 
   ngOnInit() {
@@ -51,7 +51,7 @@ export class BlockComponent implements OnInit {
       (response: any) => {
         if (!response.err) {
           this.block = response.data.block;
-          this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Block ' + this.block.height + ' | Chain Review' );
+          this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Block ' + this.block.height + ' | Chain Review' );
           this.blockTxs = response.data.txs;
           console.log('this.blockTxs', this.blockTxs);
         } else {

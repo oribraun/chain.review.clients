@@ -2,7 +2,7 @@ import {Component, HostListener, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {FilterPipe} from '../../pipes/filter/filter.pipe';
 import {OrderByPipe} from '../../pipes/orderBy/order-by.pipe';
-import {Title} from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 declare var DATA: any;
 @Component({
@@ -45,7 +45,7 @@ export class MasternodesComponent implements OnInit {
     }
     // console.log(data);
     this.data = data;
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Masternodes | Chain Review' );
+    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Masternodes | Chain Review' );
   }
 
   ngOnInit() {
