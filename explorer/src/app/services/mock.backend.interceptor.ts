@@ -129,6 +129,7 @@ const block = {
         timestamp: 1579549769,
         blockindex: 163489,
         txid: 'dc7b77ef9cd7f7c19c7954d0d244e0ee425e8390d8c660a31612d8a27bbc2531',
+        type: 2,
         blockhash: null
       },
       {
@@ -144,6 +145,7 @@ const block = {
         timestamp: 1579549769,
         blockindex: 163489,
         txid: '7a8964a2a32e2981ba4bd7c1aa0cd5ec11988b69f90eec91a1666f22cb7d351a',
+        type: 1,
         blockhash: null
       }
     ]
@@ -186,6 +188,7 @@ const addressTxs = {
   data: [
     {
       txid: 'dc7b77ef9cd7f7c19c7954d0d244e0ee425e8390d8c660a31612d8a27bbc2531',
+      txid_type: 2,
       timestamp: '1579549769',
       amount: 152207000000,
       type: 'vout',
@@ -193,6 +196,7 @@ const addressTxs = {
     },
     {
       txid: 'a13d0561fe42512ca50f818f5c257b82f6f3469d8ebf70855740e46e67538e31',
+      txid_type: 2,
       timestamp: '1579549637',
       amount: 152207000000,
       type: 'vout',
@@ -200,6 +204,7 @@ const addressTxs = {
     },
     {
       txid: '84838f5d38c60b3642ee46e13ac0b10994290481bc987bc2cf9a2dce66132f89',
+      txid_type: 2,
       timestamp: '1579549576',
       amount: 152207000000,
       type: 'vout',
@@ -207,6 +212,7 @@ const addressTxs = {
     },
     {
       txid: '669274df874ae801d100847ab715acae122f7649e1ccade59e2b883c225df33c',
+      txid_type: 2,
       timestamp: '1579549414',
       amount: 152207000000,
       type: 'vout',
@@ -214,6 +220,7 @@ const addressTxs = {
     },
     {
       txid: '06faef05c656ac0b8dd93fc63d99b163a0ea6450906fcd8be2455a1ce363dfc6',
+      txid_type: 2,
       timestamp: '1579549340',
       amount: 152207000000,
       type: 'vout',
@@ -221,6 +228,7 @@ const addressTxs = {
     },
     {
       txid: '66498e8e36587cd770a0276e38df3149359de5ed623e6aec95a769eb5b8f46f4',
+      txid_type: 2,
       timestamp: '1579549170',
       amount: 152207000000,
       type: 'vout',
@@ -228,6 +236,7 @@ const addressTxs = {
     },
     {
       txid: '33f6c11d8d7e964c3600033ed9b3cd15fe4c0947913ec166d5f20089f1242a26',
+      txid_type: 3,
       timestamp: '1579549023',
       amount: 152207000000,
       type: 'vout',
@@ -235,6 +244,7 @@ const addressTxs = {
     },
     {
       txid: '0c52175662e6fb45b9e08281a28eb7dd42ec76ff3876f4a83f6693856d4d4437',
+      txid_type: 4,
       timestamp: '1579548879',
       amount: 152207000000,
       type: 'vout',
@@ -242,6 +252,7 @@ const addressTxs = {
     },
     {
       txid: 'fa204b4e38a2d597e08d475b4d4cc5e4204c74be8d0132262e516ec1909b9514',
+      txid_type: 1,
       timestamp: '1579548674',
       amount: 152207000000,
       type: 'vout',
@@ -249,6 +260,7 @@ const addressTxs = {
     },
     {
       txid: 'a44aeb4b6a946cb2a87a3176e139a9a5ede687151e8eeafc45c4590e0041d6c2',
+      txid_type: 2,
       timestamp: '1579548644',
       amount: 152207000000,
       type: 'vout',
