@@ -28,6 +28,8 @@ import { HeaderChartComponent } from './components/header/chart/chart.component'
 import { MaxAfterDotPipe } from './pipes/maxAfterDot/max-after-dot.pipe';
 import { MovementChartComponent } from './components/movement/chart/chart.component';
 import { AddressChartComponent } from './components/address/chart/chart.component';
+import { ClustersComponent } from './components/clusters/clusters.component';
+import { ClusterComponent } from './components/cluster/cluster.component';
 
 
 @NgModule({
@@ -54,6 +56,8 @@ import { AddressChartComponent } from './components/address/chart/chart.componen
     MaxAfterDotPipe,
     MovementChartComponent,
     AddressChartComponent,
+    ClustersComponent,
+    ClusterComponent,
   ],
   imports: [
     BrowserModule,

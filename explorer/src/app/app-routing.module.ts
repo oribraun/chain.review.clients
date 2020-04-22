@@ -9,6 +9,8 @@ import {MasternodesComponent} from './components/masternodes/masternodes.compone
 import {MovementComponent} from './components/movement/movement.component';
 import {ApiComponent} from './components/api/api.component';
 import {MarketComponent} from './components/market/market.component';
+import {ClustersComponent} from "./components/clusters/clusters.component";
+import {ClusterComponent} from "./components/cluster/cluster.component";
 
 
 const routes: Routes = [
@@ -21,6 +23,8 @@ const routes: Routes = [
   { path: 'transactions', component: MovementComponent },
   { path: 'api', component: ApiComponent },
   { path: 'market', component: MarketComponent },
+  { path: 'clusters', component: ClustersComponent },
+  { path: 'cluster/:clusterId', component: ClusterComponent },
   // { path: 'market/:symbol', component: MarketComponent },
   { path: '**', redirectTo: '' },
   // { path: 'login', component: LoginComponent },

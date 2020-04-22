@@ -1,0 +1,96 @@
+<div *ngIf="!gettingClusterDetails">
+  <div class="head"><h4>Address Details</h4></div>
+  <div class="my-table--no-header my-table">
+    <div class="body">
+      <div class="my-tr">
+        <div class="row">
+          <div class="col-3-4 my-td">Id</div>
+          <div class="col-8-6 my-td" [innerHtml]="clusterDetails._id"></div>
+        </div>
+      </div>
+      <div class="my-tr">
+        <div class="row">
+          <div class="col-3-4 my-td">Tags</div>
+          <div class="col-8-6 my-td" [innerHtml]="clusterDetails.tags && clusterDetails.tags.length ? clusterDetails.tags : 'No tags yet'"></div>
+        </div>
+      </div>
+      <div class="my-tr">
+        <div class="row">
+          <div class="col-3-4 my-td">Addresses</div>
+          <div class="col-8-6 my-td" [innerHtml]="clusterDetails.address_count"></div>
+        </div>
+      </div>
+      <div class="my-tr">
+        <div class="row">
+          <div class="col-3-4 my-td">Txs</div>
+          <div class="col-8-6 my-td" [innerHtml]="clusterDetails.tx_count"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  <address-chart [addr]="addr"></address-chart>-->
+  <div>
+    <div class="head"><h4>Addresses list</h4></div>
+    <div>
+      <div class="my-table">
+        <div class="header">
+          <div class="row">
+<!--            <div class="col-5-4 col-sm-4-4 col-md-3-6 col-lg-3-4 col-xl-3-2 my-th">Timestamp</div>-->
+            <div class="col-10 col-sm-10 col-md-11 my-th">Address</div>
+            <div class="col-2 col-sm-2 col-md-1 my-th">Txs</div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="my-tr"*ngFor="let address of addresses">
+            <div class="row">
+<!--              <div class="col-5-4 col-sm-4-4 col-md-3-6 col-lg-3-4 col-xl-3-2 my-td" [innerHtml]="tx.txid_timestamp | prettyTime"></div>-->
+              <div class="col-10 col-sm-10 col-md-11 my-td"><a [routerLink]="['/address/' + address.address]" [innerHtml]="address.address"></a></div>
+              <div class="col-2 col-sm-2 col-md-1 my-td"
+                   [innerHtml]="address.tx_count"></div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center loader" *ngIf="gettingClusterTxs">
+            <div class="d-table h-100">
+              <div class="d-table-cell align-middle">
+                <div class="spinner-grow" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="Page navigation" *ngIf="showPagination && pagination.pages">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" aria-label="Previous" (click)="prevPage()">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item" (click)="setPage(num)" [ngClass]="{'active': pagination.current === num}" *ngFor="let num of ([] | range :pagination.start :pagination.end :1)"><a class="page-link" >{{num}}</a></li>
+        <li class="page-item">
+          <a class="page-link" aria-label="Next" (click)="nextPage()">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <form action="" (submit)="setPage(input)">
+            <input class="page-link input" name="input" [(ngModel)]="input" type="text" size="1" placeholder="page">
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="d-flex justify-content-center loader" *ngIf="gettingClusterDetails">
+  <div class="d-table h-100">
+    <div class="d-table-cell align-middle">
+      <div class="spinner-grow" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+</div>

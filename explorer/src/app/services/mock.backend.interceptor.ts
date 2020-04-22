@@ -8888,2488 +8888,2748 @@ const marketsSummary = {
 };
 
 const addressTxChart = {
-  "err": 0,
-  "errMessage": "",
-  "data": [
-    {
-      "date": "2019-05-30",
-      "week": 22,
-      "count": 226,
-      "totalAmountADay": 22600000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 22600000000
-    },
-    {
-      "date": "2019-05-31",
-      "week": 22,
-      "count": 1073,
-      "totalAmountADay": 49900148999958200,
-      "totalSentADay": 43900000000,
-      "totalReceivedADay": 49900105099958200
-    },
-    {
-      "date": "2019-06-01",
-      "week": 22,
-      "count": 1086,
-      "totalAmountADay": 49900113499958200,
-      "totalSentADay": 49900005199958200,
-      "totalReceivedADay": 108300000000
-    },
-    {
-      "date": "2019-06-02",
-      "week": 22,
-      "count": 715,
-      "totalAmountADay": 306200000000,
-      "totalSentADay": 237900000000,
-      "totalReceivedADay": 68300000000
-    },
-    {
-      "date": "2019-06-03",
-      "week": 23,
-      "count": 653,
-      "totalAmountADay": 71500000000,
-      "totalSentADay": 6400000000,
-      "totalReceivedADay": 65100000000
-    },
-    {
-      "date": "2019-06-04",
-      "week": 23,
-      "count": 626,
-      "totalAmountADay": 62600000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 62600000000
-    },
-    {
-      "date": "2019-06-05",
-      "week": 23,
-      "count": 690,
-      "totalAmountADay": 69000000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 69000000000
-    },
-    {
-      "date": "2019-06-06",
-      "week": 23,
-      "count": 661,
-      "totalAmountADay": 66100000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 66100000000
-    },
-    {
-      "date": "2019-06-07",
-      "week": 23,
-      "count": 644,
-      "totalAmountADay": 64400000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 64400000000
-    },
-    {
-      "date": "2019-06-08",
-      "week": 23,
-      "count": 704,
-      "totalAmountADay": 70400000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 70400000000
-    },
-    {
-      "date": "2019-06-09",
-      "week": 23,
-      "count": 699,
-      "totalAmountADay": 69900000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 69900000000
-    },
-    {
-      "date": "2019-06-10",
-      "week": 24,
-      "count": 709,
-      "totalAmountADay": 70900000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 70900000000
-    },
-    {
-      "date": "2019-06-11",
-      "week": 24,
-      "count": 698,
-      "totalAmountADay": 69800000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 69800000000
-    },
-    {
-      "date": "2019-06-12",
-      "week": 24,
-      "count": 709,
-      "totalAmountADay": 70900000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 70900000000
-    },
-    {
-      "date": "2019-06-13",
-      "week": 24,
-      "count": 699,
-      "totalAmountADay": 69900000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 69900000000
-    },
-    {
-      "date": "2019-06-14",
-      "week": 24,
-      "count": 697,
-      "totalAmountADay": 69700000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 69700000000
-    },
-    {
-      "date": "2019-06-15",
-      "week": 24,
-      "count": 689,
-      "totalAmountADay": 68900000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 68900000000
-    },
-    {
-      "date": "2019-06-16",
-      "week": 24,
-      "count": 684,
-      "totalAmountADay": 68400000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 68400000000
-    },
-    {
-      "date": "2019-06-17",
-      "week": 25,
-      "count": 704,
-      "totalAmountADay": 70400000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 70400000000
-    },
-    {
-      "date": "2019-06-18",
-      "week": 25,
-      "count": 687,
-      "totalAmountADay": 68700000000,
-      "totalSentADay": 100000000,
-      "totalReceivedADay": 68600000000
-    },
-    {
-      "date": "2019-06-19",
-      "week": 25,
-      "count": 695,
-      "totalAmountADay": 69500000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 69500000000
-    },
-    {
-      "date": "2019-06-20",
-      "week": 25,
-      "count": 695,
-      "totalAmountADay": 69500000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 69500000000
-    },
-    {
-      "date": "2019-06-21",
-      "week": 25,
-      "count": 688,
-      "totalAmountADay": 68800000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 68800000000
-    },
-    {
-      "date": "2019-06-22",
-      "week": 25,
-      "count": 693,
-      "totalAmountADay": 69300000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 69300000000
-    },
-    {
-      "date": "2019-06-23",
-      "week": 25,
-      "count": 692,
-      "totalAmountADay": 69200000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 69200000000
-    },
-    {
-      "date": "2019-06-24",
-      "week": 26,
-      "count": 687,
-      "totalAmountADay": 68700000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 68700000000
-    },
-    {
-      "date": "2019-06-25",
-      "week": 26,
-      "count": 692,
-      "totalAmountADay": 69200000000,
-      "totalSentADay": 200000000,
-      "totalReceivedADay": 69000000000
-    },
-    {
-      "date": "2019-06-26",
-      "week": 26,
-      "count": 684,
-      "totalAmountADay": 68400000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 68400000000
-    },
-    {
-      "date": "2019-06-27",
-      "week": 26,
-      "count": 743,
-      "totalAmountADay": 99405929373450,
-      "totalSentADay": 10540362601050,
-      "totalReceivedADay": 88865566772400
-    },
-    {
-      "date": "2019-06-28",
-      "week": 26,
-      "count": 707,
-      "totalAmountADay": 207467579778430,
-      "totalSentADay": 100009437778430,
-      "totalReceivedADay": 107458142000000
-    },
-    {
-      "date": "2019-06-29",
-      "week": 26,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-06-30",
-      "week": 26,
-      "count": 697,
-      "totalAmountADay": 106088279000000,
-      "totalSentADay": 913242000000,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-07-01",
-      "week": 27,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 152207000000,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-07-02",
-      "week": 27,
-      "count": 694,
-      "totalAmountADay": 205479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 205479451000000
-    },
-    {
-      "date": "2019-07-03",
-      "week": 27,
-      "count": 699,
-      "totalAmountADay": 206240486000000,
-      "totalSentADay": 100000000000000,
-      "totalReceivedADay": 106240486000000
-    },
-    {
-      "date": "2019-07-04",
-      "week": 27,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 304414000000,
-      "totalReceivedADay": 104566209000000
-    },
-    {
-      "date": "2019-07-05",
-      "week": 27,
-      "count": 737,
-      "totalAmountADay": 640399939392920,
-      "totalSentADay": 534463867392920,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-07-06",
-      "week": 27,
-      "count": 736,
-      "totalAmountADay": 177625569000000,
-      "totalSentADay": 71689497000000,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-07-07",
-      "week": 27,
-      "count": 699,
-      "totalAmountADay": 231050227000000,
-      "totalSentADay": 24961948000000,
-      "totalReceivedADay": 206088279000000
-    },
-    {
-      "date": "2019-07-08",
-      "week": 28,
-      "count": 700,
-      "totalAmountADay": 210806696000000,
-      "totalSentADay": 105479452000000,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-07-09",
-      "week": 28,
-      "count": 707,
-      "totalAmountADay": 512937590000000,
-      "totalSentADay": 407305932000000,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-07-10",
-      "week": 28,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-07-11",
-      "week": 28,
-      "count": 697,
-      "totalAmountADay": 106088279000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2019-07-12",
-      "week": 28,
-      "count": 725,
-      "totalAmountADay": 415677317000000,
-      "totalSentADay": 310350073000000,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-07-13",
-      "week": 28,
-      "count": 685,
-      "totalAmountADay": 104261795000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104261795000000
-    },
-    {
-      "date": "2019-07-14",
-      "week": 28,
-      "count": 697,
-      "totalAmountADay": 106088279000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2019-07-15",
-      "week": 29,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2019-07-16",
-      "week": 29,
-      "count": 699,
-      "totalAmountADay": 106392693000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106392693000000
-    },
-    {
-      "date": "2019-07-17",
-      "week": 29,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-07-18",
-      "week": 29,
-      "count": 694,
-      "totalAmountADay": 165449009000000,
-      "totalSentADay": 59969558000000,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-07-19",
-      "week": 29,
-      "count": 721,
-      "totalAmountADay": 629223738000000,
-      "totalSentADay": 523287666000000,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-07-20",
-      "week": 29,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-07-21",
-      "week": 29,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-07-22",
-      "week": 30,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-07-23",
-      "week": 30,
-      "count": 677,
-      "totalAmountADay": 103044139000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 103044139000000
-    },
-    {
-      "date": "2019-07-24",
-      "week": 30,
-      "count": 708,
-      "totalAmountADay": 107762556000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 107762556000000
-    },
-    {
-      "date": "2019-07-25",
-      "week": 30,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-07-26",
-      "week": 30,
-      "count": 716,
-      "totalAmountADay": 352511412000000,
-      "totalSentADay": 247031961000000,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-07-27",
-      "week": 30,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-07-28",
-      "week": 30,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-07-29",
-      "week": 31,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-07-30",
-      "week": 31,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-07-31",
-      "week": 31,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2019-08-01",
-      "week": 31,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-08-02",
-      "week": 31,
-      "count": 716,
-      "totalAmountADay": 346270925000000,
-      "totalSentADay": 240487060000000,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-08-03",
-      "week": 31,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-08-04",
-      "week": 31,
-      "count": 692,
-      "totalAmountADay": 205175036000000,
-      "totalSentADay": 99999999000000,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-08-05",
-      "week": 32,
-      "count": 701,
-      "totalAmountADay": 106697107000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106697107000000
-    },
-    {
-      "date": "2019-08-06",
-      "week": 32,
-      "count": 694,
-      "totalAmountADay": 325114152000000,
-      "totalSentADay": 219939115000000,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-08-07",
-      "week": 32,
-      "count": 680,
-      "totalAmountADay": 141095889000000,
-      "totalSentADay": 37899543000000,
-      "totalReceivedADay": 103196346000000
-    },
-    {
-      "date": "2019-08-08",
-      "week": 32,
-      "count": 692,
-      "totalAmountADay": 305022828000000,
-      "totalSentADay": 199999998000000,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-08-09",
-      "week": 32,
-      "count": 714,
-      "totalAmountADay": 375799083000000,
-      "totalSentADay": 270776253000000,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-08-10",
-      "week": 32,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-08-11",
-      "week": 32,
-      "count": 707,
-      "totalAmountADay": 107610349000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 107610349000000
-    },
-    {
-      "date": "2019-08-12",
-      "week": 33,
-      "count": 678,
-      "totalAmountADay": 103196346000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 103196346000000
-    },
-    {
-      "date": "2019-08-13",
-      "week": 33,
-      "count": 708,
-      "totalAmountADay": 107762556000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 107762556000000
-    },
-    {
-      "date": "2019-08-14",
-      "week": 33,
-      "count": 673,
-      "totalAmountADay": 102435311000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 102435311000000
-    },
-    {
-      "date": "2019-08-15",
-      "week": 33,
-      "count": 701,
-      "totalAmountADay": 106697107000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106697107000000
-    },
-    {
-      "date": "2019-08-16",
-      "week": 33,
-      "count": 724,
-      "totalAmountADay": 355098931000000,
-      "totalSentADay": 249467273000000,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-08-17",
-      "week": 33,
-      "count": 697,
-      "totalAmountADay": 106088279000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2019-08-18",
-      "week": 33,
-      "count": 697,
-      "totalAmountADay": 280669708000000,
-      "totalSentADay": 174885843000000,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-08-19",
-      "week": 34,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2019-08-20",
-      "week": 34,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-08-21",
-      "week": 34,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-08-22",
-      "week": 34,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-08-23",
-      "week": 34,
-      "count": 717,
-      "totalAmountADay": 432267880000000,
-      "totalSentADay": 326940636000000,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-08-24",
-      "week": 34,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-08-25",
-      "week": 34,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-08-26",
-      "week": 35,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-08-27",
-      "week": 35,
-      "count": 675,
-      "totalAmountADay": 102739725000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 102739725000000
-    },
-    {
-      "date": "2019-08-28",
-      "week": 35,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-08-29",
-      "week": 35,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-08-30",
-      "week": 35,
-      "count": 720,
-      "totalAmountADay": 401217652000000,
-      "totalSentADay": 295281580000000,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-08-31",
-      "week": 35,
-      "count": 687,
-      "totalAmountADay": 104566209000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104566209000000
-    },
-    {
-      "date": "2019-09-01",
-      "week": 35,
-      "count": 699,
-      "totalAmountADay": 106392693000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106392693000000
-    },
-    {
-      "date": "2019-09-02",
-      "week": 36,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-09-03",
-      "week": 36,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-09-04",
-      "week": 36,
-      "count": 707,
-      "totalAmountADay": 107610349000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 107610349000000
-    },
-    {
-      "date": "2019-09-05",
-      "week": 36,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2019-09-06",
-      "week": 36,
-      "count": 706,
-      "totalAmountADay": 385996952000000,
-      "totalSentADay": 281126329000000,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2019-09-07",
-      "week": 36,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2019-09-08",
-      "week": 36,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-09-09",
-      "week": 37,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-09-10",
-      "week": 37,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-09-11",
-      "week": 37,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-09-12",
-      "week": 37,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-09-13",
-      "week": 37,
-      "count": 689,
-      "totalAmountADay": 369710803000000,
-      "totalSentADay": 267732113000000,
-      "totalReceivedADay": 101978690000000
-    },
-    {
-      "date": "2019-09-14",
-      "week": 37,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-09-15",
-      "week": 37,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-09-16",
-      "week": 38,
-      "count": 701,
-      "totalAmountADay": 106697107000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106697107000000
-    },
-    {
-      "date": "2019-09-17",
-      "week": 38,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-09-18",
-      "week": 38,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-09-19",
-      "week": 38,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-09-20",
-      "week": 38,
-      "count": 713,
-      "totalAmountADay": 384931503000000,
-      "totalSentADay": 278995431000000,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-09-21",
-      "week": 38,
-      "count": 699,
-      "totalAmountADay": 106392693000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106392693000000
-    },
-    {
-      "date": "2019-09-22",
-      "week": 38,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-09-23",
-      "week": 39,
-      "count": 683,
-      "totalAmountADay": 103957381000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 103957381000000
-    },
-    {
-      "date": "2019-09-24",
-      "week": 39,
-      "count": 688,
-      "totalAmountADay": 104718416000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104718416000000
-    },
-    {
-      "date": "2019-09-25",
-      "week": 39,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-09-26",
-      "week": 39,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-09-27",
-      "week": 39,
-      "count": 718,
-      "totalAmountADay": 470471837000000,
-      "totalSentADay": 364992386000000,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-09-28",
-      "week": 39,
-      "count": 690,
-      "totalAmountADay": 354490103000000,
-      "totalSentADay": 249923894000000,
-      "totalReceivedADay": 104566209000000
-    },
-    {
-      "date": "2019-09-29",
-      "week": 39,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-09-30",
-      "week": 40,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-10-01",
-      "week": 40,
-      "count": 697,
-      "totalAmountADay": 205936071000000,
-      "totalSentADay": 99999999000000,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-10-02",
-      "week": 40,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-10-03",
-      "week": 40,
-      "count": 711,
-      "totalAmountADay": 108219177000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 108219177000000
-    },
-    {
-      "date": "2019-10-04",
-      "week": 40,
-      "count": 726,
-      "totalAmountADay": 471841700000000,
-      "totalSentADay": 366057835000000,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-10-05",
-      "week": 40,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2019-10-06",
-      "week": 40,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-10-07",
-      "week": 41,
-      "count": 697,
-      "totalAmountADay": 106088279000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2019-10-08",
-      "week": 41,
-      "count": 684,
-      "totalAmountADay": 104109588000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104109588000000
-    },
-    {
-      "date": "2019-10-09",
-      "week": 41,
-      "count": 693,
-      "totalAmountADay": 205327243000000,
-      "totalSentADay": 99999999000000,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-10-10",
-      "week": 41,
-      "count": 681,
-      "totalAmountADay": 103652967000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 103652967000000
-    },
-    {
-      "date": "2019-10-11",
-      "week": 41,
-      "count": 710,
-      "totalAmountADay": 388736678000000,
-      "totalSentADay": 283713848000000,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-10-12",
-      "week": 41,
-      "count": 697,
-      "totalAmountADay": 155859968000000,
-      "totalSentADay": 50076103000000,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-10-13",
-      "week": 41,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-10-14",
-      "week": 42,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-10-15",
-      "week": 42,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-10-16",
-      "week": 42,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-10-17",
-      "week": 42,
-      "count": 697,
-      "totalAmountADay": 106088279000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2019-10-18",
-      "week": 42,
-      "count": 718,
-      "totalAmountADay": 536073054000000,
-      "totalSentADay": 431050224000000,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-10-19",
-      "week": 42,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-10-20",
-      "week": 42,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-10-21",
-      "week": 43,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-10-22",
-      "week": 43,
-      "count": 697,
-      "totalAmountADay": 106088279000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2019-10-23",
-      "week": 43,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-10-24",
-      "week": 43,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-10-25",
-      "week": 43,
-      "count": 718,
-      "totalAmountADay": 521613389000000,
-      "totalSentADay": 415525110000000,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2019-10-26",
-      "week": 43,
-      "count": 684,
-      "totalAmountADay": 104109588000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104109588000000
-    },
-    {
-      "date": "2019-10-27",
-      "week": 43,
-      "count": 697,
-      "totalAmountADay": 106088279000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2019-10-28",
-      "week": 44,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-10-29",
-      "week": 44,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-10-30",
-      "week": 44,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-10-31",
-      "week": 44,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-11-01",
-      "week": 44,
-      "count": 717,
-      "totalAmountADay": 450989341000000,
-      "totalSentADay": 344901062000000,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2019-11-02",
-      "week": 44,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-11-03",
-      "week": 44,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-11-04",
-      "week": 45,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-11-05",
-      "week": 45,
-      "count": 686,
-      "totalAmountADay": 104414002000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104414002000000
-    },
-    {
-      "date": "2019-11-06",
-      "week": 45,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-11-07",
-      "week": 45,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2019-11-08",
-      "week": 45,
-      "count": 720,
-      "totalAmountADay": 460426175000000,
-      "totalSentADay": 354490103000000,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-11-09",
-      "week": 45,
-      "count": 697,
-      "totalAmountADay": 106088279000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2019-11-10",
-      "week": 45,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-11-11",
-      "week": 46,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-11-12",
-      "week": 46,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-11-13",
-      "week": 46,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-11-14",
-      "week": 46,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-11-15",
-      "week": 46,
-      "count": 720,
-      "totalAmountADay": 833637739000000,
-      "totalSentADay": 728006081000000,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-11-16",
-      "week": 46,
-      "count": 700,
-      "totalAmountADay": 176407913000000,
-      "totalSentADay": 70015220000000,
-      "totalReceivedADay": 106392693000000
-    },
-    {
-      "date": "2019-11-17",
-      "week": 46,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-11-18",
-      "week": 47,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2019-11-19",
-      "week": 47,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-11-20",
-      "week": 47,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-11-21",
-      "week": 47,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-11-22",
-      "week": 47,
-      "count": 717,
-      "totalAmountADay": 521765596000000,
-      "totalSentADay": 415981731000000,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-11-23",
-      "week": 47,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-11-24",
-      "week": 47,
-      "count": 688,
-      "totalAmountADay": 104718416000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104718416000000
-    },
-    {
-      "date": "2019-11-25",
-      "week": 48,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-11-26",
-      "week": 48,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-11-27",
-      "week": 48,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-11-28",
-      "week": 48,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-11-29",
-      "week": 48,
-      "count": 714,
-      "totalAmountADay": 605327239000000,
-      "totalSentADay": 499999995000000,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-11-30",
-      "week": 48,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-12-01",
-      "week": 48,
-      "count": 697,
-      "totalAmountADay": 106088279000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2019-12-02",
-      "week": 49,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2019-12-03",
-      "week": 49,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-12-04",
-      "week": 49,
-      "count": 697,
-      "totalAmountADay": 106088279000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2019-12-05",
-      "week": 49,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-12-06",
-      "week": 49,
-      "count": 713,
-      "totalAmountADay": 564231349000000,
-      "totalSentADay": 459056312000000,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-12-07",
-      "week": 49,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2019-12-08",
-      "week": 49,
-      "count": 700,
-      "totalAmountADay": 106544900000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106544900000000
-    },
-    {
-      "date": "2019-12-09",
-      "week": 50,
-      "count": 688,
-      "totalAmountADay": 104718416000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104718416000000
-    },
-    {
-      "date": "2019-12-10",
-      "week": 50,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-12-11",
-      "week": 50,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-12-12",
-      "week": 50,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-12-13",
-      "week": 50,
-      "count": 715,
-      "totalAmountADay": 558295276000000,
-      "totalSentADay": 452663618000000,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-12-14",
-      "week": 50,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-12-15",
-      "week": 50,
-      "count": 682,
-      "totalAmountADay": 103805174000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 103805174000000
-    },
-    {
-      "date": "2019-12-16",
-      "week": 51,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2019-12-17",
-      "week": 51,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-12-18",
-      "week": 51,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2019-12-19",
-      "week": 51,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-12-20",
-      "week": 51,
-      "count": 712,
-      "totalAmountADay": 579147635000000,
-      "totalSentADay": 474277012000000,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2019-12-21",
-      "week": 51,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2019-12-22",
-      "week": 51,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-12-23",
-      "week": 52,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2019-12-24",
-      "week": 52,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-12-25",
-      "week": 52,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-12-26",
-      "week": 52,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-12-27",
-      "week": 52,
-      "count": 717,
-      "totalAmountADay": 631659050000000,
-      "totalSentADay": 526179599000000,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2019-12-28",
-      "week": 52,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2019-12-29",
-      "week": 52,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-12-30",
-      "week": 1,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2019-12-31",
-      "week": 1,
-      "count": 701,
-      "totalAmountADay": 106697107000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106697107000000
-    },
-    {
-      "date": "2020-01-01",
-      "week": 1,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2020-01-02",
-      "week": 1,
-      "count": 684,
-      "totalAmountADay": 104109588000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104109588000000
-    },
-    {
-      "date": "2020-01-03",
-      "week": 1,
-      "count": 721,
-      "totalAmountADay": 531811258000000,
-      "totalSentADay": 425418565000000,
-      "totalReceivedADay": 106392693000000
-    },
-    {
-      "date": "2020-01-04",
-      "week": 1,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2020-01-05",
-      "week": 1,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2020-01-06",
-      "week": 2,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2020-01-07",
-      "week": 2,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2020-01-08",
-      "week": 2,
-      "count": 698,
-      "totalAmountADay": 106240486000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106240486000000
-    },
-    {
-      "date": "2020-01-09",
-      "week": 2,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2020-01-10",
-      "week": 2,
-      "count": 714,
-      "totalAmountADay": 535768640000000,
-      "totalSentADay": 430441396000000,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2020-01-11",
-      "week": 2,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2020-01-12",
-      "week": 2,
-      "count": 700,
-      "totalAmountADay": 106544900000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106544900000000
-    },
-    {
-      "date": "2020-01-13",
-      "week": 3,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2020-01-14",
-      "week": 3,
-      "count": 691,
-      "totalAmountADay": 182039572000000,
-      "totalSentADay": 77016742000000,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2020-01-15",
-      "week": 3,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2020-01-16",
-      "week": 3,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2020-01-17",
-      "week": 3,
-      "count": 713,
-      "totalAmountADay": 513089797000000,
-      "totalSentADay": 407914760000000,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2020-01-18",
-      "week": 3,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2020-01-19",
-      "week": 3,
-      "count": 697,
-      "totalAmountADay": 106088279000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2020-01-20",
-      "week": 4,
-      "count": 686,
-      "totalAmountADay": 104414002000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104414002000000
-    },
-    {
-      "date": "2020-01-21",
-      "week": 4,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2020-01-22",
-      "week": 4,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2020-01-23",
-      "week": 4,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2020-01-24",
-      "week": 4,
-      "count": 722,
-      "totalAmountADay": 673515975000000,
-      "totalSentADay": 567275489000000,
-      "totalReceivedADay": 106240486000000
-    },
-    {
-      "date": "2020-01-25",
-      "week": 4,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2020-01-26",
-      "week": 4,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2020-01-27",
-      "week": 5,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2020-01-28",
-      "week": 5,
-      "count": 671,
-      "totalAmountADay": 102130897000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 102130897000000
-    },
-    {
-      "date": "2020-01-29",
-      "week": 5,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2020-01-30",
-      "week": 5,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2020-01-31",
-      "week": 5,
-      "count": 723,
-      "totalAmountADay": 607762551000000,
-      "totalSentADay": 501674272000000,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2020-02-01",
-      "week": 5,
-      "count": 697,
-      "totalAmountADay": 210806695000000,
-      "totalSentADay": 105022830000000,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2020-02-02",
-      "week": 5,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2020-02-03",
-      "week": 6,
-      "count": 701,
-      "totalAmountADay": 216286147000000,
-      "totalSentADay": 109893454000000,
-      "totalReceivedADay": 106392693000000
-    },
-    {
-      "date": "2020-02-04",
-      "week": 6,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2020-02-05",
-      "week": 6,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2020-02-06",
-      "week": 6,
-      "count": 686,
-      "totalAmountADay": 104414002000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104414002000000
-    },
-    {
-      "date": "2020-02-07",
-      "week": 6,
-      "count": 720,
-      "totalAmountADay": 610806691000000,
-      "totalSentADay": 504718412000000,
-      "totalReceivedADay": 106088279000000
-    },
-    {
-      "date": "2020-02-08",
-      "week": 6,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2020-02-09",
-      "week": 6,
-      "count": 695,
-      "totalAmountADay": 105783865000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2020-02-10",
-      "week": 7,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2020-02-11",
-      "week": 7,
-      "count": 688,
-      "totalAmountADay": 104718416000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104718416000000
-    },
-    {
-      "date": "2020-02-12",
-      "week": 7,
-      "count": 701,
-      "totalAmountADay": 106697107000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106697107000000
-    },
-    {
-      "date": "2020-02-13",
-      "week": 7,
-      "count": 698,
-      "totalAmountADay": 106240486000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106240486000000
-    },
-    {
-      "date": "2020-02-14",
-      "week": 7,
-      "count": 716,
-      "totalAmountADay": 550380512000000,
-      "totalSentADay": 445053268000000,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2020-02-15",
-      "week": 7,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2020-02-16",
-      "week": 7,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2020-02-17",
-      "week": 8,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2020-02-18",
-      "week": 8,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2020-02-19",
-      "week": 8,
-      "count": 698,
-      "totalAmountADay": 106240486000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106240486000000
-    },
-    {
-      "date": "2020-02-20",
-      "week": 8,
-      "count": 706,
-      "totalAmountADay": 454185688000000,
-      "totalSentADay": 349162858000000,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2020-02-21",
-      "week": 8,
-      "count": 717,
-      "totalAmountADay": 521004561000000,
-      "totalSentADay": 415068489000000,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2020-02-22",
-      "week": 8,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2020-02-23",
-      "week": 8,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2020-02-24",
-      "week": 9,
-      "count": 695,
-      "totalAmountADay": 120395737000000,
-      "totalSentADay": 14764079000000,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2020-02-25",
-      "week": 9,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2020-02-26",
-      "week": 9,
-      "count": 687,
-      "totalAmountADay": 104566209000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104566209000000
-    },
-    {
-      "date": "2020-02-27",
-      "week": 9,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2020-02-28",
-      "week": 9,
-      "count": 700,
-      "totalAmountADay": 167732114000000,
-      "totalSentADay": 63470319000000,
-      "totalReceivedADay": 104261795000000
-    },
-    {
-      "date": "2020-02-29",
-      "week": 9,
-      "count": 710,
-      "totalAmountADay": 495585992000000,
-      "totalSentADay": 390106541000000,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2020-03-01",
-      "week": 9,
-      "count": 704,
-      "totalAmountADay": 107153728000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 107153728000000
-    },
-    {
-      "date": "2020-03-02",
-      "week": 10,
-      "count": 684,
-      "totalAmountADay": 104109588000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104109588000000
-    },
-    {
-      "date": "2020-03-03",
-      "week": 10,
-      "count": 698,
-      "totalAmountADay": 106240486000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106240486000000
-    },
-    {
-      "date": "2020-03-04",
-      "week": 10,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2020-03-05",
-      "week": 10,
-      "count": 690,
-      "totalAmountADay": 105022830000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2020-03-06",
-      "week": 10,
-      "count": 730,
-      "totalAmountADay": 739117192000000,
-      "totalSentADay": 632876706000000,
-      "totalReceivedADay": 106240486000000
-    },
-    {
-      "date": "2020-03-07",
-      "week": 10,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2020-03-08",
-      "week": 10,
-      "count": 688,
-      "totalAmountADay": 104718416000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104718416000000
-    },
-    {
-      "date": "2020-03-09",
-      "week": 11,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2020-03-10",
-      "week": 11,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2020-03-11",
-      "week": 11,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2020-03-12",
-      "week": 11,
-      "count": 701,
-      "totalAmountADay": 106697107000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106697107000000
-    },
-    {
-      "date": "2020-03-13",
-      "week": 11,
-      "count": 699,
-      "totalAmountADay": 171993910000000,
-      "totalSentADay": 66514459000000,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2020-03-14",
-      "week": 11,
-      "count": 706,
-      "totalAmountADay": 470167423000000,
-      "totalSentADay": 365144593000000,
-      "totalReceivedADay": 105022830000000
-    },
-    {
-      "date": "2020-03-15",
-      "week": 11,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2020-03-16",
-      "week": 12,
-      "count": 694,
-      "totalAmountADay": 164992388000000,
-      "totalSentADay": 59817351000000,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2020-03-17",
-      "week": 12,
-      "count": 700,
-      "totalAmountADay": 106544900000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106544900000000
-    },
-    {
-      "date": "2020-03-18",
-      "week": 12,
-      "count": 690,
-      "totalAmountADay": 404566206000000,
-      "totalSentADay": 299999997000000,
-      "totalReceivedADay": 104566209000000
-    },
-    {
-      "date": "2020-03-19",
-      "week": 12,
-      "count": 699,
-      "totalAmountADay": 106392693000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106392693000000
-    },
-    {
-      "date": "2020-03-20",
-      "week": 12,
-      "count": 728,
-      "totalAmountADay": 870167419000000,
-      "totalSentADay": 764383554000000,
-      "totalReceivedADay": 105783865000000
-    },
-    {
-      "date": "2020-03-21",
-      "week": 12,
-      "count": 695,
-      "totalAmountADay": 130593606000000,
-      "totalSentADay": 24961948000000,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2020-03-22",
-      "week": 12,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2020-03-23",
-      "week": 13,
-      "count": 698,
-      "totalAmountADay": 106240486000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106240486000000
-    },
-    {
-      "date": "2020-03-24",
-      "week": 13,
-      "count": 691,
-      "totalAmountADay": 105175037000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105175037000000
-    },
-    {
-      "date": "2020-03-25",
-      "week": 13,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2020-03-26",
-      "week": 13,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2020-03-27",
-      "week": 13,
-      "count": 728,
-      "totalAmountADay": 827549459000000,
-      "totalSentADay": 722070008000000,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2020-03-28",
-      "week": 13,
-      "count": 701,
-      "totalAmountADay": 106697107000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 106697107000000
-    },
-    {
-      "date": "2020-03-29",
-      "week": 13,
-      "count": 693,
-      "totalAmountADay": 105479451000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105479451000000
-    },
-    {
-      "date": "2020-03-30",
-      "week": 14,
-      "count": 692,
-      "totalAmountADay": 105327244000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105327244000000
-    },
-    {
-      "date": "2020-03-31",
-      "week": 14,
-      "count": 696,
-      "totalAmountADay": 105936072000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105936072000000
-    },
-    {
-      "date": "2020-04-01",
-      "week": 14,
-      "count": 689,
-      "totalAmountADay": 104870623000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 104870623000000
-    },
-    {
-      "date": "2020-04-02",
-      "week": 14,
-      "count": 694,
-      "totalAmountADay": 105631658000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 105631658000000
-    },
-    {
-      "date": "2020-04-03",
-      "week": 14,
-      "count": 232,
-      "totalAmountADay": 35312024000000,
-      "totalSentADay": 0,
-      "totalReceivedADay": 35312024000000
+  err: 0,
+  errMessage: '',
+  data: [
+    {
+      date: '2019-05-30',
+      week: 22,
+      count: 226,
+      totalAmountADay: 22600000000,
+      totalSentADay: 0,
+      totalReceivedADay: 22600000000
+    },
+    {
+      date: '2019-05-31',
+      week: 22,
+      count: 1073,
+      totalAmountADay: 49900148999958200,
+      totalSentADay: 43900000000,
+      totalReceivedADay: 49900105099958200
+    },
+    {
+      date: '2019-06-01',
+      week: 22,
+      count: 1086,
+      totalAmountADay: 49900113499958200,
+      totalSentADay: 49900005199958200,
+      totalReceivedADay: 108300000000
+    },
+    {
+      date: '2019-06-02',
+      week: 22,
+      count: 715,
+      totalAmountADay: 306200000000,
+      totalSentADay: 237900000000,
+      totalReceivedADay: 68300000000
+    },
+    {
+      date: '2019-06-03',
+      week: 23,
+      count: 653,
+      totalAmountADay: 71500000000,
+      totalSentADay: 6400000000,
+      totalReceivedADay: 65100000000
+    },
+    {
+      date: '2019-06-04',
+      week: 23,
+      count: 626,
+      totalAmountADay: 62600000000,
+      totalSentADay: 0,
+      totalReceivedADay: 62600000000
+    },
+    {
+      date: '2019-06-05',
+      week: 23,
+      count: 690,
+      totalAmountADay: 69000000000,
+      totalSentADay: 0,
+      totalReceivedADay: 69000000000
+    },
+    {
+      date: '2019-06-06',
+      week: 23,
+      count: 661,
+      totalAmountADay: 66100000000,
+      totalSentADay: 0,
+      totalReceivedADay: 66100000000
+    },
+    {
+      date: '2019-06-07',
+      week: 23,
+      count: 644,
+      totalAmountADay: 64400000000,
+      totalSentADay: 0,
+      totalReceivedADay: 64400000000
+    },
+    {
+      date: '2019-06-08',
+      week: 23,
+      count: 704,
+      totalAmountADay: 70400000000,
+      totalSentADay: 0,
+      totalReceivedADay: 70400000000
+    },
+    {
+      date: '2019-06-09',
+      week: 23,
+      count: 699,
+      totalAmountADay: 69900000000,
+      totalSentADay: 0,
+      totalReceivedADay: 69900000000
+    },
+    {
+      date: '2019-06-10',
+      week: 24,
+      count: 709,
+      totalAmountADay: 70900000000,
+      totalSentADay: 0,
+      totalReceivedADay: 70900000000
+    },
+    {
+      date: '2019-06-11',
+      week: 24,
+      count: 698,
+      totalAmountADay: 69800000000,
+      totalSentADay: 0,
+      totalReceivedADay: 69800000000
+    },
+    {
+      date: '2019-06-12',
+      week: 24,
+      count: 709,
+      totalAmountADay: 70900000000,
+      totalSentADay: 0,
+      totalReceivedADay: 70900000000
+    },
+    {
+      date: '2019-06-13',
+      week: 24,
+      count: 699,
+      totalAmountADay: 69900000000,
+      totalSentADay: 0,
+      totalReceivedADay: 69900000000
+    },
+    {
+      date: '2019-06-14',
+      week: 24,
+      count: 697,
+      totalAmountADay: 69700000000,
+      totalSentADay: 0,
+      totalReceivedADay: 69700000000
+    },
+    {
+      date: '2019-06-15',
+      week: 24,
+      count: 689,
+      totalAmountADay: 68900000000,
+      totalSentADay: 0,
+      totalReceivedADay: 68900000000
+    },
+    {
+      date: '2019-06-16',
+      week: 24,
+      count: 684,
+      totalAmountADay: 68400000000,
+      totalSentADay: 0,
+      totalReceivedADay: 68400000000
+    },
+    {
+      date: '2019-06-17',
+      week: 25,
+      count: 704,
+      totalAmountADay: 70400000000,
+      totalSentADay: 0,
+      totalReceivedADay: 70400000000
+    },
+    {
+      date: '2019-06-18',
+      week: 25,
+      count: 687,
+      totalAmountADay: 68700000000,
+      totalSentADay: 100000000,
+      totalReceivedADay: 68600000000
+    },
+    {
+      date: '2019-06-19',
+      week: 25,
+      count: 695,
+      totalAmountADay: 69500000000,
+      totalSentADay: 0,
+      totalReceivedADay: 69500000000
+    },
+    {
+      date: '2019-06-20',
+      week: 25,
+      count: 695,
+      totalAmountADay: 69500000000,
+      totalSentADay: 0,
+      totalReceivedADay: 69500000000
+    },
+    {
+      date: '2019-06-21',
+      week: 25,
+      count: 688,
+      totalAmountADay: 68800000000,
+      totalSentADay: 0,
+      totalReceivedADay: 68800000000
+    },
+    {
+      date: '2019-06-22',
+      week: 25,
+      count: 693,
+      totalAmountADay: 69300000000,
+      totalSentADay: 0,
+      totalReceivedADay: 69300000000
+    },
+    {
+      date: '2019-06-23',
+      week: 25,
+      count: 692,
+      totalAmountADay: 69200000000,
+      totalSentADay: 0,
+      totalReceivedADay: 69200000000
+    },
+    {
+      date: '2019-06-24',
+      week: 26,
+      count: 687,
+      totalAmountADay: 68700000000,
+      totalSentADay: 0,
+      totalReceivedADay: 68700000000
+    },
+    {
+      date: '2019-06-25',
+      week: 26,
+      count: 692,
+      totalAmountADay: 69200000000,
+      totalSentADay: 200000000,
+      totalReceivedADay: 69000000000
+    },
+    {
+      date: '2019-06-26',
+      week: 26,
+      count: 684,
+      totalAmountADay: 68400000000,
+      totalSentADay: 0,
+      totalReceivedADay: 68400000000
+    },
+    {
+      date: '2019-06-27',
+      week: 26,
+      count: 743,
+      totalAmountADay: 99405929373450,
+      totalSentADay: 10540362601050,
+      totalReceivedADay: 88865566772400
+    },
+    {
+      date: '2019-06-28',
+      week: 26,
+      count: 707,
+      totalAmountADay: 207467579778430,
+      totalSentADay: 100009437778430,
+      totalReceivedADay: 107458142000000
+    },
+    {
+      date: '2019-06-29',
+      week: 26,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-06-30',
+      week: 26,
+      count: 697,
+      totalAmountADay: 106088279000000,
+      totalSentADay: 913242000000,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-07-01',
+      week: 27,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 152207000000,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-07-02',
+      week: 27,
+      count: 694,
+      totalAmountADay: 205479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 205479451000000
+    },
+    {
+      date: '2019-07-03',
+      week: 27,
+      count: 699,
+      totalAmountADay: 206240486000000,
+      totalSentADay: 100000000000000,
+      totalReceivedADay: 106240486000000
+    },
+    {
+      date: '2019-07-04',
+      week: 27,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 304414000000,
+      totalReceivedADay: 104566209000000
+    },
+    {
+      date: '2019-07-05',
+      week: 27,
+      count: 737,
+      totalAmountADay: 640399939392920,
+      totalSentADay: 534463867392920,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-07-06',
+      week: 27,
+      count: 736,
+      totalAmountADay: 177625569000000,
+      totalSentADay: 71689497000000,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-07-07',
+      week: 27,
+      count: 699,
+      totalAmountADay: 231050227000000,
+      totalSentADay: 24961948000000,
+      totalReceivedADay: 206088279000000
+    },
+    {
+      date: '2019-07-08',
+      week: 28,
+      count: 700,
+      totalAmountADay: 210806696000000,
+      totalSentADay: 105479452000000,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-07-09',
+      week: 28,
+      count: 707,
+      totalAmountADay: 512937590000000,
+      totalSentADay: 407305932000000,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-07-10',
+      week: 28,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-07-11',
+      week: 28,
+      count: 697,
+      totalAmountADay: 106088279000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2019-07-12',
+      week: 28,
+      count: 725,
+      totalAmountADay: 415677317000000,
+      totalSentADay: 310350073000000,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-07-13',
+      week: 28,
+      count: 685,
+      totalAmountADay: 104261795000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104261795000000
+    },
+    {
+      date: '2019-07-14',
+      week: 28,
+      count: 697,
+      totalAmountADay: 106088279000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2019-07-15',
+      week: 29,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2019-07-16',
+      week: 29,
+      count: 699,
+      totalAmountADay: 106392693000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106392693000000
+    },
+    {
+      date: '2019-07-17',
+      week: 29,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-07-18',
+      week: 29,
+      count: 694,
+      totalAmountADay: 165449009000000,
+      totalSentADay: 59969558000000,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-07-19',
+      week: 29,
+      count: 721,
+      totalAmountADay: 629223738000000,
+      totalSentADay: 523287666000000,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-07-20',
+      week: 29,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-07-21',
+      week: 29,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-07-22',
+      week: 30,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-07-23',
+      week: 30,
+      count: 677,
+      totalAmountADay: 103044139000000,
+      totalSentADay: 0,
+      totalReceivedADay: 103044139000000
+    },
+    {
+      date: '2019-07-24',
+      week: 30,
+      count: 708,
+      totalAmountADay: 107762556000000,
+      totalSentADay: 0,
+      totalReceivedADay: 107762556000000
+    },
+    {
+      date: '2019-07-25',
+      week: 30,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-07-26',
+      week: 30,
+      count: 716,
+      totalAmountADay: 352511412000000,
+      totalSentADay: 247031961000000,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-07-27',
+      week: 30,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-07-28',
+      week: 30,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-07-29',
+      week: 31,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-07-30',
+      week: 31,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-07-31',
+      week: 31,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2019-08-01',
+      week: 31,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-08-02',
+      week: 31,
+      count: 716,
+      totalAmountADay: 346270925000000,
+      totalSentADay: 240487060000000,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-08-03',
+      week: 31,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-08-04',
+      week: 31,
+      count: 692,
+      totalAmountADay: 205175036000000,
+      totalSentADay: 99999999000000,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-08-05',
+      week: 32,
+      count: 701,
+      totalAmountADay: 106697107000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106697107000000
+    },
+    {
+      date: '2019-08-06',
+      week: 32,
+      count: 694,
+      totalAmountADay: 325114152000000,
+      totalSentADay: 219939115000000,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-08-07',
+      week: 32,
+      count: 680,
+      totalAmountADay: 141095889000000,
+      totalSentADay: 37899543000000,
+      totalReceivedADay: 103196346000000
+    },
+    {
+      date: '2019-08-08',
+      week: 32,
+      count: 692,
+      totalAmountADay: 305022828000000,
+      totalSentADay: 199999998000000,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-08-09',
+      week: 32,
+      count: 714,
+      totalAmountADay: 375799083000000,
+      totalSentADay: 270776253000000,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-08-10',
+      week: 32,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-08-11',
+      week: 32,
+      count: 707,
+      totalAmountADay: 107610349000000,
+      totalSentADay: 0,
+      totalReceivedADay: 107610349000000
+    },
+    {
+      date: '2019-08-12',
+      week: 33,
+      count: 678,
+      totalAmountADay: 103196346000000,
+      totalSentADay: 0,
+      totalReceivedADay: 103196346000000
+    },
+    {
+      date: '2019-08-13',
+      week: 33,
+      count: 708,
+      totalAmountADay: 107762556000000,
+      totalSentADay: 0,
+      totalReceivedADay: 107762556000000
+    },
+    {
+      date: '2019-08-14',
+      week: 33,
+      count: 673,
+      totalAmountADay: 102435311000000,
+      totalSentADay: 0,
+      totalReceivedADay: 102435311000000
+    },
+    {
+      date: '2019-08-15',
+      week: 33,
+      count: 701,
+      totalAmountADay: 106697107000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106697107000000
+    },
+    {
+      date: '2019-08-16',
+      week: 33,
+      count: 724,
+      totalAmountADay: 355098931000000,
+      totalSentADay: 249467273000000,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-08-17',
+      week: 33,
+      count: 697,
+      totalAmountADay: 106088279000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2019-08-18',
+      week: 33,
+      count: 697,
+      totalAmountADay: 280669708000000,
+      totalSentADay: 174885843000000,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-08-19',
+      week: 34,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2019-08-20',
+      week: 34,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-08-21',
+      week: 34,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-08-22',
+      week: 34,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-08-23',
+      week: 34,
+      count: 717,
+      totalAmountADay: 432267880000000,
+      totalSentADay: 326940636000000,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-08-24',
+      week: 34,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-08-25',
+      week: 34,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-08-26',
+      week: 35,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-08-27',
+      week: 35,
+      count: 675,
+      totalAmountADay: 102739725000000,
+      totalSentADay: 0,
+      totalReceivedADay: 102739725000000
+    },
+    {
+      date: '2019-08-28',
+      week: 35,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-08-29',
+      week: 35,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-08-30',
+      week: 35,
+      count: 720,
+      totalAmountADay: 401217652000000,
+      totalSentADay: 295281580000000,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-08-31',
+      week: 35,
+      count: 687,
+      totalAmountADay: 104566209000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104566209000000
+    },
+    {
+      date: '2019-09-01',
+      week: 35,
+      count: 699,
+      totalAmountADay: 106392693000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106392693000000
+    },
+    {
+      date: '2019-09-02',
+      week: 36,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-09-03',
+      week: 36,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-09-04',
+      week: 36,
+      count: 707,
+      totalAmountADay: 107610349000000,
+      totalSentADay: 0,
+      totalReceivedADay: 107610349000000
+    },
+    {
+      date: '2019-09-05',
+      week: 36,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2019-09-06',
+      week: 36,
+      count: 706,
+      totalAmountADay: 385996952000000,
+      totalSentADay: 281126329000000,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2019-09-07',
+      week: 36,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2019-09-08',
+      week: 36,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-09-09',
+      week: 37,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-09-10',
+      week: 37,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-09-11',
+      week: 37,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-09-12',
+      week: 37,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-09-13',
+      week: 37,
+      count: 689,
+      totalAmountADay: 369710803000000,
+      totalSentADay: 267732113000000,
+      totalReceivedADay: 101978690000000
+    },
+    {
+      date: '2019-09-14',
+      week: 37,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-09-15',
+      week: 37,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-09-16',
+      week: 38,
+      count: 701,
+      totalAmountADay: 106697107000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106697107000000
+    },
+    {
+      date: '2019-09-17',
+      week: 38,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-09-18',
+      week: 38,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-09-19',
+      week: 38,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-09-20',
+      week: 38,
+      count: 713,
+      totalAmountADay: 384931503000000,
+      totalSentADay: 278995431000000,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-09-21',
+      week: 38,
+      count: 699,
+      totalAmountADay: 106392693000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106392693000000
+    },
+    {
+      date: '2019-09-22',
+      week: 38,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-09-23',
+      week: 39,
+      count: 683,
+      totalAmountADay: 103957381000000,
+      totalSentADay: 0,
+      totalReceivedADay: 103957381000000
+    },
+    {
+      date: '2019-09-24',
+      week: 39,
+      count: 688,
+      totalAmountADay: 104718416000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104718416000000
+    },
+    {
+      date: '2019-09-25',
+      week: 39,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-09-26',
+      week: 39,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-09-27',
+      week: 39,
+      count: 718,
+      totalAmountADay: 470471837000000,
+      totalSentADay: 364992386000000,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-09-28',
+      week: 39,
+      count: 690,
+      totalAmountADay: 354490103000000,
+      totalSentADay: 249923894000000,
+      totalReceivedADay: 104566209000000
+    },
+    {
+      date: '2019-09-29',
+      week: 39,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-09-30',
+      week: 40,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-10-01',
+      week: 40,
+      count: 697,
+      totalAmountADay: 205936071000000,
+      totalSentADay: 99999999000000,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-10-02',
+      week: 40,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-10-03',
+      week: 40,
+      count: 711,
+      totalAmountADay: 108219177000000,
+      totalSentADay: 0,
+      totalReceivedADay: 108219177000000
+    },
+    {
+      date: '2019-10-04',
+      week: 40,
+      count: 726,
+      totalAmountADay: 471841700000000,
+      totalSentADay: 366057835000000,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-10-05',
+      week: 40,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2019-10-06',
+      week: 40,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-10-07',
+      week: 41,
+      count: 697,
+      totalAmountADay: 106088279000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2019-10-08',
+      week: 41,
+      count: 684,
+      totalAmountADay: 104109588000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104109588000000
+    },
+    {
+      date: '2019-10-09',
+      week: 41,
+      count: 693,
+      totalAmountADay: 205327243000000,
+      totalSentADay: 99999999000000,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-10-10',
+      week: 41,
+      count: 681,
+      totalAmountADay: 103652967000000,
+      totalSentADay: 0,
+      totalReceivedADay: 103652967000000
+    },
+    {
+      date: '2019-10-11',
+      week: 41,
+      count: 710,
+      totalAmountADay: 388736678000000,
+      totalSentADay: 283713848000000,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-10-12',
+      week: 41,
+      count: 697,
+      totalAmountADay: 155859968000000,
+      totalSentADay: 50076103000000,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-10-13',
+      week: 41,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-10-14',
+      week: 42,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-10-15',
+      week: 42,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-10-16',
+      week: 42,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-10-17',
+      week: 42,
+      count: 697,
+      totalAmountADay: 106088279000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2019-10-18',
+      week: 42,
+      count: 718,
+      totalAmountADay: 536073054000000,
+      totalSentADay: 431050224000000,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-10-19',
+      week: 42,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-10-20',
+      week: 42,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-10-21',
+      week: 43,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-10-22',
+      week: 43,
+      count: 697,
+      totalAmountADay: 106088279000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2019-10-23',
+      week: 43,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-10-24',
+      week: 43,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-10-25',
+      week: 43,
+      count: 718,
+      totalAmountADay: 521613389000000,
+      totalSentADay: 415525110000000,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2019-10-26',
+      week: 43,
+      count: 684,
+      totalAmountADay: 104109588000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104109588000000
+    },
+    {
+      date: '2019-10-27',
+      week: 43,
+      count: 697,
+      totalAmountADay: 106088279000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2019-10-28',
+      week: 44,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-10-29',
+      week: 44,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-10-30',
+      week: 44,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-10-31',
+      week: 44,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-11-01',
+      week: 44,
+      count: 717,
+      totalAmountADay: 450989341000000,
+      totalSentADay: 344901062000000,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2019-11-02',
+      week: 44,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-11-03',
+      week: 44,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-11-04',
+      week: 45,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-11-05',
+      week: 45,
+      count: 686,
+      totalAmountADay: 104414002000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104414002000000
+    },
+    {
+      date: '2019-11-06',
+      week: 45,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-11-07',
+      week: 45,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2019-11-08',
+      week: 45,
+      count: 720,
+      totalAmountADay: 460426175000000,
+      totalSentADay: 354490103000000,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-11-09',
+      week: 45,
+      count: 697,
+      totalAmountADay: 106088279000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2019-11-10',
+      week: 45,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-11-11',
+      week: 46,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-11-12',
+      week: 46,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-11-13',
+      week: 46,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-11-14',
+      week: 46,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-11-15',
+      week: 46,
+      count: 720,
+      totalAmountADay: 833637739000000,
+      totalSentADay: 728006081000000,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-11-16',
+      week: 46,
+      count: 700,
+      totalAmountADay: 176407913000000,
+      totalSentADay: 70015220000000,
+      totalReceivedADay: 106392693000000
+    },
+    {
+      date: '2019-11-17',
+      week: 46,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-11-18',
+      week: 47,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2019-11-19',
+      week: 47,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-11-20',
+      week: 47,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-11-21',
+      week: 47,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-11-22',
+      week: 47,
+      count: 717,
+      totalAmountADay: 521765596000000,
+      totalSentADay: 415981731000000,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-11-23',
+      week: 47,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-11-24',
+      week: 47,
+      count: 688,
+      totalAmountADay: 104718416000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104718416000000
+    },
+    {
+      date: '2019-11-25',
+      week: 48,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-11-26',
+      week: 48,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-11-27',
+      week: 48,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-11-28',
+      week: 48,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-11-29',
+      week: 48,
+      count: 714,
+      totalAmountADay: 605327239000000,
+      totalSentADay: 499999995000000,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-11-30',
+      week: 48,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-12-01',
+      week: 48,
+      count: 697,
+      totalAmountADay: 106088279000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2019-12-02',
+      week: 49,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2019-12-03',
+      week: 49,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-12-04',
+      week: 49,
+      count: 697,
+      totalAmountADay: 106088279000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2019-12-05',
+      week: 49,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-12-06',
+      week: 49,
+      count: 713,
+      totalAmountADay: 564231349000000,
+      totalSentADay: 459056312000000,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-12-07',
+      week: 49,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2019-12-08',
+      week: 49,
+      count: 700,
+      totalAmountADay: 106544900000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106544900000000
+    },
+    {
+      date: '2019-12-09',
+      week: 50,
+      count: 688,
+      totalAmountADay: 104718416000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104718416000000
+    },
+    {
+      date: '2019-12-10',
+      week: 50,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-12-11',
+      week: 50,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-12-12',
+      week: 50,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-12-13',
+      week: 50,
+      count: 715,
+      totalAmountADay: 558295276000000,
+      totalSentADay: 452663618000000,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-12-14',
+      week: 50,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-12-15',
+      week: 50,
+      count: 682,
+      totalAmountADay: 103805174000000,
+      totalSentADay: 0,
+      totalReceivedADay: 103805174000000
+    },
+    {
+      date: '2019-12-16',
+      week: 51,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2019-12-17',
+      week: 51,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-12-18',
+      week: 51,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2019-12-19',
+      week: 51,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-12-20',
+      week: 51,
+      count: 712,
+      totalAmountADay: 579147635000000,
+      totalSentADay: 474277012000000,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2019-12-21',
+      week: 51,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2019-12-22',
+      week: 51,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-12-23',
+      week: 52,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2019-12-24',
+      week: 52,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-12-25',
+      week: 52,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-12-26',
+      week: 52,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-12-27',
+      week: 52,
+      count: 717,
+      totalAmountADay: 631659050000000,
+      totalSentADay: 526179599000000,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2019-12-28',
+      week: 52,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2019-12-29',
+      week: 52,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-12-30',
+      week: 1,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2019-12-31',
+      week: 1,
+      count: 701,
+      totalAmountADay: 106697107000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106697107000000
+    },
+    {
+      date: '2020-01-01',
+      week: 1,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2020-01-02',
+      week: 1,
+      count: 684,
+      totalAmountADay: 104109588000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104109588000000
+    },
+    {
+      date: '2020-01-03',
+      week: 1,
+      count: 721,
+      totalAmountADay: 531811258000000,
+      totalSentADay: 425418565000000,
+      totalReceivedADay: 106392693000000
+    },
+    {
+      date: '2020-01-04',
+      week: 1,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2020-01-05',
+      week: 1,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2020-01-06',
+      week: 2,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2020-01-07',
+      week: 2,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2020-01-08',
+      week: 2,
+      count: 698,
+      totalAmountADay: 106240486000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106240486000000
+    },
+    {
+      date: '2020-01-09',
+      week: 2,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2020-01-10',
+      week: 2,
+      count: 714,
+      totalAmountADay: 535768640000000,
+      totalSentADay: 430441396000000,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2020-01-11',
+      week: 2,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2020-01-12',
+      week: 2,
+      count: 700,
+      totalAmountADay: 106544900000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106544900000000
+    },
+    {
+      date: '2020-01-13',
+      week: 3,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2020-01-14',
+      week: 3,
+      count: 691,
+      totalAmountADay: 182039572000000,
+      totalSentADay: 77016742000000,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2020-01-15',
+      week: 3,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2020-01-16',
+      week: 3,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2020-01-17',
+      week: 3,
+      count: 713,
+      totalAmountADay: 513089797000000,
+      totalSentADay: 407914760000000,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2020-01-18',
+      week: 3,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2020-01-19',
+      week: 3,
+      count: 697,
+      totalAmountADay: 106088279000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2020-01-20',
+      week: 4,
+      count: 686,
+      totalAmountADay: 104414002000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104414002000000
+    },
+    {
+      date: '2020-01-21',
+      week: 4,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2020-01-22',
+      week: 4,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2020-01-23',
+      week: 4,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2020-01-24',
+      week: 4,
+      count: 722,
+      totalAmountADay: 673515975000000,
+      totalSentADay: 567275489000000,
+      totalReceivedADay: 106240486000000
+    },
+    {
+      date: '2020-01-25',
+      week: 4,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2020-01-26',
+      week: 4,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2020-01-27',
+      week: 5,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2020-01-28',
+      week: 5,
+      count: 671,
+      totalAmountADay: 102130897000000,
+      totalSentADay: 0,
+      totalReceivedADay: 102130897000000
+    },
+    {
+      date: '2020-01-29',
+      week: 5,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2020-01-30',
+      week: 5,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2020-01-31',
+      week: 5,
+      count: 723,
+      totalAmountADay: 607762551000000,
+      totalSentADay: 501674272000000,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2020-02-01',
+      week: 5,
+      count: 697,
+      totalAmountADay: 210806695000000,
+      totalSentADay: 105022830000000,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2020-02-02',
+      week: 5,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2020-02-03',
+      week: 6,
+      count: 701,
+      totalAmountADay: 216286147000000,
+      totalSentADay: 109893454000000,
+      totalReceivedADay: 106392693000000
+    },
+    {
+      date: '2020-02-04',
+      week: 6,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2020-02-05',
+      week: 6,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2020-02-06',
+      week: 6,
+      count: 686,
+      totalAmountADay: 104414002000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104414002000000
+    },
+    {
+      date: '2020-02-07',
+      week: 6,
+      count: 720,
+      totalAmountADay: 610806691000000,
+      totalSentADay: 504718412000000,
+      totalReceivedADay: 106088279000000
+    },
+    {
+      date: '2020-02-08',
+      week: 6,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2020-02-09',
+      week: 6,
+      count: 695,
+      totalAmountADay: 105783865000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2020-02-10',
+      week: 7,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2020-02-11',
+      week: 7,
+      count: 688,
+      totalAmountADay: 104718416000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104718416000000
+    },
+    {
+      date: '2020-02-12',
+      week: 7,
+      count: 701,
+      totalAmountADay: 106697107000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106697107000000
+    },
+    {
+      date: '2020-02-13',
+      week: 7,
+      count: 698,
+      totalAmountADay: 106240486000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106240486000000
+    },
+    {
+      date: '2020-02-14',
+      week: 7,
+      count: 716,
+      totalAmountADay: 550380512000000,
+      totalSentADay: 445053268000000,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2020-02-15',
+      week: 7,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2020-02-16',
+      week: 7,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2020-02-17',
+      week: 8,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2020-02-18',
+      week: 8,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2020-02-19',
+      week: 8,
+      count: 698,
+      totalAmountADay: 106240486000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106240486000000
+    },
+    {
+      date: '2020-02-20',
+      week: 8,
+      count: 706,
+      totalAmountADay: 454185688000000,
+      totalSentADay: 349162858000000,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2020-02-21',
+      week: 8,
+      count: 717,
+      totalAmountADay: 521004561000000,
+      totalSentADay: 415068489000000,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2020-02-22',
+      week: 8,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2020-02-23',
+      week: 8,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2020-02-24',
+      week: 9,
+      count: 695,
+      totalAmountADay: 120395737000000,
+      totalSentADay: 14764079000000,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2020-02-25',
+      week: 9,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2020-02-26',
+      week: 9,
+      count: 687,
+      totalAmountADay: 104566209000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104566209000000
+    },
+    {
+      date: '2020-02-27',
+      week: 9,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2020-02-28',
+      week: 9,
+      count: 700,
+      totalAmountADay: 167732114000000,
+      totalSentADay: 63470319000000,
+      totalReceivedADay: 104261795000000
+    },
+    {
+      date: '2020-02-29',
+      week: 9,
+      count: 710,
+      totalAmountADay: 495585992000000,
+      totalSentADay: 390106541000000,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2020-03-01',
+      week: 9,
+      count: 704,
+      totalAmountADay: 107153728000000,
+      totalSentADay: 0,
+      totalReceivedADay: 107153728000000
+    },
+    {
+      date: '2020-03-02',
+      week: 10,
+      count: 684,
+      totalAmountADay: 104109588000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104109588000000
+    },
+    {
+      date: '2020-03-03',
+      week: 10,
+      count: 698,
+      totalAmountADay: 106240486000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106240486000000
+    },
+    {
+      date: '2020-03-04',
+      week: 10,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2020-03-05',
+      week: 10,
+      count: 690,
+      totalAmountADay: 105022830000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2020-03-06',
+      week: 10,
+      count: 730,
+      totalAmountADay: 739117192000000,
+      totalSentADay: 632876706000000,
+      totalReceivedADay: 106240486000000
+    },
+    {
+      date: '2020-03-07',
+      week: 10,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2020-03-08',
+      week: 10,
+      count: 688,
+      totalAmountADay: 104718416000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104718416000000
+    },
+    {
+      date: '2020-03-09',
+      week: 11,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2020-03-10',
+      week: 11,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2020-03-11',
+      week: 11,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2020-03-12',
+      week: 11,
+      count: 701,
+      totalAmountADay: 106697107000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106697107000000
+    },
+    {
+      date: '2020-03-13',
+      week: 11,
+      count: 699,
+      totalAmountADay: 171993910000000,
+      totalSentADay: 66514459000000,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2020-03-14',
+      week: 11,
+      count: 706,
+      totalAmountADay: 470167423000000,
+      totalSentADay: 365144593000000,
+      totalReceivedADay: 105022830000000
+    },
+    {
+      date: '2020-03-15',
+      week: 11,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2020-03-16',
+      week: 12,
+      count: 694,
+      totalAmountADay: 164992388000000,
+      totalSentADay: 59817351000000,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2020-03-17',
+      week: 12,
+      count: 700,
+      totalAmountADay: 106544900000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106544900000000
+    },
+    {
+      date: '2020-03-18',
+      week: 12,
+      count: 690,
+      totalAmountADay: 404566206000000,
+      totalSentADay: 299999997000000,
+      totalReceivedADay: 104566209000000
+    },
+    {
+      date: '2020-03-19',
+      week: 12,
+      count: 699,
+      totalAmountADay: 106392693000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106392693000000
+    },
+    {
+      date: '2020-03-20',
+      week: 12,
+      count: 728,
+      totalAmountADay: 870167419000000,
+      totalSentADay: 764383554000000,
+      totalReceivedADay: 105783865000000
+    },
+    {
+      date: '2020-03-21',
+      week: 12,
+      count: 695,
+      totalAmountADay: 130593606000000,
+      totalSentADay: 24961948000000,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2020-03-22',
+      week: 12,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2020-03-23',
+      week: 13,
+      count: 698,
+      totalAmountADay: 106240486000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106240486000000
+    },
+    {
+      date: '2020-03-24',
+      week: 13,
+      count: 691,
+      totalAmountADay: 105175037000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105175037000000
+    },
+    {
+      date: '2020-03-25',
+      week: 13,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2020-03-26',
+      week: 13,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2020-03-27',
+      week: 13,
+      count: 728,
+      totalAmountADay: 827549459000000,
+      totalSentADay: 722070008000000,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2020-03-28',
+      week: 13,
+      count: 701,
+      totalAmountADay: 106697107000000,
+      totalSentADay: 0,
+      totalReceivedADay: 106697107000000
+    },
+    {
+      date: '2020-03-29',
+      week: 13,
+      count: 693,
+      totalAmountADay: 105479451000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105479451000000
+    },
+    {
+      date: '2020-03-30',
+      week: 14,
+      count: 692,
+      totalAmountADay: 105327244000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105327244000000
+    },
+    {
+      date: '2020-03-31',
+      week: 14,
+      count: 696,
+      totalAmountADay: 105936072000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105936072000000
+    },
+    {
+      date: '2020-04-01',
+      week: 14,
+      count: 689,
+      totalAmountADay: 104870623000000,
+      totalSentADay: 0,
+      totalReceivedADay: 104870623000000
+    },
+    {
+      date: '2020-04-02',
+      week: 14,
+      count: 694,
+      totalAmountADay: 105631658000000,
+      totalSentADay: 0,
+      totalReceivedADay: 105631658000000
+    },
+    {
+      date: '2020-04-03',
+      week: 14,
+      count: 232,
+      totalAmountADay: 35312024000000,
+      totalSentADay: 0,
+      totalReceivedADay: 35312024000000
+    }
+  ]
+};
+
+const clusters = {
+  err: 0,
+  errMessage: '',
+  data: [
+    {
+      _id: '5e972636d27d6ae50bc07d0b',
+      tags: null,
+      address_count: 43721
+    },
+    {
+      _id: '5e971be4d27d6ae50bc03fa2',
+      tags: null,
+      address_count: 15593
+    },
+    {
+      _id: '5e96f8a2d27d6ae50bbf61f3',
+      tags: null,
+      address_count: 2430
+    },
+    {
+      _id: '5e96f854d27d6ae50bbf5da4',
+      tags: null,
+      address_count: 1833
+    },
+    {
+      _id: '5e96f853d27d6ae50bbf5da1',
+      tags: null,
+      address_count: 1754
+    },
+    {
+      _id: '5e970315d27d6ae50bbfa963',
+      tags: null,
+      address_count: 1386
+    },
+    {
+      _id: '5e970c75d27d6ae50bbfe481',
+      tags: null,
+      address_count: 1010
+    },
+    {
+      _id: '5e96f85bd27d6ae50bbf5de1',
+      tags: null,
+      address_count: 928
+    },
+    {
+      _id: '5e971636d27d6ae50bc01cf7',
+      tags: null,
+      address_count: 922
+    },
+    {
+      _id: '5e970435d27d6ae50bbfb219',
+      tags: null,
+      address_count: 916
+    },
+    {
+      _id: '5e97127bd27d6ae50bc0065d',
+      tags: null,
+      address_count: 859
+    },
+    {
+      _id: '5e96f859d27d6ae50bbf5dd3',
+      tags: null,
+      address_count: 840
+    },
+    {
+      _id: '5e96f85ad27d6ae50bbf5dda',
+      tags: null,
+      address_count: 748
+    },
+    {
+      _id: '5e96f858d27d6ae50bbf5dc9',
+      tags: null,
+      address_count: 707
+    },
+    {
+      _id: '5e96f838d27d6ae50bbf5d6d',
+      tags: null,
+      address_count: 565
+    },
+    {
+      _id: '5e9728ccd27d6ae50bc08cf5',
+      tags: null,
+      address_count: 506
+    },
+    {
+      _id: '5e96f838d27d6ae50bbf5d6e',
+      tags: null,
+      address_count: 469
+    },
+    {
+      _id: '5e96f854d27d6ae50bbf5da6',
+      tags: null,
+      address_count: 416
+    },
+    {
+      _id: '5e96f865d27d6ae50bbf5e0f',
+      tags: null,
+      address_count: 377
+    },
+    {
+      _id: '5e96f86bd27d6ae50bbf5e22',
+      tags: null,
+      address_count: 364
+    },
+    {
+      _id: '5e970f9ad27d6ae50bbff477',
+      tags: null,
+      address_count: 327
+    },
+    {
+      _id: '5e96fa7cd27d6ae50bbf6d6e',
+      tags: null,
+      address_count: 319
+    },
+    {
+      _id: '5e96fcb6d27d6ae50bbf7d8a',
+      tags: null,
+      address_count: 313
+    },
+    {
+      _id: '5e970706d27d6ae50bbfc302',
+      tags: null,
+      address_count: 301
+    },
+    {
+      _id: '5e96f852d27d6ae50bbf5d98',
+      tags: null,
+      address_count: 297
+    },
+    {
+      _id: '5e96f866d27d6ae50bbf5e12',
+      tags: null,
+      address_count: 277
+    },
+    {
+      _id: '5e96f85dd27d6ae50bbf5de4',
+      tags: null,
+      address_count: 264
+    },
+  ]
+};
+
+const clusterDetails = {
+  err: 0,
+  errMessage: '',
+  data: {
+    _id: '5e972636d27d6ae50bc07d0b',
+    tags: null,
+    address_count: 35564,
+    tx_count: 161764
+  }
+};
+
+const clusterAddresses = {
+  err: 0,
+  errMessage: '',
+  data: [
+    {
+      address: 'FEibWogWsv7eQU35qdG7qkipF44PWqzR4t',
+      tx_count: 56
+    },
+    {
+      address: 'FNqt2F3HycFYHGaRxcaQ1S6RXXTtRaLi4d',
+      tx_count: 52
+    },
+    {
+      address: 'FASGgTfqjd19ydthrgWhcgXmoaxB1RuQZA',
+      tx_count: 49
+    },
+    {
+      address: 'FGpjnHW7MAaP6ZE2LJRZ7Cot9n8UqCKRhp',
+      tx_count: 39
+    },
+    {
+      address: 'FUa2iVjWYA2pLZNw1ds6THz8Ang1Vspie6',
+      tx_count: 38
+    },
+    {
+      address: 'FRcmtyn6SGdQP1EhWXGwhPBqifKsCBCYTV',
+      tx_count: 36
+    },
+    {
+      address: 'FGxBZLoQmSD5e9JJZPFCDJy6LVDaFjZmas',
+      tx_count: 36
+    },
+    {
+      address: 'FGsBr14y85chgP1Z777HQPDUWrqmTn6buu',
+      tx_count: 36
+    },
+    {
+      address: 'FHnpLu5Q14jRngHZVt5uMj2no59ubwC4PJ',
+      tx_count: 36
+    },
+    {
+      address: 'FJToGyNn6bLr2iMAQEYcBynpib5MLJifoi',
+      tx_count: 36
+    },
+    {
+      address: 'FGCcsbaxbjidnGJJkhGHhCtYnMdjrUQ59X',
+      tx_count: 36
+    },
+    {
+      address: 'FNSGAs5SxZzmnc55JB4LPDSWQS5PD72BHe',
+      tx_count: 36
+    },
+    {
+      address: 'FUrPVbYKW6gyc9XJYxTskxsB44uazMtVes',
+      tx_count: 36
+    },
+    {
+      address: 'FJuskErcim1Kiue7NBJKH6i5rqqf3NEejM',
+      tx_count: 36
+    },
+    {
+      address: 'FCd8eGM9ogbeq5i787fCcb5NbTopTa3eq7',
+      tx_count: 36
+    },
+    {
+      address: 'FLNA2BX5Wimj2s7zAmKo2Lnpar1EAuokKt',
+      tx_count: 35
+    },
+    {
+      address: 'F7uKLyU46CcaNBE4bzRjZupU2giefpu8QV',
+      tx_count: 35
+    },
+    {
+      address: 'FCbTpUnSQCwrrnGvxpYoBqjFGx54Z4E6H6',
+      tx_count: 35
+    },
+    {
+      address: 'FDLLbjvqbtadzNVx5CZXUqGRz64eLf7Jna',
+      tx_count: 34
+    },
+    {
+      address: 'FRL6RLPAcNsKLojXvA1iUSz6s35k6Ks6uA',
+      tx_count: 34
+    },
+    {
+      address: 'FSQoDnhWjdkEUR8hC7374j6Soc6xmG2caY',
+      tx_count: 34
+    },
+    {
+      address: 'FPxDo2ChBhzQunB9Z8fD1CF7rbb3fLLUyM',
+      tx_count: 34
+    },
+    {
+      address: 'FQcvfFdtdJMHcfv1UeL8ffPmrj3Nj393pM',
+      tx_count: 34
+    },
+    {
+      address: 'FKEMtHh7gBfmukcXwLwB7A2jAbFP9ZzPt4',
+      tx_count: 34
+    },
+    {
+      address: 'FFoPirANCZqCshrasVbZwT6Z4e6WvfZnYH',
+      tx_count: 33
     }
   ]
 };
@@ -11494,6 +11754,25 @@ export class MockBackendInterceptor implements HttpInterceptor {
           wallet = array[2];
           address = parseInt(body.address, 0);
           return getAddressTxChart(wallet, address);
+        case url.indexOf('/getAllClustersWithAddressCount') > -1 && method === 'POST':
+          host = window.location.protocol + '//' + window.location.host + '/';
+          array = url.replace(host, '').split('/');
+          wallet = array[2];
+          return getAllClustersWithAddressCount(wallet);
+        case url.indexOf('/getClusterDetails') > -1 && method === 'POST':
+          host = window.location.protocol + '//' + window.location.host + '/';
+          array = url.replace(host, '').split('/');
+          wallet = array[2];
+          return getClusterDetails(wallet);
+        case url.indexOf('/getClusterAddresses') > -1 && method === 'POST':
+          host = window.location.protocol + '//' + window.location.host + '/';
+          array = url.replace(host, '').split('/');
+          wallet = array[2];
+          func = array[3];
+          limit = parseInt(body.limit, 0);
+          offset = parseInt(body.offset, 0);
+          return getClusterAddresses(wallet, limit, offset);
+
         default:
           // pass through any requests not handled above
           return next.handle(request);
@@ -11553,6 +11832,17 @@ export class MockBackendInterceptor implements HttpInterceptor {
     }
     function getAddressTxChart(wallet, address) {
       return ok(addressTxChart);
+    }
+    function getAllClustersWithAddressCount(wallet) {
+      return ok(clusters);
+    }
+    function getClusterDetails(wallet) {
+      return ok(clusterDetails);
+    }
+    function getClusterAddresses(wallet, limit, offset) {
+      const d = JSON.parse(JSON.stringify(clusterAddresses));
+      d.data = d.data.slice(offset * limit, limit + offset * limit);
+      return ok(d);
     }
 
     function ok(body?) {
