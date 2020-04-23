@@ -96,7 +96,11 @@
             var coin = data[i];
             $('.wallet-' + i).html('<a href="' +  coin.explorer  + '">' + coin.wallet.toUpperCase() + '</a>')
             $('.last_block-' + i).html(coin.stats.last_block);
-            $('.masternodes-' + i).html(coin.stats.masternodesCount.total + '/' + coin.stats.masternodesCount.enabled);
+            if(coin.stats.masternodesCount) {
+                $('.masternodes-' + i).html(coin.stats.masternodesCount.total + '/' + coin.stats.masternodesCount.enabled);
+            } else {
+                $('.masternodes-' + i).html('-');
+            }
             // $('.version-' + i).html(coin.stats.version.toString().replace(/(.)./g, "$1."));
             $('.users_tx_count-' + i).html(coin.stats.users_tx_count_24_hours);
         }
