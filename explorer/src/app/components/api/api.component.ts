@@ -34,6 +34,7 @@ export class ApiComponent implements OnInit {
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/getmoneysupply', desc: 'Returns current money supply'},
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/getdistribution', desc: 'Returns wealth distribution stats'},
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/getAddress/' + this.data.devAddress, desc: 'Returns information for given address'},
+      {url: window.location.origin + '/api/db/' + this.data.wallet + '/listmasternodes', desc: 'Returns current masternode list'},
       // {url:window.location.origin + "/api/db/" + data.wallet + "/getAvailableMarkets", desc:"Returns available market's information"},
       // {url:window.location.origin + "/api/db/" + data.wallet + "/getMarket/" + data.wallet.replace('dogecash', 'dogec').toUpperCase() + "_BTC", desc:"Returns market information"}
     ];
