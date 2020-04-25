@@ -17,7 +17,7 @@ export class ClustersComponent implements OnInit {
   public emptyTable: any[] = [];
   public currentTable: any[] = [];
   public gettingClusters = false;
-  public orderBy = 'count';
+  public orderBy = 'address_count';
   public orderByOrder = '-';
   public pagination: any = {
     current: 1,
@@ -176,7 +176,7 @@ export class ClustersComponent implements OnInit {
 
   filterClusters() {
     const a = this.orderByPipe.transform(this.clusters, this.orderByOrder + this.orderBy);
-    const b = this.filterPipe.transform(a, this.search, ['_id', 'tags', 'count']);
+    const b = this.filterPipe.transform(a, this.search, ['_id', 'tags', 'address_count']);
     return b;
   }
 
