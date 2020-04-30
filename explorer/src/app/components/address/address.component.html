@@ -26,6 +26,12 @@
           <div class="col-8-6 my-td" [innerHtml]="(addressDetails.balance / 100000000).toFixed(8)"></div>
         </div>
       </div>
+      <div class="my-tr" *ngIf="addressDetails.clusters && addressDetails.clusters.length">
+        <div class="row">
+          <div class="col-3-4 my-td">Clusters</div>
+          <div class="col-8-6 my-td"><span *ngFor="let cluster of addressDetails.clusters; let i = index"><a [routerLink]="['/cluster/' + cluster._id]" [innerHtml]="cluster._id"></a><span *ngIf="i < addressDetails.clusters.length - 1"><br></span></span></div>
+        </div>
+      </div>
     </div>
   </div>
   <address-chart [addr]="addr"></address-chart>
