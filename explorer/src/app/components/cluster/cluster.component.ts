@@ -48,7 +48,7 @@ export class ClusterComponent implements OnInit {
       this.clusterId = params.clusterId;
       this.resetPagination();
       this.setCurrentTable();
-      this.getClusterDetailsDetails();
+      this.getClusterDetails();
     });
     this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Address ' + this.clusterId + ' | Chain Review' );
   }
@@ -176,7 +176,7 @@ export class ClusterComponent implements OnInit {
     );
   }
 
-  getClusterDetailsDetails() {
+  getClusterDetails() {
     this.gettingClusterDetails = true;
     const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getClusterDetails';
     console.log('url', url);

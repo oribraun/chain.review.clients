@@ -277,6 +277,7 @@ const addressDetails = {
     sent: 8523592000000,
     received: 108523592000000,
     balance: 100000000000000,
+    clusters: [{_id: "5e99ff8fffa159fd64e10247"}],
     count: 164409
   }
 };
@@ -11734,7 +11735,7 @@ export class MockBackendInterceptor implements HttpInterceptor {
           array = url.replace(host, '').split('/');
           wallet = array[2];
           return getSearch(wallet);
-        case url.indexOf('/getTxVinVoutCountWhereTotal') > -1 && method === 'GET':
+        case url.indexOf('/getTxVinVoutCount') > -1 && method === 'GET':
           host = window.location.protocol + '//' + window.location.host + '/';
           array = url.replace(host, '').split('/');
           wallet = array[2];

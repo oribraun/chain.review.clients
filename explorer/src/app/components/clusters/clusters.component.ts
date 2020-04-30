@@ -136,10 +136,15 @@ export class ClustersComponent implements OnInit {
     this.gettingClusters = true;
     const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getAllClustersWithAddressCount';
     console.log('url', url);
-    this.http.post(url, {}).subscribe(
+    const data = {
+      limit : this.pagination.limit,
+      offset : this.pagination.offset,
+    };
+    this.http.post(url, data).subscribe(
       (response: any) => {
         if (!response.err) {
           this.clusters = response.data;
+          console.log('this.clusters', this.clusters)
           this.currentTable = this.emptyTable.slice();
           for (let i = 0; i < this.clusters.length; i++) {
             this.currentTable[i] = this.clusters[i];

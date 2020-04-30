@@ -136,7 +136,7 @@ export class MovementComponent implements OnInit {
 
   getTxVinVoutCount() {
     this.gettingTxVinVoutCount = true;
-    const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getTxVinVoutCountWhereTotal';
+    const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getTxVinVoutCount';
     console.log('url', url);
     this.http.get(url).subscribe(
       (response: any) => {
