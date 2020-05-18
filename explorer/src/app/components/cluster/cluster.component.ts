@@ -50,7 +50,7 @@ export class ClusterComponent implements OnInit {
       this.setCurrentTable();
       this.getClusterDetails();
     });
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Address ' + this.clusterId + ' | Chain Review' );
+    this.titleService.setTitle( this.data.symbol.toUpperCase() + ' Coin - Address ' + this.clusterId + ' | Chain Review' );
   }
 
   ngOnInit() {
@@ -184,7 +184,7 @@ export class ClusterComponent implements OnInit {
       (response: any) => {
         if (!response.err) {
           this.clusterDetails = response.data;
-          this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Address ' + this.clusterDetails._id + ' | Chain Review' );
+          this.titleService.setTitle( this.data.symbol.toUpperCase() + ' Coin - Address ' + this.clusterDetails._id + ' | Chain Review' );
           this.getAddressTxList();
         } else {
           if (response.errMessage === 'no address found') {

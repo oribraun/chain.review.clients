@@ -45,7 +45,7 @@ export class MovementComponent implements OnInit {
     }
     // console.log(data);
     this.data = data;
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Transactions | Chain Review' );
+    this.titleService.setTitle( this.data.symbol.toUpperCase() + ' Coin - Transactions | Chain Review' );
   }
 
   ngOnInit() {

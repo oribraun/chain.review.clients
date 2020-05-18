@@ -45,7 +45,7 @@ export class MasternodesComponent implements OnInit {
     }
     // console.log(data);
     this.data = data;
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Masternodes | Chain Review' );
+    this.titleService.setTitle( this.data.symbol.toUpperCase() + ' Coin - Masternodes | Chain Review' );
   }
 
   ngOnInit() {

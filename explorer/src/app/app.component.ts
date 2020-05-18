@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     this.data = data;
     console.log('session data');
     // console.log('app component', data);
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Network - Blockchain Explorer | Chain Review' );
+    this.titleService.setTitle( this.data.symbol.toUpperCase() + ' Network - Blockchain Explorer | Chain Review' );
     // this.data = data;
   }
 

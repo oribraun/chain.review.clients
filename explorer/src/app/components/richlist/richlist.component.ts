@@ -40,7 +40,7 @@ export class RichlistComponent implements OnInit {
     }
     // console.log(data);
     this.data = data;
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Addresses | Chain Review' );
+    this.titleService.setTitle( this.data.symbol.toUpperCase() + ' Coin - Addresses | Chain Review' );
   }
 
   ngOnInit() {

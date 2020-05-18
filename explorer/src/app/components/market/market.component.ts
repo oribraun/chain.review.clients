@@ -46,7 +46,7 @@ export class MarketComponent implements OnInit {
         data = (window as any).DATA;
       }
       this.data = data;
-      this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Market Overview | Chain Review' );
+      this.titleService.setTitle( this.data.symbol.toUpperCase() + ' Coin - Market Overview | Chain Review' );
       // if(this.avaliableMarkets) {
       //   this.getMarket();
       // }

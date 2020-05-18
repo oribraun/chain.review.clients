@@ -19,7 +19,7 @@ export class ApiComponent implements OnInit {
       data = (window as any).DATA;
     }
     this.data = data;
-    this.titleService.setTitle( this.data.wallet.replace('dogecash', 'dogec').toUpperCase() + ' Coin - Free Blockchain API | Chain Review' );
+    this.titleService.setTitle( this.data.symbol.toUpperCase() + ' Coin - Free Blockchain API | Chain Review' );
   }
 
   ngOnInit() {
@@ -36,7 +36,7 @@ export class ApiComponent implements OnInit {
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/getAddress/' + this.data.devAddress, desc: 'Returns information for given address'},
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/listmasternodes', desc: 'Returns current masternode list'},
       // {url:window.location.origin + "/api/db/" + data.wallet + "/getAvailableMarkets", desc:"Returns available market's information"},
-      // {url:window.location.origin + "/api/db/" + data.wallet + "/getMarket/" + data.wallet.replace('dogecash', 'dogec').toUpperCase() + "_BTC", desc:"Returns market information"}
+      // {url:window.location.origin + "/api/db/" + data.wallet + "/getMarket/" + data.symbol.toUpperCase() + "_BTC", desc:"Returns market information"}
     ];
   }
 
