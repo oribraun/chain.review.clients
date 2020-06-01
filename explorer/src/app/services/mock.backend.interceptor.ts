@@ -277,7 +277,7 @@ const addressDetails = {
     sent: 8523592000000,
     received: 108523592000000,
     balance: 100000000000000,
-    clusters: [{_id: "5e99ff8fffa159fd64e10247"}],
+    clusters: [{_id: '5e99ff8fffa159fd64e10247'}],
     count: 164409
   }
 };
@@ -11547,7 +11547,10 @@ const clusterDetails = {
     _id: '5e972636d27d6ae50bc07d0b',
     tags: null,
     address_count: 35564,
-    tx_count: 161764
+    tx_balance: 0,
+    tx_count: 161766,
+    tx_received: 779028156603295900,
+    tx_sent: 779028156603295900
   }
 };
 
@@ -11556,108 +11559,201 @@ const clusterAddresses = {
   errMessage: '',
   data: [
     {
+      tx_count: 56,
+      sent: 149826163563238,
+      received: 149826163563238,
       address: 'FEibWogWsv7eQU35qdG7qkipF44PWqzR4t',
-      tx_count: 56
+      balance: 0
     },
     {
+      tx_count: 52,
+      sent: 212586204706367,
+      received: 212586204706367,
       address: 'FNqt2F3HycFYHGaRxcaQ1S6RXXTtRaLi4d',
-      tx_count: 52
+      balance: 0
     },
     {
+      tx_count: 49,
+      sent: 190468173575541,
+      received: 190468173575541,
       address: 'FASGgTfqjd19ydthrgWhcgXmoaxB1RuQZA',
-      tx_count: 49
+      balance: 0
     },
     {
+      tx_count: 39,
+      sent: 304351572887806,
+      received: 304351572887806,
       address: 'FGpjnHW7MAaP6ZE2LJRZ7Cot9n8UqCKRhp',
-      tx_count: 39
+      balance: 0
     },
     {
+      tx_count: 38,
+      sent: 279830875945607,
+      received: 279830875945607,
       address: 'FUa2iVjWYA2pLZNw1ds6THz8Ang1Vspie6',
-      tx_count: 38
+      balance: 0
     },
     {
-      address: 'FRcmtyn6SGdQP1EhWXGwhPBqifKsCBCYTV',
-      tx_count: 36
-    },
-    {
-      address: 'FGxBZLoQmSD5e9JJZPFCDJy6LVDaFjZmas',
-      tx_count: 36
-    },
-    {
-      address: 'FGsBr14y85chgP1Z777HQPDUWrqmTn6buu',
-      tx_count: 36
-    },
-    {
-      address: 'FHnpLu5Q14jRngHZVt5uMj2no59ubwC4PJ',
-      tx_count: 36
-    },
-    {
-      address: 'FJToGyNn6bLr2iMAQEYcBynpib5MLJifoi',
-      tx_count: 36
-    },
-    {
-      address: 'FGCcsbaxbjidnGJJkhGHhCtYnMdjrUQ59X',
-      tx_count: 36
-    },
-    {
-      address: 'FNSGAs5SxZzmnc55JB4LPDSWQS5PD72BHe',
-      tx_count: 36
-    },
-    {
-      address: 'FUrPVbYKW6gyc9XJYxTskxsB44uazMtVes',
-      tx_count: 36
-    },
-    {
+      tx_count: 36,
+      sent: 303922689932606,
+      received: 303922689932606,
       address: 'FJuskErcim1Kiue7NBJKH6i5rqqf3NEejM',
-      tx_count: 36
+      balance: 0
     },
     {
+      tx_count: 36,
+      sent: 327998028880153,
+      received: 327998028880153,
+      address: 'FGxBZLoQmSD5e9JJZPFCDJy6LVDaFjZmas',
+      balance: 0
+    },
+    {
+      tx_count: 36,
+      sent: 201152711237827,
+      received: 201152711237827,
+      address: 'FNSGAs5SxZzmnc55JB4LPDSWQS5PD72BHe',
+      balance: 0
+    },
+    {
+      tx_count: 36,
+      sent: 279248985120270,
+      received: 279248985120270,
+      address: 'FGCcsbaxbjidnGJJkhGHhCtYnMdjrUQ59X',
+      balance: 0
+    },
+    {
+      tx_count: 36,
+      sent: 90419833660005,
+      received: 90419833660005,
+      address: 'FHnpLu5Q14jRngHZVt5uMj2no59ubwC4PJ',
+      balance: 0
+    },
+    {
+      tx_count: 36,
+      sent: 231279086580359,
+      received: 231279086580359,
+      address: 'FUrPVbYKW6gyc9XJYxTskxsB44uazMtVes',
+      balance: 0
+    },
+    {
+      tx_count: 36,
+      sent: 246160497028929,
+      received: 246160497028929,
       address: 'FCd8eGM9ogbeq5i787fCcb5NbTopTa3eq7',
-      tx_count: 36
+      balance: 0
     },
     {
-      address: 'FLNA2BX5Wimj2s7zAmKo2Lnpar1EAuokKt',
-      tx_count: 35
+      tx_count: 36,
+      sent: 278079133247459,
+      received: 278079133247459,
+      address: 'FJToGyNn6bLr2iMAQEYcBynpib5MLJifoi',
+      balance: 0
     },
     {
-      address: 'F7uKLyU46CcaNBE4bzRjZupU2giefpu8QV',
-      tx_count: 35
+      tx_count: 36,
+      sent: 165125487484004,
+      received: 165125487484004,
+      address: 'FGsBr14y85chgP1Z777HQPDUWrqmTn6buu',
+      balance: 0
     },
     {
+      tx_count: 36,
+      sent: 183204574652243,
+      received: 183204574652243,
+      address: 'FRcmtyn6SGdQP1EhWXGwhPBqifKsCBCYTV',
+      balance: 0
+    },
+    {
+      tx_count: 35,
+      sent: 69013110178722,
+      received: 69013110178722,
       address: 'FCbTpUnSQCwrrnGvxpYoBqjFGx54Z4E6H6',
-      tx_count: 35
+      balance: 0
     },
     {
-      address: 'FDLLbjvqbtadzNVx5CZXUqGRz64eLf7Jna',
-      tx_count: 34
+      tx_count: 35,
+      sent: 164808892402256,
+      received: 164808892402256,
+      address: 'F7uKLyU46CcaNBE4bzRjZupU2giefpu8QV',
+      balance: 0
     },
     {
-      address: 'FRL6RLPAcNsKLojXvA1iUSz6s35k6Ks6uA',
-      tx_count: 34
+      tx_count: 35,
+      sent: 80157355184538,
+      received: 80157355184538,
+      address: 'FLNA2BX5Wimj2s7zAmKo2Lnpar1EAuokKt',
+      balance: 0
     },
     {
-      address: 'FSQoDnhWjdkEUR8hC7374j6Soc6xmG2caY',
-      tx_count: 34
-    },
-    {
-      address: 'FPxDo2ChBhzQunB9Z8fD1CF7rbb3fLLUyM',
-      tx_count: 34
-    },
-    {
-      address: 'FQcvfFdtdJMHcfv1UeL8ffPmrj3Nj393pM',
-      tx_count: 34
-    },
-    {
+      tx_count: 34,
+      sent: 56686191186520,
+      received: 56686191186520,
       address: 'FKEMtHh7gBfmukcXwLwB7A2jAbFP9ZzPt4',
-      tx_count: 34
+      balance: 0
     },
     {
-      address: 'FFoPirANCZqCshrasVbZwT6Z4e6WvfZnYH',
-      tx_count: 33
+      tx_count: 34,
+      sent: 166743333108035,
+      received: 166743333108035,
+      address: 'FDLLbjvqbtadzNVx5CZXUqGRz64eLf7Jna',
+      balance: 0
+    },
+    {
+      tx_count: 34,
+      sent: 140905160698744,
+      received: 140905160698744,
+      address: 'FSQoDnhWjdkEUR8hC7374j6Soc6xmG2caY',
+      balance: 0
+    },
+    {
+      tx_count: 34,
+      sent: 155827143129077,
+      received: 155827143129077,
+      address: 'FRL6RLPAcNsKLojXvA1iUSz6s35k6Ks6uA',
+      balance: 0
+    },
+    {
+      tx_count: 34,
+      sent: 218414647667397,
+      received: 218414647667397,
+      address: 'FQcvfFdtdJMHcfv1UeL8ffPmrj3Nj393pM',
+      balance: 0
+    },
+    {
+      tx_count: 34,
+      sent: 253044165457652,
+      received: 253044165457652,
+      address: 'FPxDo2ChBhzQunB9Z8fD1CF7rbb3fLLUyM',
+      balance: 0
+    },
+    {
+      tx_count: 33,
+      sent: 66126643073310,
+      received: 66126643073310,
+      address: 'FKHTczSWjLFg2SuoiAngj2L25uLWToinst',
+      balance: 0
     }
   ]
 };
 
+const clusterChart = {
+  err: 0,
+  errMessage: '',
+  data: [
+    {
+      c: 3,
+      t: 300004698367432,
+      d: '2019-06-14',
+      w: 24
+    },
+    {
+      c: 1,
+      t: 100000499561154,
+      d: '2019-06-11',
+      w: 24
+    }
+  ]
+};
 @Injectable()
 export class MockBackendInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
@@ -11796,6 +11892,11 @@ export class MockBackendInterceptor implements HttpInterceptor {
           limit = parseInt(body.limit, 0);
           offset = parseInt(body.offset, 0);
           return getClusterAddresses(wallet, limit, offset);
+        case url.indexOf('/getClusterChart') > -1 && method === 'POST':
+          host = window.location.protocol + '//' + window.location.host + '/';
+          array = url.replace(host, '').split('/');
+          wallet = array[2];
+          return getClusterChart(wallet);
 
         default:
           // pass through any requests not handled above
@@ -11867,6 +11968,9 @@ export class MockBackendInterceptor implements HttpInterceptor {
       const d = JSON.parse(JSON.stringify(clusterAddresses));
       d.data = d.data.slice(offset * limit, limit + offset * limit);
       return ok(d);
+    }
+    function getClusterChart(wallet) {
+      return ok(clusterChart);
     }
 
     function ok(body?) {

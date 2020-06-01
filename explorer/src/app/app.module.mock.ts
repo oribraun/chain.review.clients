@@ -30,6 +30,7 @@ import { MovementChartComponent } from './components/movement/chart/chart.compon
 import { AddressChartComponent } from './components/address/chart/chart.component';
 import { ClustersComponent } from './components/clusters/clusters.component';
 import { ClusterComponent } from './components/cluster/cluster.component';
+import { ClusterChartComponent } from './components/cluster/chart/chart.component';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { ClusterComponent } from './components/cluster/cluster.component';
     AddressChartComponent,
     ClustersComponent,
     ClusterComponent,
+    ClusterChartComponent,
   ],
   imports: [
     BrowserModule,

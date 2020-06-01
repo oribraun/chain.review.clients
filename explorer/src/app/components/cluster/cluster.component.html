@@ -1,5 +1,5 @@
 <div *ngIf="!gettingClusterDetails">
-  <div class="head"><h4>Address Details</h4></div>
+  <div class="head"><h4>Cluster Details</h4></div>
   <div class="my-table--no-header my-table">
     <div class="body">
       <div class="my-tr">
@@ -26,27 +26,56 @@
           <div class="col-8-6 my-td" [innerHtml]="clusterDetails.tx_count"></div>
         </div>
       </div>
+      <div class="my-tr">
+        <div class="row">
+          <div class="col-3-4 my-td">Volume</div>
+          <div class="col-8-6 my-td" [innerHtml]="((clusterDetails.tx_sent + clusterDetails.tx_received) / 100000000).toFixed(2)"></div>
+        </div>
+      </div>
+      <div class="my-tr">
+        <div class="row">
+          <div class="col-3-4 my-td">Avg Amount/Tx</div>
+          <div class="col-8-6 my-td" [innerHtml]="((clusterDetails.tx_sent + clusterDetails.tx_received) / clusterDetails.tx_count / 100000000).toFixed(2)"></div>
+        </div>
+      </div>
+<!--      <div class="my-tr">-->
+<!--        <div class="row">-->
+<!--          <div class="col-3-4 my-td">Received</div>-->
+<!--          <div class="col-8-6 my-td" [innerHtml]="(clusterDetails.tx_received / 100000000).toFixed(8)"></div>-->
+<!--        </div>-->
+<!--      </div>-->
+      <div class="my-tr">
+        <div class="row">
+          <div class="col-3-4 my-td">Balance</div>
+          <div class="col-8-6 my-td" [innerHtml]="(clusterDetails.tx_balance / 100000000).toFixed(2)"></div>
+        </div>
+      </div>
     </div>
   </div>
-<!--  <address-chart [addr]="addr"></address-chart>-->
+  <cluster-chart [clusterId]="clusterId"></cluster-chart>
   <div>
     <div class="head"><h4>Addresses list</h4></div>
     <div>
       <div class="my-table">
-        <div class="header">
+        <div class="header d-none d-sm-none d-md-block">
           <div class="row">
 <!--            <div class="col-5-4 col-sm-4-4 col-md-3-6 col-lg-3-4 col-xl-3-2 my-th">Timestamp</div>-->
-            <div class="col-10 col-sm-10 col-md-11 my-th">Address</div>
+            <div class="col-10 col-sm-10 col-md-3-9 my-th">Address</div>
             <div class="col-2 col-sm-2 col-md-1 my-th">Txs</div>
+            <div class="col-2 col-sm-2 col-md-2-8 my-th">Volume</div>
+            <div class="col-2 col-sm-2 col-md-2-8 my-th">Avg Amount/Tx</div>
+            <div class="col-2 col-sm-2 col-md-1-5 my-th">Balance</div>
           </div>
         </div>
         <div class="body">
           <div class="my-tr"*ngFor="let address of addresses">
             <div class="row">
 <!--              <div class="col-5-4 col-sm-4-4 col-md-3-6 col-lg-3-4 col-xl-3-2 my-td" [innerHtml]="tx.txid_timestamp | prettyTime"></div>-->
-              <div class="col-10 col-sm-10 col-md-11 my-td"><a [routerLink]="['/address/' + address.address]" [innerHtml]="address.address"></a></div>
-              <div class="col-2 col-sm-2 col-md-1 my-td"
-                   [innerHtml]="address.tx_count"></div>
+              <div class="col-md-3-9 my-td"><span class="d-md-none my-th">Address:&nbsp;&nbsp;</span><a [routerLink]="['/address/' + address.address]">{{address.address}}</a></div>
+              <div class="col-md-1 my-td"><span class="d-md-none my-th">Txs:&nbsp;&nbsp;</span>{{address.tx_count}}</div>
+              <div class="col-md-2-8 my-td"><span class="d-md-none my-th">Volume:&nbsp;&nbsp;</span>{{((address.sent + address.received) / 100000000).toFixed(2)}}</div>
+              <div class="col-md-2-8 my-td"><span class="d-md-none my-th">Avg Amount/Tx:&nbsp;&nbsp;</span>{{(address.sent / 100000000).toFixed(2)}}</div>
+              <div class="col-md-1-5 my-td"><span class="d-md-none my-th">Balance:&nbsp;&nbsp;</span>{{(address.balance / 100000000).toFixed(2)}}</div>
             </div>
           </div>
           <div class="d-flex justify-content-center loader" *ngIf="gettingClusterTxs">
