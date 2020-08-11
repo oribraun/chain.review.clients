@@ -51,6 +51,10 @@ html body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.my-table .my-td-chart {
+  padding-top:.35rem;
+  padding-bottom:.35rem;
+}
 .my-table .dev-fund a {
   color: #74bd00;
 }
@@ -82,4 +86,11 @@ html body {
   display: inline-block;
   vertical-align: top;
 }
+  span[class*='users_tx_weekly-'] {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    max-width: 150px;
+  }
+.jqstooltip{width:fit-content !important; height:fit-content !important}
 /*# sourceMappingURL=style.css.map */

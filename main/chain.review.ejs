@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Blockchain | Chain Review</title>
     <base href="/">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
@@ -12,20 +13,21 @@
 <div class="container-xl">
     <nav class="navbar navbar-light">
         <a class="navbar-brand" href="#">
-            <img src="https://new.capital/exchange/img/new/small_logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-            <div class="vertical_divider">
+            <img src="https://new.capital/exchange/img/new/small_logo.svg" width="30" height="30" class="d-block d-sm-inline-block mx-auto align-top" alt="">
+            <div class="vertical_divider d-none d-sm-inline-block">
             </div>
-            Select Blockchain | Chain Review
+            <span class="d-block d-sm-inline-block">Select Blockchain | Chain Review</span>
         </a>
     </nav>
     <div class="my-table">
         <div class="header d-none d-md-block">
             <div class="row">
-                <div class="col-md-3 my-th">Coin</div>
+                <div class="col-md-2 my-th">Coin</div>
 <!--                <div class="col-md-4 my-th">Explorer</div>-->
                 <div class="col-md-3 my-th">User Tx 24h</div>
-                <div class="col-md-3 my-th">Last Block</div>
-                <div class="col-md-3 my-th">Masternodes</div>
+                <div class="col-md-3 my-th">User Tx Weekly</div>
+                <div class="col-md-2 my-th">Last Block</div>
+                <div class="col-md-2 my-th">Masternodes</div>
 <!--                <div class="col-md-2 my-th">Version</div>-->
             </div>
         </div>
@@ -33,7 +35,7 @@
             <% for(var i = 0 ; i < data.length ; i++) { %>
                 <div class="my-tr">
                     <div class="row">
-                        <div class="col-md-3 my-td">
+                        <div class="col-md-2 my-td">
                             <span class="label font-weight-bold d-md-none">Coin:&nbsp;</span>
                             <span class="wallet-<%=i%>">&nbsp;</span>
                         </div>
@@ -41,11 +43,17 @@
                             <span class="label font-weight-bold d-md-none">User Tx 24h:&nbsp;</span>
                             <span class="users_tx_count-<%=i%>">&nbsp;</span>
                         </div>
-                        <div class="col-md-3 my-td">
+                        <div class="col-md-3 my-td my-td-chart">
+                            <span class="label font-weight-bold d-md-none">User Tx Weekly:&nbsp;</span>
+                            <span class="users_tx_weekly-<%=i%>">
+                                <canvas width="0" height="0" class="users_tx_weekly-<%=i%>-chart"></canvas>
+                            </span>
+                        </div>
+                        <div class="col-md-2 my-td">
                             <span class="label font-weight-bold d-md-none">Last Block:&nbsp;</span>
                             <span class="last_block-<%=i%>">&nbsp;</span>
                         </div>
-                        <div class="col-md-3 my-td">
+                        <div class="col-md-2 my-td">
                             <span class="label font-weight-bold d-md-none">Masternodes:&nbsp;</span>
                             <span class="masternodes-<%=i%>">&nbsp;</span>
                         </div>
@@ -64,7 +72,8 @@
         src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
         crossorigin="anonymous"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.min.js"></script>
 <script>
     var data = <%-JSON.stringify(data)%>;
 
@@ -91,6 +100,7 @@
 
     function setUpTable() {
         data = data.sort(function(a,b) {return b.stats.users_tx_count_24_hours - a.stats.users_tx_count_24_hours}); // desc
+        console.log(data);
         // data = data.sort(function(a,b) {return a.stats.users_tx_count - b.stats.users_tx_count}); // asc
         for(var i in data) {
             var coin = data[i];
@@ -103,9 +113,156 @@
             }
             // $('.version-' + i).html(coin.stats.version.toString().replace(/(.)./g, "$1."));
             $('.users_tx_count-' + i).html(coin.stats.users_tx_count_24_hours);
+            // $('.users_tx_weekly-' + i).html(coin.stats.users_tx_count_24_hours);
+            // setUpChart2('.users_tx_weekly-' + i, coin.stats.users_tx_chart)
+            setUpSparkline('.users_tx_weekly-' + i, coin.stats.users_tx_chart)
         }
     }
     setUpTable();
+
+    function setUpChart(id, array) {
+        // $(id).html(array.length);
+        var dates = array.map(function(o){ return o.date});
+        var counts = array.map(function(o){ return o.count});
+        var options = {
+            series: [{
+                name: "User Tx",
+                data: counts
+            }],
+            chart: {
+                type: 'area',
+                height: '50px',
+                width: '100%',
+                zoom: {
+                    enabled: false
+                },
+                toolbar: { show:false },
+                parentHeightOffset: 0,
+            },
+            responsive: [{
+                breakpoint: undefined,
+                options: {},
+            }],
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'straight'
+            },
+
+            title: {
+                text: undefined,
+            },
+            subtitle: {
+                text: undefined,
+                align: 'left'
+            },
+            labels: dates,
+            xaxis: {
+                show: false,
+                type: 'datetime',
+                labels: {show: false},
+                axisBorder: {show: false},
+                axisTicks: {show: false},
+            },
+            yaxis: {
+                // opposite: true
+                show: false,
+                labels: {show: false},
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 0,
+                }
+            },
+            legend: {
+                show: false,
+                horizontalAlign: 'left'
+            },
+            grid: {
+                show: false,
+                padding: {
+                    left: 0,
+                    right: 0
+                }
+            },
+            tooltip: {
+                show: false
+            }
+        };
+
+        console.log('options', options)
+        setTimeout(function() {
+            var chart = new ApexCharts(document.querySelector(id), options);
+            chart.render();
+        });
+    }
+
+    function setUpChart2(id, array) {
+        var canvas = $(id + '-chart')[0];
+        var context = canvas.getContext('2d');
+        context.clearRect(0,0, canvas.width, canvas.height);
+        canvas.width = $(id).width();
+        canvas.height = $(id).height();
+        canvas.style.width = '100%';
+        canvas.style.height = '100%';
+        canvas.style.verticalAlign = 'top';
+        // canvas.style.position = 'absolute';
+        var xStep = canvas.width/(array.length - 1);
+        var countMap = array.map(function(o) {return o.count});
+        var maxCount = Math.max.apply(null, countMap);
+        var radius = 0;
+        // console.log(maxCount)
+        // console.log(countMap)
+        // context.beginPath()
+        // for(var i = 0; i < array.length; i++) {
+        //     context.arc(i * xStep, canvas.height, canvas.width / array.length / 20, 0, 2 * Math.PI);
+        //     context.stroke()
+        // }
+        // context.closePath();
+        context.beginPath()
+        context.arc(0, canvas.height, radius, 0, 2 * Math.PI);
+        var points = [];
+        for(var i = 0; i < array.length; i++) {
+            points.push(i * xStep + ',' + Math.round(canvas.height - canvas.height * array[i].count / maxCount));
+            context.arc(i * xStep, canvas.height - canvas.height * array[i].count / maxCount, radius, 0, 2 * Math.PI);
+        }
+        context.arc((array.length - 1) * xStep, canvas.height, radius, 0, 2 * Math.PI);
+        context.fillStyle = "#72b6ff";
+        context.fill()
+        context.strokeStyle = "#007bff";
+        context.stroke()
+        // context.arc(0, canvas.height, radius, 0, 2 * Math.PI);
+        context.closePath();
+        $(id).append(canvas)
+        // console.log('points', points)
+        canvas.addEventListener('mousemove', function(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            var offset = $(canvas).offset();
+            var currentX = x - offset.left
+            var currentY = y - offset.top
+            // console.log(currentX)
+            // console.log(currentY)
+            if(points.indexOf(currentX + ',' + currentY) > -1) {
+                // console.log('point')
+            }
+        })
+    }
+
+    function setUpSparkline(id, array) {
+        console.log($(id)[0].clientHeight)
+        var dataset = array.map(function(o) {return o.count});
+        var dates = array.map(function(o, i) { return o.date});
+        $(id).sparkline(dataset, {
+            type: 'line',
+            width: $(id)[0].clientWidth,
+            height: $(id)[0].clientHeight,
+            // tooltipFormat: '{{offset:dates}}<br>Txs:{{y:val}}',
+            // tooltipValueLookups: {dates: dates}
+        });
+    }
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112004141-3"></script>

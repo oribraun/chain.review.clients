@@ -55,8 +55,11 @@ html body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.my-table .my-td-chart {
+    padding:0;
+}
 .my-table .dev-fund a {
-        color: #74bd00;
+    color: #74bd00;
 }
 .my-table .loader {
     position: absolute;
@@ -87,4 +90,10 @@ html body {
     background-color: var(--border-color);
     display: inline-block;
     vertical-align: top;
+}
+span[class*='users_tx_weekly-'] {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    max-width: 150px;
 }
