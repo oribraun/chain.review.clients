@@ -100,7 +100,7 @@
 
     function setUpTable() {
         data = data.sort(function(a,b) {return b.stats.users_tx_count_24_hours - a.stats.users_tx_count_24_hours}); // desc
-        console.log(data);
+        // console.log(data);
         // data = data.sort(function(a,b) {return a.stats.users_tx_count - b.stats.users_tx_count}); // asc
         for(var i in data) {
             var coin = data[i];
@@ -252,7 +252,6 @@
     }
 
     function setUpSparkline(id, array) {
-        console.log($(id)[0].clientHeight)
         var dataset = array.map(function(o) {return o.count});
         var dates = array.map(function(o, i) { return o.date});
         $(id).sparkline(dataset, {
