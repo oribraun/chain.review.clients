@@ -24,6 +24,7 @@ export class ApiComponent implements OnInit {
 
   ngOnInit() {
     this.api = [
+      {url: window.location.origin + '/api/db/' + this.data.wallet + '/getstats', desc: 'Returns the current wallet stats.'},
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/getdifficulty', desc: 'Returns the current difficulty.'},
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/getconnectioncount', desc: 'Returns the number of connections the block explorer has to other nodes.'},
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/getblockcount', desc: 'Returns the current block index.'},
