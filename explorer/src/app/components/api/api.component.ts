@@ -27,7 +27,7 @@ export class ApiComponent implements OnInit {
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/getdifficulty', desc: 'Returns the current difficulty.'},
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/getconnectioncount', desc: 'Returns the number of connections the block explorer has to other nodes.'},
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/getblockcount', desc: 'Returns the current block index.'},
-      {url: window.location.origin + '/api/db/' + this.data.wallet + '/getblockhash/1', desc: 'Returns the hash of the block at ; index 0 is the genesis block.'},
+      {url: window.location.origin + '/api/db/' + this.data.wallet + '/getblockhash/0', desc: 'Returns the hash of the block at ; index 0 is the genesis block.'},
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/getblock/' + this.data.blockHash, desc: 'Returns information about the block with the given hash.'},
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/getrawtransaction/' + this.data.txHash, desc: 'Returns raw transaction representation for given transaction id'},
       {url: window.location.origin + '/api/db/' + this.data.wallet + '/getnetworkhashps', desc: 'Returns the current network hashrate. (hash/s)'},
