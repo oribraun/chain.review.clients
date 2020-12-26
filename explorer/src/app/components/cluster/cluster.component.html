@@ -35,7 +35,7 @@
       <div class="my-tr">
         <div class="row">
           <div class="col-3-4 my-td">Avg Amount/Tx</div>
-          <div class="col-8-6 my-td" [innerHtml]="(((clusterDetails.tx_sent + clusterDetails.tx_received) / 100000000) / clusterDetails.tx_count).toFixed(2)"></div>
+          <div class="col-8-6 my-td" [innerHtml]="(((clusterDetails.tx_sent + clusterDetails.tx_received) / 100000000)).toFixed(2)"></div>
         </div>
       </div>
 <!--      <div class="my-tr">-->
