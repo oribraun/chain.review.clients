@@ -111,7 +111,7 @@ export class MarketComponent implements OnInit {
       const fromCoin = symbolSplit[0];
       const toCoin = symbolSplit[1];
       const regularSymbol = fromCoin + '_' + toCoin;
-      if (!regularSymbol.includes(this.data.wallet.toUpperCase() + '_')) {
+      if (!regularSymbol.includes(this.data.symbol.toUpperCase() + '_')) {
         this.marketSummary.splice(i, 1);
         i--;
       }
