@@ -35,7 +35,7 @@
       <div class="my-tr">
         <div class="row">
           <div class="col-3-4 my-td">Avg Amount/Tx</div>
-          <div class="col-8-6 my-td" [innerHtml]="(((clusterDetails.tx_sent + clusterDetails.tx_received) / 100000000)).toFixed(2)"></div>
+          <div class="col-8-6 my-td" [innerHtml]="((clusterDetails.tx_sent + clusterDetails.tx_received) / 100000000 / clusterDetails.tx_count).toFixed(2)"></div>
         </div>
       </div>
 <!--      <div class="my-tr">-->
@@ -74,7 +74,7 @@
               <div class="col-md-3-9 my-td"><span class="d-md-none my-th">Address:&nbsp;&nbsp;</span><a [routerLink]="['/address/' + address.address]">{{address.address}}</a></div>
               <div class="col-md-1 my-td"><span class="d-md-none my-th">Txs:&nbsp;&nbsp;</span>{{address.tx_count}}</div>
               <div class="col-md-2-8 my-td"><span class="d-md-none my-th">Volume:&nbsp;&nbsp;</span>{{((address.sent + address.received) / 100000000).toFixed(2)}}</div>
-              <div class="col-md-2-8 my-td"><span class="d-md-none my-th">Avg Amount/Tx:&nbsp;&nbsp;</span>{{(address.sent / 100000000).toFixed(2)}}</div>
+              <div class="col-md-2-8 my-td"><span class="d-md-none my-th">Avg Amount/Tx:&nbsp;&nbsp;</span>{{(((address.sent + address.received) / 100000000) / address.tx_count).toFixed(2)}}</div>
               <div class="col-md-1-5 my-td"><span class="d-md-none my-th">Balance:&nbsp;&nbsp;</span>{{(address.balance / 100000000).toFixed(2)}}</div>
             </div>
           </div>
