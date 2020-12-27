@@ -11,58 +11,81 @@
 </head>
 <body>
 <div class="container-xl">
-    <nav class="navbar navbar-light">
-        <a class="navbar-brand" href="#">
+    <nav class="main-header">
+        <div class="text-center">
             <img src="https://new.capital/exchange/img/new/small_logo.svg" width="30" height="30" class="d-block d-sm-inline-block mx-auto align-top" alt="">
-            <div class="vertical_divider d-none d-sm-inline-block">
-            </div>
-            <span class="d-block d-sm-inline-block">Select Blockchain | Chain Review</span>
-        </a>
+            <span >Chain Review</span>
+        </div>
     </nav>
     <div class="my-table">
         <div class="header d-none d-md-block">
             <div class="row">
-                <div class="col-md-2 my-th">Coin</div>
-<!--                <div class="col-md-4 my-th">Explorer</div>-->
-                <div class="col-md-3 my-th">User Tx 24h</div>
-                <div class="col-md-3 my-th">User Tx Weekly</div>
-                <div class="col-md-2 my-th">Last Block</div>
-                <div class="col-md-2 my-th">Masternodes</div>
-<!--                <div class="col-md-2 my-th">Version</div>-->
+                <div class="col-md-2-3">
+                    <div class="my-th">NAME</div>
+                </div>
+                <div class="col-md-1-5">
+                    <div class="my-th divider">&nbsp;</div>
+                </div>
+                <div class="col-md-1-5 my-th">
+                    <div class="my-th divider">24H TX</div>
+                </div>
+                <div class="col-md-2-7 my-th">
+                    <div class="my-th divider">WEEKLY TX</div>
+                </div>
+                <div class="col-md-2 my-th">
+                    <div class="my-th divider">LAST BLOCK</div>
+                </div>
+                <div class="col-md-2 my-th">
+                    <div class="my-th">MASTERNODES</div>
+                </div>
+                <!--                <div class="col-md-2 my-th">Version</div>-->
             </div>
         </div>
         <div class="body">
             <% for(var i = 0 ; i < data.length ; i++) { %>
-                <div class="my-tr">
-                    <div class="row">
-                        <div class="col-md-2 my-td">
+            <div class="my-tr">
+                <div class="row">
+                    <div class="col-md-2-3">
+                        <div class="my-td my-td-with-icon">
                             <span class="label font-weight-bold d-md-none">Coin:&nbsp;</span>
+                            <span class="wallet-icon-<%=i%>">&nbsp;</span>
                             <span class="wallet-<%=i%>">&nbsp;</span>
                         </div>
-                        <div class="col-md-3 my-td">
+                    </div>
+                    <div class="col-md-1-5">
+                        <div class="my-td divider">
+                            <span class="label font-weight-bold d-md-none">Symbol:&nbsp;</span>
+                            <span class="wallet-symbol-<%=i%>">&nbsp;</span>
+                        </div>
+                    </div>
+                    <div class="col-md-1-5">
+                        <div class="my-td divider">
                             <span class="label font-weight-bold d-md-none">User Tx 24h:&nbsp;</span>
                             <span class="users_tx_count-<%=i%>">&nbsp;</span>
                         </div>
-                        <div class="col-md-3 my-td my-td-chart">
+                    </div>
+                    <div class="col-md-2-7">
+                        <div class="my-td my-td-chart divider">
                             <span class="label font-weight-bold d-md-none">User Tx Weekly:&nbsp;</span>
                             <span class="users_tx_weekly-<%=i%>">
-                                <canvas width="0" height="0" class="users_tx_weekly-<%=i%>-chart"></canvas>
-                            </span>
+                            <canvas width="0" height="0" class="users_tx_weekly-<%=i%>-chart"></canvas>
+                        </span>
                         </div>
-                        <div class="col-md-2 my-td">
+                    </div>
+                    <div class="col-md-2">
+                        <div class="my-td divider">
                             <span class="label font-weight-bold d-md-none">Last Block:&nbsp;</span>
                             <span class="last_block-<%=i%>">&nbsp;</span>
                         </div>
-                        <div class="col-md-2 my-td">
+                    </div>
+                    <div class="col-md-2">
+                        <div class="my-td">
                             <span class="label font-weight-bold d-md-none">Masternodes:&nbsp;</span>
                             <span class="masternodes-<%=i%>">&nbsp;</span>
                         </div>
-<!--                        <div class="col-md-2 my-td">-->
-<!--                            <span class="label font-weight-bold d-md-none">Version:&nbsp;</span>-->
-<!--                            <span class="version-<%=i%>">&nbsp;</span>-->
-<!--                        </div>-->
                     </div>
                 </div>
+            </div>
             <% } %>
         </div>
     </div>
@@ -103,8 +126,18 @@
         // console.log(data);
         // data = data.sort(function(a,b) {return a.stats.users_tx_count - b.stats.users_tx_count}); // asc
         for(var i in data) {
+            // console.log('data', data)
             var coin = data[i];
-            $('.wallet-' + i).html('<a href="' +  coin.explorer  + '">' + coin.wallet.toUpperCase() + '</a>')
+            var name = coin.wallet === 'Fix' ? (coin.wallet + ' network').toUpperCase() : coin.wallet.toUpperCase()
+            var volume = coin.markets_stats['New Capital']['24hVolume'];
+            var avgPriceBtc = coin.markets_stats['New Capital']['avgPriceBtc'];
+            var btcUsdPrice = parseFloat(coin.market_summary.usd_price.BTC);
+            var volumeUsd = parseFloat(volume) * parseFloat(coin.market_summary.usd_price.BTC);
+            var avgPriceBtcUsd = parseFloat(avgPriceBtc) * parseFloat(coin.market_summary.usd_price.BTC);
+
+            $('.wallet-' + i).html('<a href="' +  coin.explorer  + '">' + name + '</a>')
+            $('.wallet-icon-' + i).html('<img src="./' +  coin.wallet.toLowerCase()  + '.svg" />')
+            $('.wallet-symbol-' + i).html(coin.symbol);
             $('.last_block-' + i).html(coin.stats.last_block);
             if(coin.stats.masternodesCount) {
                 $('.masternodes-' + i).html(coin.stats.masternodesCount.total + '/' + coin.stats.masternodesCount.enabled);
@@ -113,6 +146,8 @@
             }
             // $('.version-' + i).html(coin.stats.version.toString().replace(/(.)./g, "$1."));
             $('.users_tx_count-' + i).html(coin.stats.users_tx_count_24_hours);
+            $('.volume-' + i).html(volumeUsd.toFixed(2));
+            $('.price-' + i).html(avgPriceBtcUsd.toFixed(2));
             // $('.users_tx_weekly-' + i).html(coin.stats.users_tx_count_24_hours);
             // setUpChart2('.users_tx_weekly-' + i, coin.stats.users_tx_chart)
             setUpSparkline('.users_tx_weekly-' + i, coin.stats.users_tx_chart)
@@ -258,6 +293,9 @@
             type: 'line',
             width: $(id)[0].clientWidth,
             height: $(id)[0].clientHeight,
+            // height: '100%',
+            lineColor: '#78beff',
+            fillColor: '#9ad5ff'
             // tooltipFormat: '{{offset:dates}}<br>Txs:{{y:val}}',
             // tooltipValueLookups: {dates: dates}
         });
