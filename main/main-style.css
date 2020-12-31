@@ -4299,7 +4299,6 @@ html body {
 }
 .my-table .header .row .my-th {
   font-weight: bold;
-  position: relative;
 }
 .my-table .header .row .my-th:after {
   content: '';
@@ -4307,6 +4306,10 @@ html body {
   top: 0;
   bottom: 0;
   right: 0;
+}
+.my-table .header .row .my-th .caret {
+  position: absolute;
+  margin-left: 5px;
 }
 .my-table .header .row .divider:after {
   content: '';
@@ -4334,7 +4337,6 @@ html body {
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: bold;
-  position: relative;
 }
 .my-table .body .my-tr .my-td a {
   color: inherit;
@@ -4351,7 +4353,7 @@ html body {
 .my-table .body .my-tr .my-td-with-icon {
   padding: .307rem .707rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .my-table .body .my-tr .my-td-with-icon {
     padding: .307rem;
   }
@@ -4360,12 +4362,12 @@ html body {
   padding: .707rem;
   height: 100%;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .my-table .body .my-tr .my-td-chart {
     padding: .307rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .my-table .body .my-tr .divider:after {
     content: '';
     position: absolute;

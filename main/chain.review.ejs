@@ -7,6 +7,7 @@
     <base href="/">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="main/main-style.css?v=1">
 </head>
 <body>
@@ -18,74 +19,91 @@
         </div>
     </nav>
     <div class="my-table">
-        <div class="header d-none d-md-block">
+        <div class="header d-none d-lg-block">
             <div class="row">
-                <div class="col-md-2-3">
-                    <div class="my-th">NAME</div>
+                <div class="col-lg-2-1">
+                    <div class="my-th pointer" onclick="sortByClick('NAME')">NAME <span class="caret name"></span></div>
                 </div>
-                <div class="col-md-1-5">
+                <div class="col-lg-1-3">
                     <div class="my-th divider">&nbsp;</div>
                 </div>
-                <div class="col-md-1-5 my-th">
-                    <div class="my-th divider">24H TX</div>
+                <div class="col-lg-1-2">
+                    <div class="my-th divider pointer" onclick="sortByClick('24H TX')">24H TX <span class="caret txs"></span></div>
                 </div>
-                <div class="col-md-2-7 my-th">
+                <div class="col-lg-2">
                     <div class="my-th divider">WEEKLY TX</div>
                 </div>
-                <div class="col-md-2 my-th">
-                    <div class="my-th divider">LAST BLOCK</div>
+                <div class="col-lg-1-3">
+                    <div class="my-th divider pointer" onclick="sortByClick('VOLUME')">VOLUME <span class="caret volume"></span></div>
                 </div>
-                <div class="col-md-2 my-th">
-                    <div class="my-th">MASTERNODES</div>
+                <div class="col-lg-1-2">
+                    <div class="my-th divider pointer" onclick="sortByClick('PRICE')">PRICE <span class="caret price"></span></div>
+                </div>
+                <div class="col-lg-1-4">
+                    <div class="my-th divider pointer" onclick="sortByClick('LAST BLOCK')">LAST BLOCK <span class="caret last_block"></span></div>
+                </div>
+                <div class="col-lg-1-5">
+                    <div class="my-th pointer" onclick="sortByClick('MASTERNODES')">MASTERNODES <span class="caret masternodes"></span></div>
                 </div>
                 <!--                <div class="col-md-2 my-th">Version</div>-->
             </div>
         </div>
         <div class="body">
             <% for(var i = 0 ; i < data.length ; i++) { %>
-            <div class="my-tr">
-                <div class="row">
-                    <div class="col-md-2-3">
-                        <div class="my-td my-td-with-icon">
-                            <span class="label font-weight-bold d-md-none">Coin:&nbsp;</span>
-                            <span class="wallet-icon-<%=i%>">&nbsp;</span>
-                            <span class="wallet-<%=i%>">&nbsp;</span>
+                <div class="my-tr" id="my-tr-<%- i %>">
+                    <div class="row">
+                        <div class="col-lg-2-1 col-md-5 col-sm-5">
+                            <div class="my-td my-td-with-icon">
+                                <span class="wallet-icon-<%=i%>">&nbsp;</span>
+                                <span class="wallet-<%=i%>">&nbsp;</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-1-5">
-                        <div class="my-td divider">
-                            <span class="label font-weight-bold d-md-none">Symbol:&nbsp;</span>
-                            <span class="wallet-symbol-<%=i%>">&nbsp;</span>
+                        <div class="col-lg-1-3 col-md-4 col-sm-7">
+                            <div class="my-td divider">
+                                <span class="label font-weight-bold d-lg-none">SYMBOL:&nbsp;</span>
+                                <span class="wallet-symbol-<%=i%>">&nbsp;</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-1-5">
-                        <div class="my-td divider">
-                            <span class="label font-weight-bold d-md-none">User Tx 24h:&nbsp;</span>
-                            <span class="users_tx_count-<%=i%>">&nbsp;</span>
+                        <div class="col-lg-1-2 col-md-3 col-sm-5">
+                            <div class="my-td divider">
+                                <span class="label font-weight-bold d-lg-none">24H TX:&nbsp;</span>
+                                <span class="users_tx_count-<%=i%>">&nbsp;</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2-7">
-                        <div class="my-td my-td-chart divider">
-                            <span class="label font-weight-bold d-md-none">User Tx Weekly:&nbsp;</span>
-                            <span class="users_tx_weekly-<%=i%>">
+                        <div class="col-lg-2 col-md-5 col-sm-7">
+                            <div class="my-td my-td-chart divider">
+                                <span class="label font-weight-bold d-lg-none">WEEKLY TX:&nbsp;</span>
+                                <span class="users_tx_weekly-<%=i%>">
                             <canvas width="0" height="0" class="users_tx_weekly-<%=i%>-chart"></canvas>
                         </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="my-td divider">
-                            <span class="label font-weight-bold d-md-none">Last Block:&nbsp;</span>
-                            <span class="last_block-<%=i%>">&nbsp;</span>
+                        <div class="col-lg-1-3 col-md-4 col-sm-5">
+                            <div class="my-td divider">
+                                <span class="label font-weight-bold d-lg-none">VOLUME:&nbsp;</span>
+                                <span class="volume-<%=i%>">&nbsp;</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="my-td">
-                            <span class="label font-weight-bold d-md-none">Masternodes:&nbsp;</span>
-                            <span class="masternodes-<%=i%>">&nbsp;</span>
+                        <div class="col-lg-1-2 col-md-3 col-sm-7">
+                            <div class="my-td divider">
+                                <span class="label font-weight-bold d-lg-none">PRICE:&nbsp;</span>
+                                <span class="price-<%=i%>">&nbsp;</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-1-4 col-md-5 col-sm-5">
+                            <div class="my-td divider">
+                                <span class="label font-weight-bold d-lg-none">LAST BLOCK:&nbsp;</span>
+                                <span class="last_block-<%=i%>">&nbsp;</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-1-5 col-md-4 col-sm-7">
+                            <div class="my-td">
+                                <span class="label font-weight-bold d-lg-none">Masternodes:&nbsp;</span>
+                                <span class="masternodes-<%=i%>">&nbsp;</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <% } %>
         </div>
     </div>
@@ -99,7 +117,10 @@
 <script src="https://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.min.js"></script>
 <script>
     var data = <%-JSON.stringify(data)%>;
-
+    var positions = {};
+    var newData;
+    var sortBy = '24H TX';
+    var order = 'desc';
     function updateTable() {
         $.ajax({
             url: '/main/getUsersStats',
@@ -107,8 +128,8 @@
             contentType: "application/json",
             success: function(response) {
                 if(!response.err) {
-                    data = response.data;
-                    setUpTable();
+                    newData = response.data;
+                    setUpTable(newData);
                 }
             },
             error: function(err) {
@@ -117,43 +138,130 @@
         })
     }
 
+    function setUpPositions(data) {
+        var pos = {};
+        for(var i in data) {
+            var currentPosition = $('#my-tr-' + i).position()
+            pos[data[i].wallet] = {position: currentPosition, index: i};
+        }
+        // console.log('pos', pos);
+        return pos;
+    }
+
+    function getPositionsDiff(pos, newPos) {
+        var diff = {};
+        var diffExist = false;
+        for(var i in pos) {
+            var moveToTop =  $('#my-tr-' + newPos[i].index).position().top - $('#my-tr-' + pos[i].index).position().top;
+            diffExist  = moveToTop !== 0 || diffExist;
+            diff[i] = {index: pos[i].index, moveToTop: moveToTop};
+        }
+        return {diff: diff, diffExist: diffExist};
+    }
+
+    function animateToDiff(diff) {
+        for(var i in diff) {
+            var ele = $('#my-tr-' + diff[i].index);
+            animate(ele, diff[i].moveToTop);
+        }
+    }
+    function animate(ele, moveToTop) {
+        ele.css('position', 'relative');
+        ele.animate({'top': moveToTop},300, 'linear', function() {
+            ele.css('top', '0');
+        });
+    }
     setInterval(function() {
         updateTable()
     },1000 * 60)// every minute
 
-    function setUpTable() {
-        data = data.sort(function(a,b) {return b.stats.users_tx_count_24_hours - a.stats.users_tx_count_24_hours}); // desc
+    function setUpTable(data) {
+        setUpCaret();
+        data = data.sort(function(a,b) {
+            if(sortBy === '24H TX') {
+                if(order === 'desc') {
+                    return b.stats.users_tx_count_24_hours - a.stats.users_tx_count_24_hours
+                } else {
+                    return a.stats.users_tx_count_24_hours - b.stats.users_tx_count_24_hours
+                }
+            }
+            if(sortBy === 'NAME') {
+                if(order === 'desc') {
+                    return b.wallet > a.wallet ? 1 : -1
+                } else {
+                    return a.wallet > b.wallet ? 1 : -1
+                }
+            }
+            if(sortBy === 'VOLUME') {
+                if(order === 'desc') {
+                    return b.markets_stats['New Capital']['24hVolume'] - a.markets_stats['New Capital']['24hVolume']
+                } else {
+                    return a.markets_stats['New Capital']['24hVolume'] - b.markets_stats['New Capital']['24hVolume']
+                }
+            }
+            if(sortBy === 'PRICE') {
+                if(order === 'desc') {
+                    return b.markets_stats['New Capital']['avgPriceBtc'] - a.markets_stats['New Capital']['avgPriceBtc']
+                } else {
+                    return a.markets_stats['New Capital']['avgPriceBtc'] - b.markets_stats['New Capital']['avgPriceBtc']
+                }
+            }
+            if(sortBy === 'LAST BLOCK') {
+                if(order === 'desc') {
+                    return b.stats.last_block - a.stats.last_block
+                } else {
+                    return a.stats.last_block - b.stats.last_block
+                }
+            }
+            if(sortBy === 'MASTERNODES') {
+                if(order === 'desc') {
+                    return b.stats.masternodesCount.total - a.stats.masternodesCount.total
+                } else {
+                    return a.stats.masternodesCount.total - b.stats.masternodesCount.total
+                }
+            }
+        }); // desc
+        // shuffleArray(data);
+        if(!Object.keys(positions).length) {
+            positions = setUpPositions(data);
+        }
+        var new_positions = setUpPositions(data);
+        var obj = getPositionsDiff(positions, new_positions);
+        animateToDiff(obj.diff);
+        positions = new_positions;
         // console.log(data);
         // data = data.sort(function(a,b) {return a.stats.users_tx_count - b.stats.users_tx_count}); // asc
-        for(var i in data) {
-            // console.log('data', data)
-            var coin = data[i];
-            var name = coin.wallet === 'Fix' ? (coin.wallet + ' network').toUpperCase() : coin.wallet.toUpperCase()
-            var volume = coin.markets_stats['New Capital']['24hVolume'];
-            var avgPriceBtc = coin.markets_stats['New Capital']['avgPriceBtc'];
-            var btcUsdPrice = parseFloat(coin.market_summary.usd_price.BTC);
-            var volumeUsd = parseFloat(volume) * parseFloat(coin.market_summary.usd_price.BTC);
-            var avgPriceBtcUsd = parseFloat(avgPriceBtc) * parseFloat(coin.market_summary.usd_price.BTC);
+        setTimeout(function() {
+            for(var i in data) {
+                // console.log('data', data)
+                var coin = data[i];
+                var name = coin.wallet === 'Fix' ? (coin.wallet + ' network').toUpperCase() : coin.wallet.toUpperCase()
+                var volume = coin.markets_stats['New Capital']['24hVolume'];
+                var avgPriceBtc = coin.markets_stats['New Capital']['avgPriceBtc'];
+                var btcUsdPrice = parseFloat(coin.market_summary.usd_price.BTC);
+                var volumeUsd = parseFloat(volume) * parseFloat(coin.market_summary.usd_price.BTC);
+                var avgPriceBtcUsd = parseFloat(avgPriceBtc) * parseFloat(coin.market_summary.usd_price.BTC);
 
-            $('.wallet-' + i).html('<a href="' +  coin.explorer  + '">' + name + '</a>')
-            $('.wallet-icon-' + i).html('<img src="./' +  coin.wallet.toLowerCase()  + '.svg" />')
-            $('.wallet-symbol-' + i).html(coin.symbol);
-            $('.last_block-' + i).html(coin.stats.last_block);
-            if(coin.stats.masternodesCount) {
-                $('.masternodes-' + i).html(coin.stats.masternodesCount.total + '/' + coin.stats.masternodesCount.enabled);
-            } else {
-                $('.masternodes-' + i).html('-');
+                $('.wallet-' + i).html('<a href="' +  coin.explorer  + '">' + name + '</a>')
+                $('.wallet-icon-' + i).html('<img src="./' +  coin.wallet.toLowerCase()  + '.svg" />')
+                $('.wallet-symbol-' + i).html(coin.symbol);
+                $('.last_block-' + i).html(coin.stats.last_block);
+                if(coin.stats.masternodesCount) {
+                    $('.masternodes-' + i).html(coin.stats.masternodesCount.total + '/' + coin.stats.masternodesCount.enabled);
+                } else {
+                    $('.masternodes-' + i).html('-');
+                }
+                // $('.version-' + i).html(coin.stats.version.toString().replace(/(.)./g, "$1."));
+                $('.users_tx_count-' + i).html(coin.stats.users_tx_count_24_hours);
+                $('.volume-' + i).html('$' + volumeUsd.toFixed(1));
+                $('.price-' + i).html('$' + avgPriceBtcUsd.toFixed(3));
+                // $('.users_tx_weekly-' + i).html(coin.stats.users_tx_count_24_hours);
+                // setUpChart2('.users_tx_weekly-' + i, coin.stats.users_tx_chart)
+                setUpSparkline('.users_tx_weekly-' + i, coin.stats.users_tx_chart)
             }
-            // $('.version-' + i).html(coin.stats.version.toString().replace(/(.)./g, "$1."));
-            $('.users_tx_count-' + i).html(coin.stats.users_tx_count_24_hours);
-            $('.volume-' + i).html(volumeUsd.toFixed(2));
-            $('.price-' + i).html(avgPriceBtcUsd.toFixed(2));
-            // $('.users_tx_weekly-' + i).html(coin.stats.users_tx_count_24_hours);
-            // setUpChart2('.users_tx_weekly-' + i, coin.stats.users_tx_chart)
-            setUpSparkline('.users_tx_weekly-' + i, coin.stats.users_tx_chart)
-        }
+        }, obj.diffExist ? 300 : 0)
     }
-    setUpTable();
+    setUpTable(data);
 
     function setUpChart(id, array) {
         // $(id).html(array.length);
@@ -299,6 +407,76 @@
             // tooltipFormat: '{{offset:dates}}<br>Txs:{{y:val}}',
             // tooltipValueLookups: {dates: dates}
         });
+    }
+
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+
+    function sortByClick(sort) {
+        if(sortBy === sort) {
+            if(order === 'desc') {
+                order = 'asc';
+            } else {
+                order = 'desc';
+            }
+        } else {
+            sortBy = sort;
+            order = 'desc';
+        }
+
+        this.setUpTable(data);
+    }
+
+    function setUpCaret() {
+        $('.caret').empty()
+        if(sortBy === '24H TX') {
+            if(order === 'desc') {
+                $('.caret.txs').append('<i class="fas fa-caret-down"></i>');
+            } else {
+                $('.caret.txs').append('<i class="fas fa-caret-up"></i>');
+            }
+        }
+        if(sortBy === 'NAME') {
+            if(order === 'desc') {
+                $('.caret.name').append('<i class="fas fa-caret-down"></i>');
+            } else {
+                $('.caret.name').append('<i class="fas fa-caret-up"></i>');
+            }
+        }
+        if(sortBy === 'VOLUME') {
+            if(order === 'desc') {
+                $('.caret.volume').append('<i class="fas fa-caret-down"></i>');
+            } else {
+                $('.caret.volume').append('<i class="fas fa-caret-up"></i>');
+            }
+        }
+        if(sortBy === 'PRICE') {
+            if(order === 'desc') {
+                $('.caret.price').append('<i class="fas fa-caret-down"></i>');
+            } else {
+                $('.caret.price').append('<i class="fas fa-caret-up"></i>');
+            }
+        }
+        if(sortBy === 'LAST BLOCK') {
+            if(order === 'desc') {
+                $('.caret.last_block').append('<i class="fas fa-caret-down"></i>');
+            } else {
+                $('.caret.last_block').append('<i class="fas fa-caret-up"></i>');
+            }
+        }
+        if(sortBy === 'MASTERNODES') {
+            if(order === 'desc') {
+                $('.caret.masternodes').append('<i class="fas fa-caret-down"></i>');
+            } else {
+                $('.caret.masternodes').append('<i class="fas fa-caret-up"></i>');
+            }
+        }
     }
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->

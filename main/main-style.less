@@ -40,13 +40,16 @@ html body {
             margin: 0 -0.75rem;
             .my-th {
                 font-weight: bold;
-                position: relative;
                 &:after {
                     content:'';
                     position: absolute;
                     top:0;
                     bottom:0;
                     right:0
+                }
+                .caret {
+                    position: absolute;
+                    margin-left: 5px;
                 }
             }
             .divider {
@@ -78,7 +81,6 @@ html body {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 font-weight: bold;
-                position: relative;
                 a {
                     color: inherit;
                 }
@@ -94,7 +96,7 @@ html body {
             }
             .my-td-with-icon {
                 padding: .307rem .707rem;
-                @media(min-width:768px) {
+                @media(min-width:992px) {
                     padding: .307rem;
                 }
             }
@@ -102,11 +104,11 @@ html body {
                 padding: .707rem;
                 height: 100%;
                 //min-height: 40px;
-                @media(min-width:768px) {
+                @media(min-width:992px) {
                     padding: .307rem;
                 }
             }
-            @media(min-width:768px) {
+            @media(min-width:992px) {
                 .divider {
                     &:after {
                         content: '';
