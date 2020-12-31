@@ -4281,12 +4281,6 @@ html body {
   padding: .5rem 1rem;
 }
 .banner {
-  height: 300px;
-  width: 100%;
-  background-image: url('/assets/new_year_2021.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply;
   margin-bottom: .3em;
 }
 .my-table {
