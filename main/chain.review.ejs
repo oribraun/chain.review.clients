@@ -233,9 +233,11 @@
             }
             if(sortBy === 'MASTERNODES') {
                 if(!b.stats.masternodesCount) {
+                    b.stats.masternodesCount = {}:
                     b.stats.masternodesCount.total = 0;
                 }
                 if(!b.stats.masternodesCount) {
+                    a.stats.masternodesCount = {};
                     a.stats.masternodesCount.total = 0;
                 }
                 if(order === 'desc') {
