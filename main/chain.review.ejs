@@ -232,17 +232,10 @@
                 }
             }
             if(sortBy === 'MASTERNODES') {
-                if(!b.stats.masternodesCount || !a.stats.masternodesCount) {
-                    if(order === 'desc') {
-                        return -1;
-                    } else {
-                        return 1;
-                    }
-                }
                 if(order === 'desc') {
-                    return b.stats.masternodesCount.total - a.stats.masternodesCount.total
+                    return (b.stats.masternodesCount ? b.stats.masternodesCount.total : 0) - (a.stats.masternodesCount ? a.stats.masternodesCount.total : 0)
                 } else {
-                    return a.stats.masternodesCount.total - b.stats.masternodesCount.total
+                    return (a.stats.masternodesCount ? a.stats.masternodesCount.total : 0) - (b.stats.masternodesCount ? b.stats.masternodesCount.total : 0)
                 }
             }
         }); // desc
