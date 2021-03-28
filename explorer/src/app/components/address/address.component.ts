@@ -195,6 +195,7 @@ export class AddressComponent implements OnInit {
             this.getAddressTxList();
           } else {
             if (response.errMessage === 'no address found') {
+              alert('address not exist or still in sync');
               this.router.navigateByUrl('/');
             }
           }
