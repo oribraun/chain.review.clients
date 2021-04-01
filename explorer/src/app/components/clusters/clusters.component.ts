@@ -13,10 +13,12 @@ export class ClustersComponent implements OnInit {
 
   public data;
   public input = '';
+  public total = 0;
   public clusters: any[] = [];
   public emptyTable: any[] = [];
   public currentTable: any[] = [];
   public gettingClusters = false;
+  public showPagination = false;
   public orderBy = 'address_count';
   public orderByOrder = '-';
   public pagination: any = {
@@ -46,18 +48,37 @@ export class ClustersComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.resetPagination();
     this.setCurrentTable();
-    this.getClusters();
+    this.getClustersCount();
 
   }
 
+  resetPagination() {
+    this.pagination = {
+      current: 1,
+      start: 1,
+      end: 10,
+      pages: 0,
+      maxPages: 10,
+      offset: 0,
+      limit: 25
+    };
+  }
+
+  setCurrentTable() {
+    for (let i = 0; i < this.pagination.maxPages; i++) {
+      this.emptyTable.push( { addr: '&nbsp;', collateral: '', status: '', lastseen: '' });
+    }
+    this.currentTable = this.emptyTable.slice();
+  }
   setPages() {
     if (window.innerWidth <= 415) {
       this.pagination.maxPages = 5;
     } else {
       this.pagination.maxPages = 10;
     }
-    this.pagination.pages = Math.ceil(this.filterClusters().length / this.pagination.limit);
+    this.pagination.pages = Math.ceil(this.total / this.pagination.limit);
     this.pagination.start = this.pagination.current - Math.floor(this.pagination.maxPages / 2) + 1;
     this.pagination.end = this.pagination.current + Math.floor(this.pagination.maxPages / 2);
     if (this.pagination.start < 1) {
@@ -80,18 +101,11 @@ export class ClustersComponent implements OnInit {
       this.pagination.current = this.pagination.end;
     }
   }
-  setCurrentTable() {
-    for (let i = 0; i < this.pagination.maxPages; i++) {
-      this.emptyTable.push( { addr: '&nbsp;', collateral: '', status: '', lastseen: '' });
-    }
-    this.currentTable = this.emptyTable.slice();
-  }
   nextPage() {
     if (this.gettingClusters) { return; }
     if (this.pagination.current < this.pagination.pages) {
       this.pagination.current++;
-      // this.getBlocks();
-      this.getNextClusters();
+      this.getClusters();
     }
     if (this.pagination.end < this.pagination.pages && this.pagination.current > Math.floor(this.pagination.maxPages / 2)) {
       this.pagination.start++;
@@ -104,8 +118,7 @@ export class ClustersComponent implements OnInit {
     if (this.gettingClusters) { return; }
     if (this.pagination.current > 1) {
       this.pagination.current--;
-      // this.getBlocks();
-      this.getNextClusters();
+      this.getClusters();
     }
     if (this.pagination.start > 1 && this.pagination.current < this.pagination.pages - Math.ceil(this.pagination.maxPages / 2)) {
       this.pagination.start--;
@@ -116,39 +129,29 @@ export class ClustersComponent implements OnInit {
 
   setPage(page) {
     if (this.gettingClusters) { return; }
-    if (page == this.pagination.current || !page || isNaN(page)) {
+    if (page === this.pagination.current || !page || isNaN(page)) {
       return;
     }
-    this.pagination.current = parseInt(page);
+    this.pagination.current = parseInt(page, 0);
     if (this.pagination.current < 1) {
       this.pagination.current = this.pagination.start;
     }
     if (this.pagination.current > this.pagination.pages) {
       this.pagination.current = this.pagination.pages;
     }
-    this.pagination.offset = (parseInt(this.pagination.current) - 1);
+    this.pagination.offset = (parseInt(this.pagination.current, 0) - 1);
 
     this.setPages();
-    this.getNextClusters();
+    this.getClusters();
   }
 
-  getClusters() {
-    this.gettingClusters = true;
-    const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getAllClustersWithAddressCount';
-    console.log('url', url);
-    const data = {
-      limit : this.pagination.limit,
-      offset : this.pagination.offset,
-    };
-    this.http.post(url, data).subscribe(
+  getClustersCount() {
+    const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getClustersCount';
+    this.http.post(url, {}).subscribe(
       (response: any) => {
         if (!response.err) {
-          this.clusters = response.data;
-          console.log('this.clusters', this.clusters)
-          this.currentTable = this.emptyTable.slice();
-          for (let i = 0; i < this.clusters.length; i++) {
-            this.currentTable[i] = this.clusters[i];
-          }
+          this.total = response.data;
+          this.getClusters();
         }
         this.gettingClusters = false;
         this.setPages();
@@ -159,13 +162,34 @@ export class ClustersComponent implements OnInit {
       }
     );
   }
-  getNextClusters() {
-    this.currentTable = this.emptyTable.slice();
-    for (let i = 0; i < this.currentTable.length; i++) {
-      if (this.clusters[(this.pagination.current - 1) * this.pagination.limit + i]) {
-        this.currentTable[i] = this.clusters[(this.pagination.current - 1) * this.pagination.limit + i];
+
+  getClusters() {
+    this.gettingClusters = true;
+    const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getClusters';
+    const data = {
+      limit : this.pagination.limit,
+      offset : this.pagination.offset,
+    };
+    this.http.post(url, data).subscribe(
+      (response: any) => {
+        if (!response.err) {
+          this.clusters = response.data;
+          this.currentTable = this.emptyTable.slice();
+          for (let i = 0; i < this.clusters.length; i++) {
+            this.currentTable[i] = this.clusters[i];
+          }
+        }
+        if (!this.showPagination) {
+          this.showPagination = true;
+        }
+        this.gettingClusters = false;
+        this.setPages();
+      },
+      (error) => {
+        console.log(error);
+        this.gettingClusters = false;
       }
-    }
+    );
   }
 
   @HostListener('window:resize')
@@ -177,12 +201,6 @@ export class ClustersComponent implements OnInit {
       this.pagination.maxPages = 10;
     }
     this.setPages();
-  }
-
-  filterClusters() {
-    const a = this.orderByPipe.transform(this.clusters, this.orderByOrder + this.orderBy);
-    const b = this.filterPipe.transform(a, this.search, ['_id', 'tags', 'address_count']);
-    return b;
   }
 
   setOrderBy(orderBy: string) {

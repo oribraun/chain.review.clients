@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="body">
-    <div class="my-tr" *ngFor="let cluster of filterClusters() | slice:(pagination.current - 1) * pagination.limit:pagination.current * pagination.limit; let i = index;">
+    <div class="my-tr" *ngFor="let cluster of clusters; let i = index;">
       <div class="row">
         <!--        {{(pagination.current - 1) * pagination.limit + i}}-->
         <div class="col-8 col-sm-5 col-md-5 my-td"><a [routerLink]="['/cluster/' + cluster._id]" [innerHtml]="cluster._id"></a></div>
@@ -46,17 +46,17 @@
     </div>
   </div>
 </div>
-<nav aria-label="Page navigation" *ngIf="!gettingClusters && clusters.length">
+<nav aria-label="Page navigation" *ngIf="showPagination && pagination.pages">
   <ul class="pagination justify-content-center">
     <li class="page-item">
-      <a class="page-link pointer" aria-label="Previous" (click)="prevPage()">
+      <a class="page-link" aria-label="Previous" (click)="prevPage()">
         <span aria-hidden="true">&laquo;</span>
         <span class="sr-only">Previous</span>
       </a>
     </li>
-    <li class="page-item" (click)="setPage(num)" [ngClass]="{'active': pagination.current === num}" *ngFor="let num of ([] | range :pagination.start :pagination.end :1)"><a class="page-link pointer">{{num}}</a></li>
+    <li class="page-item" (click)="setPage(num)" [ngClass]="{'active': pagination.current === num}" *ngFor="let num of ([] | range :pagination.start :pagination.end :1)"><a class="page-link" >{{num}}</a></li>
     <li class="page-item">
-      <a class="page-link pointer" aria-label="Next" (click)="nextPage()">
+      <a class="page-link" aria-label="Next" (click)="nextPage()">
         <span aria-hidden="true">&raquo;</span>
         <span class="sr-only">Next</span>
       </a>
