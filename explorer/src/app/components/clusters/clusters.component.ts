@@ -18,6 +18,7 @@ export class ClustersComponent implements OnInit {
   public emptyTable: any[] = [];
   public currentTable: any[] = [];
   public gettingClusters = false;
+  public gettingClustersCount = false;
   public showPagination = false;
   public orderBy = 'address_count';
   public orderByOrder = '-';
@@ -146,6 +147,7 @@ export class ClustersComponent implements OnInit {
   }
 
   getClustersCount() {
+    this.gettingClustersCount = true;
     const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getClustersCount';
     this.http.post(url, {}).subscribe(
       (response: any) => {
@@ -153,12 +155,12 @@ export class ClustersComponent implements OnInit {
           this.total = response.data;
           this.getClusters();
         }
-        this.gettingClusters = false;
+        this.gettingClustersCount = false;
         this.setPages();
       },
       (error) => {
         console.log(error);
-        this.gettingClusters = false;
+        this.gettingClustersCount = false;
       }
     );
   }
