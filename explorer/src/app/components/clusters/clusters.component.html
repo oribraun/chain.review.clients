@@ -68,3 +68,12 @@
     </li>
   </ul>
 </nav>
+<div class="d-flex justify-content-center loader" *ngIf="gettingClustersCount">
+  <div class="d-table h-100">
+    <div class="d-table-cell align-middle">
+      <div class="spinner-grow" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+</div>
