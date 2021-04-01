@@ -50,7 +50,7 @@ export class ClusterComponent implements OnInit {
       this.setCurrentTable();
       this.getClusterDetails();
     });
-    this.titleService.setTitle( this.data.symbol.toUpperCase() + ' Coin - Address ' + this.clusterId + ' | Chain Review' );
+    this.titleService.setTitle( this.data.symbol.toUpperCase() + ' Coin - Cluster ' + this.clusterId + ' | Chain Review' );
   }
 
   ngOnInit() {
