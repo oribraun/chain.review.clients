@@ -45,16 +45,16 @@
                 <div class="col-lg-1-3">
                     <div class="my-th divider">&nbsp;</div>
                 </div>
-                <div class="col-lg-1-2">
+                <div class="col-lg-1-1">
                     <div class="my-th divider pointer" onclick="sortByClick('24H TX')">24H TX <span class="caret txs"></span></div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-1-9">
                     <div class="my-th divider">WEEKLY TX</div>
                 </div>
-                <div class="col-lg-1-3">
+                <div class="col-lg-1-4">
                     <div class="my-th divider pointer" onclick="sortByClick('VOLUME')">VOLUME <span class="caret volume"></span></div>
                 </div>
-                <div class="col-lg-1-2">
+                <div class="col-lg-1-3">
                     <div class="my-th divider pointer" onclick="sortByClick('PRICE')">PRICE <span class="caret price"></span></div>
                 </div>
                 <div class="col-lg-1-4">
@@ -82,13 +82,13 @@
                                 <span class="wallet-symbol-<%=i%>">&nbsp;</span>
                             </div>
                         </div>
-                        <div class="col-lg-1-2 col-md-3 col-sm-5">
+                        <div class="col-lg-1-1 col-md-3 col-sm-5">
                             <div class="my-td divider">
                                 <span class="label font-weight-bold d-lg-none">24H TX:&nbsp;</span>
                                 <span class="users_tx_count-<%=i%>">&nbsp;</span>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-5 col-sm-7">
+                        <div class="col-lg-1-9 col-md-5 col-sm-7">
                             <div class="my-td my-td-chart divider">
                                 <span class="label font-weight-bold d-lg-none">WEEKLY TX:&nbsp;</span>
                                 <span class="users_tx_weekly-<%=i%>">
@@ -96,13 +96,13 @@
                         </span>
                             </div>
                         </div>
-                        <div class="col-lg-1-3 col-md-4 col-sm-5">
+                        <div class="col-lg-1-4 col-md-4 col-sm-5">
                             <div class="my-td divider">
                                 <span class="label font-weight-bold d-lg-none">VOLUME:&nbsp;</span>
                                 <span class="volume-<%=i%>">&nbsp;</span>
                             </div>
                         </div>
-                        <div class="col-lg-1-2 col-md-3 col-sm-7">
+                        <div class="col-lg-1-3 col-md-3 col-sm-7">
                             <div class="my-td divider">
                                 <span class="label font-weight-bold d-lg-none">PRICE:&nbsp;</span>
                                 <span class="price-<%=i%>">&nbsp;</span>
@@ -272,7 +272,7 @@
                 // $('.version-' + i).html(coin.stats.version.toString().replace(/(.)./g, "$1."));
                 $('.users_tx_count-' + i).html(coin.stats.users_tx_count_24_hours);
                 $('.volume-' + i).html('$' + volumeUsd.toFixed(1));
-                $('.price-' + i).html('$' + avgPriceBtcUsd.toFixed(10));
+                $('.price-' + i).html('$' + avgPriceBtcUsd.toFixed(4));
                 $('.price-' + i).attr('title', '$' + avgPriceBtcUsd.toFixed(10));
                 // $('.users_tx_weekly-' + i).html(coin.stats.users_tx_count_24_hours);
                 // setUpChart2('.users_tx_weekly-' + i, coin.stats.users_tx_chart)
