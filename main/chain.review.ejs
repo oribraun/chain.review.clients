@@ -272,7 +272,8 @@
                 // $('.version-' + i).html(coin.stats.version.toString().replace(/(.)./g, "$1."));
                 $('.users_tx_count-' + i).html(coin.stats.users_tx_count_24_hours);
                 $('.volume-' + i).html('$' + volumeUsd.toFixed(1));
-                $('.price-' + i).html('$' + avgPriceBtcUsd.toFixed(3));
+                $('.price-' + i).html('$' + avgPriceBtcUsd.toFixed(10));
+                $('.price-' + i).attr('title', '$' + avgPriceBtcUsd.toFixed(10));
                 // $('.users_tx_weekly-' + i).html(coin.stats.users_tx_count_24_hours);
                 // setUpChart2('.users_tx_weekly-' + i, coin.stats.users_tx_chart)
                 setUpSparkline('.users_tx_weekly-' + i, coin.stats.users_tx_chart)
