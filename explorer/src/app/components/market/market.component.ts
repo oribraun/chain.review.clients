@@ -138,10 +138,10 @@ export class MarketComponent implements OnInit {
         this.marketData[this.marketSummary[i].market_name].buyLiquidity += this.marketSummary[i].totalBuyLiquidityBtc;
         this.marketData[this.marketSummary[i].market_name].sellLiquidity += this.marketSummary[i].amountSellLiquidityBtc;
         this.marketData[this.marketSummary[i].market_name]['24hVolume'] += parseFloat(this.marketSummary[i].volume) * parseFloat(this.marketSummary[i].leftCoinPriceBtc);
-        if (this.marketSummary[i].symbol.indexOf('BTC_') === -1) {
+        // if (this.marketSummary[i].symbol.indexOf('BTC_') === -1) {
           this.marketData[this.marketSummary[i].market_name].totalPriceBtc += this.marketSummary[i].leftCoinPriceBtc;
           this.marketData[this.marketSummary[i].market_name].totalPriceCount += 1;
-        }
+        // }
         const symbolSplit = this.marketSummary[i].symbol.split('_');
         const fromCoin = symbolSplit[0];
         const toCoin = symbolSplit[1];
