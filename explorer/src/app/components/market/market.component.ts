@@ -89,7 +89,7 @@ export class MarketComponent implements OnInit {
     this.http.post(url, {}).subscribe(
       (response: any) => {
         if (!response.err) {
-          this.marketSummary = response.data;
+          this.marketData = response.data;
           this.removeDuplicateSummary();
           this.calcMarketData();
           // console.log('getMarketsSummary', response.data);
