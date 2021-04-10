@@ -257,8 +257,11 @@
                 var volume = coin.markets_stats['New Capital']['24hVolume'];
                 var avgPriceBtc = coin.markets_stats['New Capital']['avgPriceBtc'];
                 var btcUsdPrice = parseFloat(coin.market_summary.usd_price.BTC);
-                var volumeUsd = parseFloat(volume) * parseFloat(coin.market_summary.usd_price.BTC);
-                var avgPriceBtcUsd = parseFloat(avgPriceBtc) * parseFloat(coin.market_summary.usd_price.BTC);
+                // var volumeUsd = parseFloat(volume) * parseFloat(coin.market_summary.usd_price.BTC);
+                // var avgPriceBtcUsd = parseFloat(avgPriceBtc) * parseFloat(coin.market_summary.usd_price.BTC);
+
+                var volumeUsd = parseFloat(coin.market_summary.usd_price.BTC);
+                var avgPriceBtcUsd = parseFloat(coin.market_summary.usd_price.BTC);
 
                 $('.wallet-' + i).html('<a href="' +  coin.explorer  + '">' + name + '</a>')
                 $('.wallet-icon-' + i).html('<img src="./' +  coin.wallet.toLowerCase()  + '.svg" />')
