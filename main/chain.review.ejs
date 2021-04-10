@@ -260,7 +260,7 @@
                 // var volumeUsd = parseFloat(volume) * parseFloat(coin.market_summary.usd_price.BTC);
                 // var avgPriceBtcUsd = parseFloat(avgPriceBtc) * parseFloat(coin.market_summary.usd_price.BTC);
 
-                var volumeUsd = parseFloat(coin.market_summary.usd_price.BTC);
+                var volumeUsd = parseFloat(coin.market_summary['24hVolume'].BTC);
                 var avgPriceBtcUsd = parseFloat(coin.market_summary.usd_price.BTC);
 
                 $('.wallet-' + i).html('<a href="' +  coin.explorer  + '">' + name + '</a>')
