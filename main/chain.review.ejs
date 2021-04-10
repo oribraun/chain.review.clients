@@ -441,7 +441,12 @@
         }
     }
 
+    var sortInProgress = false;
     function sortByClick(sort) {
+        if(sortInProgress) {
+            return;
+        }
+        sortInProgress = true;
         if(sortBy === sort) {
             if(order === 'desc') {
                 order = 'asc';
@@ -454,6 +459,9 @@
         }
 
         this.setUpTable(data);
+        setTimeout(() => {
+            sortInProgress = false;
+        }, 300)
     }
 
     function setUpCaret() {
