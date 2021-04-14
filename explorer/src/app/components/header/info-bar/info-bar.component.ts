@@ -19,6 +19,10 @@ export class InfoBarComponent implements OnInit {
     }
 
     this.data = data;
-    this.preetyVersion = this.data.stats.version.toString().replace(/(.)./g, "$1.");
+    if(this.data.stats.version.indexOf('.') > -1) {
+      this.preetyVersion = this.data.stats.version;
+    } else {
+      this.preetyVersion = this.data.stats.version.toString().replace(/(.)./g, "$1.");
+    }
   }
 }
