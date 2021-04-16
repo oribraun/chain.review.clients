@@ -212,16 +212,16 @@
             }
             if(sortBy === 'VOLUME') {
                 if(order === 'desc') {
-                    return b.markets_stats['New Capital']['24hVolume'] - a.markets_stats['New Capital']['24hVolume']
+                    return b.market_summary['24hVolume'].BTC - a.market_summary['24hVolume'].BTC
                 } else {
-                    return a.markets_stats['New Capital']['24hVolume'] - b.markets_stats['New Capital']['24hVolume']
+                    return a.market_summary['24hVolume'].BTC - b.market_summary['24hVolume'].BTC
                 }
             }
             if(sortBy === 'PRICE') {
                 if(order === 'desc') {
-                    return b.markets_stats['New Capital']['avgPriceBtc'] - a.markets_stats['New Capital']['avgPriceBtc']
+                    return b.market_summary.usd_price.BTC - a.market_summary.usd_price.BTC
                 } else {
-                    return a.markets_stats['New Capital']['avgPriceBtc'] - b.markets_stats['New Capital']['avgPriceBtc']
+                    return a.market_summary.usd_price.BTC - b.market_summary.usd_price.BTC
                 }
             }
             if(sortBy === 'LAST BLOCK') {
@@ -254,8 +254,8 @@
                 // console.log('data', data)
                 var coin = data[i];
                 var name = coin.wallet === 'Fix' ? (coin.wallet + ' network').toUpperCase() : coin.wallet.toUpperCase()
-                var volume = coin.markets_stats['New Capital']['24hVolume'];
-                var avgPriceBtc = coin.markets_stats['New Capital']['avgPriceBtc'];
+                // var volume = coin.markets_stats['New Capital']['24hVolume'];
+                // var avgPriceBtc = coin.markets_stats['New Capital']['avgPriceBtc'];
                 var btcUsdPrice = parseFloat(coin.market_summary.usd_price.BTC);
                 // var volumeUsd = parseFloat(volume) * parseFloat(coin.market_summary.usd_price.BTC);
                 // var avgPriceBtcUsd = parseFloat(avgPriceBtc) * parseFloat(coin.market_summary.usd_price.BTC);
