@@ -49,7 +49,7 @@ export class AddressChartComponent implements OnInit {
             transactions: transactions.length,
           }
           this.setTransactionChartData();
-          console.log('this.httpData', this.httpData);
+          // console.log('this.httpData', this.httpData);
         }
         this.gettingAddressChart = false;
       },
@@ -62,7 +62,7 @@ export class AddressChartComponent implements OnInit {
 
   setTransactionChartData() {
     this.chartData = this.httpData.map((obj) => ([ new Date(obj.date).getTime(), obj.count]));
-    console.log(this.chartData);
+    // console.log(this.chartData);
     if (this.chartType !== 'Transactions') {
       this.setChart('Transactions', true);
     }

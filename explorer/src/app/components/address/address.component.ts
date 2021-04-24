@@ -149,10 +149,10 @@ export class AddressComponent implements OnInit {
   }
 
   getAddressTxList() {
-    console.log('this.latestAddressId', this.latestAddressId);
+    // console.log('this.latestAddressId', this.latestAddressId);
     this.gettingTxs = true;
     const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getAddressTxs';
-    console.log('url', url);
+    // console.log('url', url);
     const data = {
       address : this.addr,
       limit : this.pagination.limit,
@@ -165,7 +165,7 @@ export class AddressComponent implements OnInit {
           if (this.txs.length) {
             this.latestAddressId = this.txs[this.txs.length - 1];
           }
-          console.log('this.latestAddressId', this.latestAddressId);
+          // console.log('this.latestAddressId', this.latestAddressId);
           this.currentTable = this.emptyTable.slice();
           for (let i = 0; i < this.txs.length; i++) {
             this.currentTable[i] = this.txs[i];
@@ -186,7 +186,7 @@ export class AddressComponent implements OnInit {
   getAddressDetails() {
     this.gettingAddressDetails = true;
     const url = window.location.origin + '/explorer-api/db/' + this.data.wallet + '/getAddressDetails';
-    console.log('url', url);
+    // console.log('url', url);
     this.http.post(url, {address: this.addr}).subscribe(
         (response: any) => {
           if (!response.err) {
