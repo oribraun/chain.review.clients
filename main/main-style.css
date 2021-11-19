@@ -4363,23 +4363,16 @@ html body {
   padding: .307rem 0;
 }
 .my-table-wrapper .my-table .body .my-tr .my-td-chart {
-  padding: .707rem;
   height: 100%;
+  padding: .307rem;
 }
-@media (min-width: 992px) {
-  .my-table-wrapper .my-table .body .my-tr .my-td-chart {
-    padding: .307rem;
-  }
-}
-@media (min-width: 992px) {
-  .my-table-wrapper .my-table .body .my-tr .divider:after {
-    content: '';
-    position: absolute;
-    top: 20%;
-    bottom: 20%;
-    right: 0;
-    border-right: 1px solid #ccc;
-  }
+.my-table-wrapper .my-table .body .my-tr .divider:after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  right: 0;
+  border-right: 1px solid #ccc;
 }
 .my-table-wrapper .fixed-table-width {
   min-width: 1220px;
