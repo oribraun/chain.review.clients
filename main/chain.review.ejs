@@ -255,8 +255,13 @@
                 // var volumeUsd = parseFloat(volume) * parseFloat(coin.market_summary.usd_price.BTC);
                 // var avgPriceBtcUsd = parseFloat(avgPriceBtc) * parseFloat(coin.market_summary.usd_price.BTC);
 
-                var volumeUsd = parseFloat(coin.market_summary['24hVolume'].BTC);
-                var avgPriceBtcUsd = parseFloat(coin.market_summary.usd_price.BTC);
+                function numberWithCommas(x, digits) {
+                    var parts = x.toFixed(digits).toString().split(".");
+                    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    return parts.join(".");
+                }
+                var volumeUsd = numberWithCommas(parseFloat(coin.market_summary['24hVolume'].BTC), 0);
+                var avgPriceBtcUsd = numberWithCommas(parseFloat(coin.market_summary.usd_price.BTC), 4);
 
                 $('.wallet-' + i).html('<a href="' +  coin.explorer  + '">' + name + '</a>')
                 $('.wallet-icon-' + i).html('<img src="./' +  coin.wallet.toLowerCase()  + '.svg" />')
@@ -269,10 +274,10 @@
                 }
                 // $('.version-' + i).html(coin.stats.version.toString().replace(/(.)./g, "$1."));
                 $('.users_tx_count-' + i).html(coin.stats.users_tx_count_24_hours);
-                $('.volume-' + i).html('$' + volumeUsd.toFixed(0));
-                $('.volume-' + i).attr('title', '$' + volumeUsd.toFixed(0));
-                $('.price-' + i).html('$' + avgPriceBtcUsd.toFixed(4));
-                $('.price-' + i).attr('title', '$' + avgPriceBtcUsd.toFixed(10));
+                $('.volume-' + i).html('$' + volumeUsd);
+                // $('.volume-' + i).attr('title', '$' + volumeUsd);
+                $('.price-' + i).html('$' + avgPriceBtcUsd);
+                // $('.price-' + i).attr('title', '$' + avgPriceBtcUsd);
                 // $('.users_tx_weekly-' + i).html(coin.stats.users_tx_count_24_hours);
                 // setUpChart2('.users_tx_weekly-' + i, coin.stats.users_tx_chart)
                 setUpSparkline('.users_tx_weekly-' + i, coin.stats.users_tx_chart)
