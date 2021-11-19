@@ -4292,10 +4292,13 @@ html body {
     max-width: 1250px;
   }
 }
-.my-table {
+.my-table-wrapper {
+  overflow-x: auto;
+}
+.my-table-wrapper .my-table {
   font-size: .8em;
 }
-.my-table .header {
+.my-table-wrapper .my-table .header {
   font-size: .9em;
   vertical-align: bottom;
   border-bottom: 1px solid #dee2e6;
@@ -4306,24 +4309,24 @@ html body {
   border-radius: .5em;
   color: #727272;
 }
-.my-table .header .row {
+.my-table-wrapper .my-table .header .row {
   margin: 0 -0.75rem;
 }
-.my-table .header .row .my-th {
+.my-table-wrapper .my-table .header .row .my-th {
   font-weight: bold;
 }
-.my-table .header .row .my-th:after {
+.my-table-wrapper .my-table .header .row .my-th:after {
   content: '';
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
 }
-.my-table .header .row .my-th .caret {
+.my-table-wrapper .my-table .header .row .my-th .caret {
   position: absolute;
   margin-left: 5px;
 }
-.my-table .header .row .divider:after {
+.my-table-wrapper .my-table .header .row .divider:after {
   content: '';
   position: absolute;
   top: 0;
@@ -4331,56 +4334,51 @@ html body {
   right: 0;
   border-right: 1px solid #ccc;
 }
-.my-table .body {
+.my-table-wrapper .my-table .body {
   color: #000;
 }
-.my-table .body .my-tr {
+.my-table-wrapper .my-table .body .my-tr {
   background: #ffffff;
   border: 1px solid #e5e5e5;
   -webkit-border-radius: .5em;
   -moz-border-radius: .5em;
   border-radius: .5em;
-  padding: .3em 0.75rem;
+  padding: .3em 0.95rem;
   margin: .5em 0;
 }
-.my-table .body .my-tr .my-td {
+.my-table-wrapper .my-table .body .my-tr .my-td {
   padding: .707rem;
   vertical-align: top;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: bold;
 }
-.my-table .body .my-tr .my-td a {
+.my-table-wrapper .my-table .body .my-tr .my-td a {
   color: inherit;
 }
-.my-table .body .my-tr .my-td span[class*='wallet-icon-'] {
+.my-table-wrapper .my-table .body .my-tr .my-td span[class*='wallet-icon-'] {
   display: inline-block;
   height: 32px;
   width: 32px;
 }
-.my-table .body .my-tr .my-td span[class*='wallet-icon-'] img {
+.my-table-wrapper .my-table .body .my-tr .my-td span[class*='wallet-icon-'] img {
   width: 100%;
   height: 100%;
 }
-.my-table .body .my-tr .my-td-with-icon {
-  padding: .307rem .707rem;
+.my-table-wrapper .my-table .body .my-tr .my-td-with-icon {
+  padding: .307rem;
 }
-@media (min-width: 992px) {
-  .my-table .body .my-tr .my-td-with-icon {
-    padding: .307rem;
-  }
-}
-.my-table .body .my-tr .my-td-chart {
+.my-table-wrapper .my-table .body .my-tr .my-td-chart {
   padding: .707rem;
   height: 100%;
 }
 @media (min-width: 992px) {
-  .my-table .body .my-tr .my-td-chart {
+  .my-table-wrapper .my-table .body .my-tr .my-td-chart {
     padding: .307rem;
   }
 }
 @media (min-width: 992px) {
-  .my-table .body .my-tr .divider:after {
+  .my-table-wrapper .my-table .body .my-tr .divider:after {
     content: '';
     position: absolute;
     top: 20%;
@@ -4388,6 +4386,21 @@ html body {
     right: 0;
     border-right: 1px solid #ccc;
   }
+}
+.my-table-wrapper .fixed-table-width {
+  min-width: 1085px;
+}
+.my-table-wrapper .fixed-table-width .fixed-column {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: #fff;
+}
+.my-table-wrapper .fixed-table-width .header .fixed-column {
+  background: #e5e5e5;
+}
+.my-table-wrapper .fixed-table-width .unfixed-column {
+  position: relative;
 }
 span[class*='users_tx_weekly-'] {
   display: inline-block;

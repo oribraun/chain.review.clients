@@ -18,111 +18,106 @@
             <span >Chain Review</span>
         </div>
     </nav>
-<!--    <section class="banner">-->
-<!--        <img src="/assets/new_year_2021.png" width="100%" alt="">-->
-<!--        <div class="bird-container bird-container&#45;&#45;one">-->
-<!--            <div class="bird bird&#45;&#45;one"></div>-->
-<!--        </div>-->
+    <!--    <section class="banner">-->
+    <!--        <img src="/assets/new_year_2021.png" width="100%" alt="">-->
+    <!--        <div class="bird-container bird-container&#45;&#45;one">-->
+    <!--            <div class="bird bird&#45;&#45;one"></div>-->
+    <!--        </div>-->
 
-<!--        <div class="bird-container bird-container&#45;&#45;two">-->
-<!--            <div class="bird bird&#45;&#45;two"></div>-->
-<!--        </div>-->
+    <!--        <div class="bird-container bird-container&#45;&#45;two">-->
+    <!--            <div class="bird bird&#45;&#45;two"></div>-->
+    <!--        </div>-->
 
-<!--        <div class="bird-container bird-container&#45;&#45;three">-->
-<!--            <div class="bird bird&#45;&#45;three"></div>-->
-<!--        </div>-->
+    <!--        <div class="bird-container bird-container&#45;&#45;three">-->
+    <!--            <div class="bird bird&#45;&#45;three"></div>-->
+    <!--        </div>-->
 
-<!--        <div class="bird-container bird-container&#45;&#45;four">-->
-<!--            <div class="bird bird&#45;&#45;four"></div>-->
-<!--        </div>-->
-<!--    </section>-->
-    <div class="my-table">
-        <div class="header d-none d-lg-block">
-            <div class="row">
-                <div class="col-lg-2-1">
-                    <div class="my-th pointer" onclick="sortByClick('NAME')">NAME <span class="caret name"></span></div>
+    <!--        <div class="bird-container bird-container&#45;&#45;four">-->
+    <!--            <div class="bird bird&#45;&#45;four"></div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+    <div class="my-table-wrapper">
+        <div class="my-table fixed-table-width">
+            <div class="header">
+                <div class="row">
+                    <div class="col-1-8 fixed-column">
+                        <div class="my-th pointer" onclick="sortByClick('NAME')">NAME <span class="caret name"></span></div>
+                    </div>
+                    <div class="col-1-1 unfixed-column">
+                        <div class="my-th divider">&nbsp;</div>
+                    </div>
+                    <div class="col-1-1">
+                        <div class="my-th divider pointer" onclick="sortByClick('24H TX')">24H TX <span class="caret txs"></span></div>
+                    </div>
+                    <div class="col-1-9">
+                        <div class="my-th divider">WEEKLY TX</div>
+                    </div>
+                    <div class="col-1-7">
+                        <div class="my-th divider pointer" onclick="sortByClick('VOLUME')">VOLUME <span class="caret volume"></span></div>
+                    </div>
+                    <div class="col-1-5">
+                        <div class="my-th divider pointer" onclick="sortByClick('PRICE')">PRICE <span class="caret price"></span></div>
+                    </div>
+                    <div class="col-1-4">
+                        <div class="my-th divider pointer" onclick="sortByClick('LAST BLOCK')">LAST BLOCK <span class="caret last_block"></span></div>
+                    </div>
+                    <div class="col-1-5">
+                        <div class="my-th pointer" onclick="sortByClick('MASTERNODES')">MASTERNODES <span class="caret masternodes"></span></div>
+                    </div>
+                    <!--                <div class="col-md-2 my-th">Version</div>-->
                 </div>
-                <div class="col-lg-1-3">
-                    <div class="my-th divider">&nbsp;</div>
-                </div>
-                <div class="col-lg-1-1">
-                    <div class="my-th divider pointer" onclick="sortByClick('24H TX')">24H TX <span class="caret txs"></span></div>
-                </div>
-                <div class="col-lg-1-9">
-                    <div class="my-th divider">WEEKLY TX</div>
-                </div>
-                <div class="col-lg-1-4">
-                    <div class="my-th divider pointer" onclick="sortByClick('VOLUME')">VOLUME <span class="caret volume"></span></div>
-                </div>
-                <div class="col-lg-1-3">
-                    <div class="my-th divider pointer" onclick="sortByClick('PRICE')">PRICE <span class="caret price"></span></div>
-                </div>
-                <div class="col-lg-1-4">
-                    <div class="my-th divider pointer" onclick="sortByClick('LAST BLOCK')">LAST BLOCK <span class="caret last_block"></span></div>
-                </div>
-                <div class="col-lg-1-5">
-                    <div class="my-th pointer" onclick="sortByClick('MASTERNODES')">MASTERNODES <span class="caret masternodes"></span></div>
-                </div>
-                <!--                <div class="col-md-2 my-th">Version</div>-->
             </div>
-        </div>
-        <div class="body">
-            <% for(var i = 0 ; i < data.length ; i++) { %>
-                <div class="my-tr" id="my-tr-<%- i %>">
-                    <div class="row">
-                        <div class="col-lg-2-1 col-md-5 col-sm-5">
-                            <div class="my-td my-td-with-icon">
-                                <span class="wallet-icon-<%=i%>">&nbsp;</span>
-                                <span class="wallet-<%=i%>">&nbsp;</span>
+            <div class="body">
+                <% for(var i = 0 ; i < data.length ; i++) { %>
+                    <div class="my-tr" id="my-tr-<%- i %>">
+                        <div class="row">
+                            <div class="col-1-8 fixed-column">
+                                <div class="my-td my-td-with-icon">
+                                    <span class="wallet-icon-<%=i%>">&nbsp;</span>
+                                    <span class="wallet-<%=i%>">&nbsp;</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-1-3 col-md-4 col-sm-7">
-                            <div class="my-td divider">
-                                <span class="label font-weight-bold d-lg-none">SYMBOL:&nbsp;</span>
-                                <span class="wallet-symbol-<%=i%>">&nbsp;</span>
+                            <div class="col-1-1 unfixed-column">
+                                <div class="my-td divider">
+                                    <span class="wallet-symbol-<%=i%>">&nbsp;</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-1-1 col-md-3 col-sm-5">
-                            <div class="my-td divider">
-                                <span class="label font-weight-bold d-lg-none">24H TX:&nbsp;</span>
-                                <span class="users_tx_count-<%=i%>">&nbsp;</span>
+                            <div class="col-1-1">
+                                <div class="my-td divider">
+                                    <span class="users_tx_count-<%=i%>">&nbsp;</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-1-9 col-md-5 col-sm-7">
-                            <div class="my-td my-td-chart divider">
-                                <span class="label font-weight-bold d-lg-none">WEEKLY TX:&nbsp;</span>
+                            <div class="col-1-9">
+                                <div class="my-td my-td-chart divider">
                                 <span class="users_tx_weekly-<%=i%>">
                             <canvas width="0" height="0" class="users_tx_weekly-<%=i%>-chart"></canvas>
                         </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-1-4 col-md-4 col-sm-5">
-                            <div class="my-td divider">
-                                <span class="label font-weight-bold d-lg-none">VOLUME:&nbsp;</span>
-                                <span class="volume-<%=i%>">&nbsp;</span>
+                            <div class="col-1-7">
+                                <div class="my-td divider">
+                                    <span class="volume-<%=i%>">&nbsp;</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-1-3 col-md-3 col-sm-7">
-                            <div class="my-td divider">
-                                <span class="label font-weight-bold d-lg-none">PRICE:&nbsp;</span>
-                                <span class="price-<%=i%>">&nbsp;</span>
+                            <div class="col-1-5">
+                                <div class="my-td divider">
+                                    <span class="price-<%=i%>">&nbsp;</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-1-4 col-md-5 col-sm-5">
-                            <div class="my-td divider">
-                                <span class="label font-weight-bold d-lg-none">LAST BLOCK:&nbsp;</span>
-                                <span class="last_block-<%=i%>">&nbsp;</span>
+                            <div class="col-1-4">
+                                <div class="my-td divider">
+                                    <span class="last_block-<%=i%>">&nbsp;</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-1-5 col-md-4 col-sm-7">
-                            <div class="my-td">
-                                <span class="label font-weight-bold d-lg-none">Masternodes:&nbsp;</span>
-                                <span class="masternodes-<%=i%>">&nbsp;</span>
+                            <div class="col-1-5">
+                                <div class="my-td">
+                                    <span class="masternodes-<%=i%>">&nbsp;</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            <% } %>
+                <% } %>
+            </div>
         </div>
     </div>
 </div>
