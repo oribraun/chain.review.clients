@@ -4301,12 +4301,8 @@ html body {
 .my-table-wrapper .my-table .header {
   font-size: .9em;
   vertical-align: bottom;
-  border-bottom: 1px solid #dee2e6;
   padding: .75rem;
   background: #e5e5e5;
-  -webkit-border-radius: .5em;
-  -moz-border-radius: .5em;
-  border-radius: .5em;
   color: #727272;
 }
 .my-table-wrapper .my-table .header .row {
@@ -4339,12 +4335,10 @@ html body {
 }
 .my-table-wrapper .my-table .body .my-tr {
   background: #ffffff;
-  border: 1px solid #e5e5e5;
-  -webkit-border-radius: .5em;
-  -moz-border-radius: .5em;
-  border-radius: .5em;
   padding: .3em 0.95rem;
   margin: .5em 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 }
 .my-table-wrapper .my-table .body .my-tr .my-td {
   padding: .707rem;
