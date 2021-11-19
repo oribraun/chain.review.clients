@@ -4336,9 +4336,9 @@ html body {
 .my-table-wrapper .my-table .body .my-tr {
   background: #ffffff;
   padding: .3em 0.95rem;
-  margin: .5em 0;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  -webkit-box-shadow: 0 0 2px #cac9c9;
+  -moz-box-shadow: 0 0 2px #cac9c9;
+  box-shadow: 0 0 2px #cac9c9;
 }
 .my-table-wrapper .my-table .body .my-tr .my-td {
   padding: .707rem;
